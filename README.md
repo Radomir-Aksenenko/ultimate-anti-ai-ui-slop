@@ -1,7 +1,7 @@
-# ⚡ Ultimate Anti-AI UI Slop & Human-Craft Design System (v11.0)
-### Domain-Calibrated Universal Edition for LLMs & Frontend Architects
+# ⚡ Ultimate Anti-AI UI Slop & Human-Craft Design System (v12.0)
+### Pure Commercial & Human-Senior Grade Edition for LLMs & Frontend Architects
 
-> **The Universal System Prompt, Design Tokens, and Invariant Ruleset derived from 20 NON-AI living masterwork systems (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia) that forces ANY AI (Claude, ChatGPT, Cursor, Gemini, Grok, DeepSeek, v0, 27B+ models) to output production-grade, human-engineered web applications without "AI smells" AND without "DevTools over-engineering".**
+> **The Universal System Prompt, Design Tokens, and Invariant Ruleset derived from 20 NON-AI living masterwork systems (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia) that forces ANY AI (Claude, ChatGPT, Cursor, Gemini, Grok, DeepSeek, v0, 27B+ models) to output production-grade, human-engineered web applications without "AI smells", without "DevTools over-engineering", and without "pseudo-architectural gimmicks".**
 
 ---
 
@@ -21,33 +21,31 @@ Include `tokens.css` into your CSS bundle for instant access to the 6 curated Go
 
 ---
 
-## 🧭 The 4 Domain Modes: Zero DevTools Over-Engineering
+## 🚫 The Anti-Gimmick Purge: Eradicating Pseudo-Architectural Noise
 
-To prevent AI from blindly dumping server terminals or JSON blocks onto everyday consumer or service sites, the system operates across 4 calibrated domain modes:
+When AI models try to look "technical" and "serious", they often generate bizarre pseudo-architectural clichés. In v12.0, these are explicitly eradicated:
+
+| Pseudo-Architectural Gimmick 🚫 | Pure Human Commercial Solution ✅ |
+| :--- | :--- |
+| **Section Numbers on Lines (`05 / ЛОКАЦИЯ`)** | **Natural H2 Headings with Category Eyebrows** and 60px–90px whitespace separation. |
+| **Fake GPS Coords & Internal Codes (`44.6051° N`)** | **Real Human Addresses**: `Екатеринбург, ул. Брусничная, 7 (м. Динамо)`. |
+| **Vertical 'SCROLL' Sticks & Marquees** | **Calm Vertical Rhythm** with static high-resolution visuals and zero jitter. |
+| **Monospace ALL-CAPS Buttons & Nav** | **Clean Sans-Serif Controls** (`13px–15px`). `font-mono` is strictly for tabular prices/numbers. |
+| **Microscopic 8px–9px Text Clutter** | **Readable Typography** (`14px–16px` body, `11px–12px` tags, zero 8px noise). |
+
+---
+
+## 🧭 The 4 Domain Modes: Zero DevTools Over-Engineering
 
 ```mermaid
 graph TD
   Prompt["User Request / Domain"] --> Sieve{"Domain Context Sieve"}
   
-  Sieve -->|"1. Consumer & Lifestyle"| D1["Mode 1: Consumer, Retail & Food<br/>• Radii: 8px–14px (Soft, Warm, Premium)<br/>• Artifacts: Menus, Booking, Real Ingredients, Hours<br/>• STRICT BAN: No Terminals, No JSON Drawers"]
+  Sieve -->|"1. Consumer & Lifestyle"| D1["Mode 1: Consumer, Retail, Real Estate & Food<br/>• Radii: 8px–14px (Soft, Warm, Premium)<br/>• Artifacts: Menus, Floor Plans, Booking, Real Addresses<br/>• STRICT BAN: No Terminals, No Section Line Stamps"]
   Sieve -->|"2. Services & Medicine"| D2["Mode 2: Professional Services & Health<br/>• Radii: 6px–10px (Trustworthy, Clean)<br/>• Artifacts: Doctor/Lawyer Passports, Licenses, Schedules<br/>• STRICT BAN: No DevTools Widgets, No Fake SLA"]
   Sieve -->|"3. E-commerce & Hardware"| D3["Mode 3: Physical Goods & Catalogs<br/>• Radii: 6px–10px (Modular, Clear)<br/>• Artifacts: Parametric Filters, Dimensions, SKU, BOM<br/>• STRICT BAN: No Server Logs"]
   Sieve -->|"4. SaaS & DevTools"| D4["Mode 4: Cloud, B2B & Infrastructure<br/>• Radii: 4px–8px (Dense, Keyboard-First)<br/>• Artifacts: Master-Detail Inspectors, ⌘K, API Snippets<br/>• Full Telemetry Permitted"]
 ```
-
-1. **Consumer, Food, Retail & Lifestyle** *(Bakeries, Restaurants, Coffee Shops, Boutiques, Salons, Hotels)*:
-   - **Geometry**: Natural, soft, tactile (`8px` buttons, `12px` cards, `16px` modals).
-   - **Artifacts**: Structured visual menus, table/appointment booking, opening hours, real ingredients, map passports.
-   - **Banned**: No terminal logs, no raw JSON boxes, no WebSocket pings, no commit hash badges.
-2. **Professional Services, Medicine & Legal** *(Law firms, Dental/medical clinics, Architecture, Consulting)*:
-   - **Geometry**: Clean, authoritative, balanced (`8px` buttons, `10px` cards, `14px` dialogs).
-   - **Artifacts**: Specialist credential passports, treatment/consultation protocols, transparent pricing, certifications.
-3. **E-commerce & Physical Goods** *(Furniture, Tools, Fashion, Hardware)*:
-   - **Geometry**: Precise, modular (`6px` controls, `10px` product cards).
-   - **Artifacts**: Parametric attribute sieve, dimensioned CAD/vector schematics, BOM parts list, live stock badge.
-4. **SaaS, DevTools & Enterprise** *(Cloud platforms, FinTech, Analytics)*:
-   - **Geometry**: Hyper-dense, keyboard-first (`4px–8px`).
-   - **Artifacts**: Master-Detail split inspectors, ⌘K command palette, live telemetry tickers, API payloads.
 
 ---
 
@@ -55,8 +53,8 @@ graph TD
 
 | # | Masterwork System | Domain | Transferred Anti-Slop Principle & Technique |
 | :--- | :--- | :--- | :--- |
-| **1** | **Stripe** | FinTech & Payments | **Hairline Bevel (`inset 0 1px 0 rgba(255,255,255,0.15)`) & Live API Materialization** |
-| **2** | **Linear** | DevTools & Issues | **Keyboard Sovereignty (`⌘K`, `J/K`), 50ms Invariant & 36px List Density** |
+| **1** | **Stripe** | FinTech & Payments | **Hairline Bevel (`inset 0 1px 0 rgba(255,255,255,0.15)`) & Clean Surface Lighting** |
+| **2** | **Linear** | DevTools & Issues | **Keyboard Sovereignty (`⌘K`, `J/K`), 50ms Invariant & Crisp 8px Controls** |
 | **3** | **Apple** | Hardware & Specs | **Sticky Matrix Comparator & Physical Verification ($nits$, $dB$, $mm$, $g$)** |
 | **4** | **Bloomberg** | Financial Markets | **Sparkline Inlines, Real-Time Telemetry Ticker & Flash Highlights** |
 | **5** | **GitHub** | Code Collaboration | **Segmented Counter Buttons (`[★ Star \| 14.2k]`) & Monospace Hash Links** |
@@ -72,22 +70,9 @@ graph TD
 | **15** | **Datadog** | Cloud Observability | **Host Heatmap Node Matrices, Crosshair Time Sync & SLA Guides** |
 | **16** | **IKEA / Uniqlo** | Physical Catalogs | **Dimensioned Vector Schematics & Bill-of-Materials (BOM)** |
 | **17** | **Raycast** | Hyper-Speed Tools | **Split-View Command Bar (⌘K) & Action Dock Keyboard Footers** |
-| **18** | **A24 / Monocle** | Cultural Studio | **Archival Index Numbering (`[ARCHIVE-ID]`) & Rigid 1px Poster Grids** |
+| **18** | **A24 / Monocle** | Cultural Studio | **Editorial Balance, Restrained Grid & Clean Typographic Scale** |
 | **19** | **PostHog / Sentry** | Error Telemetry | **Breadcrumb Event Trails & Stack Trace Code Contexts** |
-| **20** | **Vercel / Cloudflare** | Edge Pipelines | **Terminal Build Loggers with Auto-Scroll & Inline-Editable Parametric Tables** |
-
----
-
-## 🎯 The Core Problem: Why AI Web Designs Feel "AI-ish" (And Why Fixes Failed)
-
-| AI Slop Anti-Pattern 🚫 | Naive Over-Correction Mistake ❌ | The Human Senior Solution (v11.0) ✅ |
-| :--- | :--- | :--- |
-| **1. Bubble UI & Inflatable Radii** | Makes everything a rigid `0px` DOS box. | **Domain-Calibrated Natural Radii.** Buttons `8px`, cards `10px–12px`, modals `16px`. Soft, elegant, zero balloons. |
-| **2. DevTools Contamination** | Puts JSON payloads and terminal logs on a bakery website. | **Authentic Business Artifacts.** Real menus, booking calendars, doctor credentials, opening hours. |
-| **3. Micro-Label Clutter** | Spams `[STATUS: OK]` above every heading. | **Visual Breathing Room (Zero-Fat Content).** Clear headlines, generous whitespace, zero redundant tags. |
-| **4. Fake Tactile Gimmicks** | Injects noisy SVG filters or moving button sweeps. | **Zero Noise. Zero Gimmicks.** Solid clean canvas, subtle 1px hairline borders (`rgba(15,23,42,0.08)`). |
-| **5. Monotonous Bento Grids** | Stacks identical `grid-cols-3` cards top to bottom. | **Universal Layout Alternation.** Alternates split showcases, parametric matrices, spec sheets, and proof strips. |
-| **6. Corporate AI Fluff & Buzzwords** | "Unlocking revolutionary synergy of tomorrow". | **Factual Physical Reality (Humanizer-Pro 3.0).** "Свежая выпечка каждое утро к 07:30 • Французская мука Т55 • Покровка, 12". |
+| **20** | **Vercel / Cloudflare** | Edge Pipelines | **Inline-Editable Parametric Tables & Clean Dark Palettes** |
 
 ---
 
@@ -123,7 +108,7 @@ All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeri
 
 ## 📂 Repository Contents
 
-* **[`SKILL.md`](./SKILL.md)** — The master universal prompt / skill instructions for LLMs (v11.0).
+* **[`SKILL.md`](./SKILL.md)** — The master universal prompt / skill instructions for LLMs (v12.0).
 * **[`tokens.css`](./tokens.css)** — Production CSS design tokens (6 Google Fonts themes, Light/Dark WCAG AAA palettes, Natural Radii).
 * **[`anti-patterns.md`](./anti-patterns.md)** — Detailed 20-system visual comparison guide (AI Slop vs Human Senior Craft).
 

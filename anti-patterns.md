@@ -1,10 +1,22 @@
-# Anti-Patterns Guide: AI Slop vs Domain-Calibrated Human Craft (v11.0)
+# Anti-Patterns Guide: AI Slop vs Domain-Calibrated Human Craft (v12.0)
 
-This reference guide details why standard AI-generated code looks artificial, childish, and unrefined, AND why naive attempts to fix it result in **over-engineered "IT-devtools spam" or "DOS-box angularity"** on ordinary websites. All solutions are benchmarked against **20 Non-AI Masterwork Systems** (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia).
+This reference guide details why standard AI-generated code looks artificial, childish, and unrefined, AND why naive attempts to fix it result in **pseudo-architectural gimmicks, devtools clutter, or rigid DOS boxes** on ordinary websites. All solutions are benchmarked against **20 Non-AI Masterwork Systems** (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia).
 
 ---
 
-## 1. Border-Radii & Container Geometry (The Bubble vs The Brick)
+## 1. Pseudo-Architectural Gimmicks & Line-Spam (Чертежные штампы и полоски с надписями)
+
+| AI Gimmick Anti-Pattern 🚫 | Pure Human Commercial Solution ✅ | Non-AI Benchmark System |
+| :--- | :--- | :--- |
+| **Section Numbering on Dividing Lines**: Slicing the page with horizontal 1px borders and printing `05 / ЛОКАЦИЯ` or `07 / ГАЛЕРЕЯ` on the line. Looks like a student blueprint, not a modern commercial website. | **Natural Human Section Headers**: Clean category eyebrow tag + powerful H2 headline + 1-2 concise descriptive sentences. Sections are separated by **whitespace (60px–90px)**, not black borders. | **Apple / Stripe / Uniqlo** |
+| **Fake GPS Coordinates & Factory Codes**: Putting `44.6051° N / 60.9858° E · СБЫТ: КОРПУС B` into the Hero header. | **Clear Human Address**: Clean, readable human address: `Екатеринбург, ул. Брусничная, 7 (м. Динамо)`. | **Monocle / Basecamp** |
+| **Vertical 'SCROLL' Sticks & Marquees**: Putting vertical `[СКРОЛЛ | ]` text in Hero or endless running text strips with diamond separators `◆`. | **Calm Visual Rhythm**: Natural vertical scroll flow, static high-fidelity photography, and zero jittery animations. | **Pitch / Substack** |
+| **Monospace Buttons & Navigation**: Styling all buttons and header links in `font-mono` uppercase with wide letter-spacing. | **Clean Sans-Serif Controls**: Navigation and CTA buttons use readable **`font-sans`** (13px–15px). `font-mono` is strictly reserved for tabular prices, areas, and SKUs. | **Linear / Raycast / Gov.uk** |
+| **Microscopic Text (< 11px) & Bizarre Disclaimers**: Adding 8px–9px text under every image ("по шагомеру компании за сентябрь 2025"). | **Readable Accessible Typography**: Body text is `14px–16px`, tags and secondary notes are `11px–12px`. Zero unreadable 8px clutter. | **Gov.uk (WCAG AAA)** |
+
+---
+
+## 2. Border-Radii & Container Geometry (The Bubble vs The Brick)
 
 | AI Slop Anti-Pattern 🚫 | Domain-Calibrated Human Craft Solution ✅ | Non-AI Benchmark System |
 | :--- | :--- | :--- |
@@ -14,7 +26,7 @@ This reference guide details why standard AI-generated code looks artificial, ch
 
 ---
 
-## 2. DevTools Contamination vs Domain Authenticity (Гипер-айтишность)
+## 3. DevTools Contamination vs Domain Authenticity (Гипер-айтишность)
 
 | AI Slop Anti-Pattern 🚫 | Domain-Calibrated Human Craft Solution ✅ | Non-AI Benchmark System |
 | :--- | :--- | :--- |
@@ -23,16 +35,16 @@ This reference guide details why standard AI-generated code looks artificial, ch
 
 ---
 
-## 3. Typography & Font Pairing
+## 4. Typography & Font Pairing
 
 | AI Slop Anti-Pattern 🚫 | Domain-Calibrated Human Craft Solution ✅ | Non-AI Benchmark System |
 | :--- | :--- | :--- |
-| **Typography Monotony (Inter-Only Everywhere)**: Using default uncalibrated Inter with no optical tracking on every single project, making every site look like a clone. | **Curated Google Fonts Archetypes**: Precision matching of font personality to domain (`Plus Jakarta Sans` for DevTools, `Space Grotesk` for Swiss Grid, `Outfit` for FinTech, `Unbounded` for Hardware, `Manrope` for Lifestyle/Editorial, `IBM Plex` for Banking/Gov). | **Raycast / Pitch / Stripe** |
+| **Typography Monotony (Inter-Only Everywhere)**: Using default uncalibrated Inter with no optical tracking on every single project, making every site look like a clone. | **Curated Google Fonts Archetypes**: Precision matching of font personality to domain (`Plus Jakarta Sans` for DevTools, `Space Grotesk` for Swiss Grid, `Outfit` for FinTech, `Unbounded` for Hardware/Real Estate, `Manrope` for Lifestyle/Editorial, `IBM Plex` for Banking/Gov). | **Raycast / Pitch / Stripe** |
 | **Serif Italic Injection**: Injects Playfair Display or Georgia italic into the middle of a sans-serif H1 ("Беспосадочные *перелеты по миру*"). | **Mono-Family Purity & Tabular Figures**: One master geometric grotesk. Tight negative optical tracking (`letter-spacing: -0.035em`) on large headings and `tabular-nums` on all numbers. | **Apple / Bloomberg / A24** |
 
 ---
 
-## 4. Surfaces & Ambient Depth
+## 5. Surfaces & Ambient Depth
 
 | AI Slop Anti-Pattern 🚫 | Domain-Calibrated Human Craft Solution ✅ | Non-AI Benchmark System |
 | :--- | :--- | :--- |
@@ -41,7 +53,7 @@ This reference guide details why standard AI-generated code looks artificial, ch
 
 ---
 
-## 5. Section Architecture & Layout Rhythm
+## 6. Section Architecture & Layout Rhythm
 
 | AI Slop Anti-Pattern 🚫 | Domain-Calibrated Human Craft Solution ✅ | Non-AI Benchmark System |
 | :--- | :--- | :--- |
@@ -50,7 +62,7 @@ This reference guide details why standard AI-generated code looks artificial, ch
 
 ---
 
-## 6. Commercial & Parametric Density
+## 7. Commercial & Parametric Density
 
 | AI Slop Anti-Pattern 🚫 | Domain-Calibrated Human Craft Solution ✅ | Non-AI Benchmark System |
 | :--- | :--- | :--- |
@@ -59,7 +71,7 @@ This reference guide details why standard AI-generated code looks artificial, ch
 
 ---
 
-## 7. Copywriting & Factual Depth (Humanizer-Pro 3.0)
+## 8. Copywriting & Factual Depth (Humanizer-Pro 3.0)
 
 | AI Slop Anti-Pattern 🚫 | Domain-Calibrated Human Craft Solution ✅ | Non-AI Benchmark System |
 | :--- | :--- | :--- |
