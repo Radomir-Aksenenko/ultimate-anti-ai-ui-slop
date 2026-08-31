@@ -1,6 +1,6 @@
-# ⚡ Ultimate Anti-AI UI Slop & Human-Craft Design System (v9.0)
+# ⚡ Ultimate Anti-AI UI Slop & Human-Craft Design System (v10.0)
 
-> **The Universal System Prompt, Design Tokens, and Ruleset that forces ANY AI (ChatGPT, Claude, Cursor, Copilot, Gemini, Grok, DeepSeek, v0) to output production-grade, human-engineered Enterprise web applications (Stripe / Linear / Apple / Vercel / Bloomberg standard) without "AI smells" across ANY industry domain.**
+> **The Universal System Prompt, Design Tokens, and Ruleset derived from 20 NON-AI living masterwork systems (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia) that forces ANY AI (ChatGPT, Claude, Cursor, Copilot, Gemini, Grok, DeepSeek, v0) to output production-grade, human-engineered Enterprise web applications without "AI smells" across ANY industry domain.**
 
 ---
 
@@ -16,7 +16,34 @@ Simply copy the entire contents of **[`SKILL.md`](./SKILL.md)** and paste it int
 ```bash
 git clone https://github.com/Radomir-Aksenenko/ultimate-anti-ai-ui-slop.git
 ```
-Include `tokens.css` into your CSS bundle for instant access to the 6 curated Google Fonts archetypes and Swiss micro-radii tokens.
+Include `tokens.css` into your CSS bundle for instant access to the 6 curated Google Fonts archetypes, Swiss micro-radii tokens, and high-visibility focus indicators.
+
+---
+
+## 🏛️ The 20 Non-AI Living Masterworks & Extracted Invariants
+
+| # | Masterwork System | Domain | Transferred Anti-Slop Principle & Technique |
+| :--- | :--- | :--- | :--- |
+| **1** | **Stripe** | FinTech & Payments | **Hairline Bevel (`inset 0 1px 0 rgba(255,255,255,0.15)`) & Live API Materialization** |
+| **2** | **Linear** | DevTools & Issues | **Keyboard Sovereignty (`⌘K`, `J/K`), 50ms Invariant & 36px List Density** |
+| **3** | **Apple** | Hardware & Specs | **Sticky Matrix Comparator & Physical Verification ($nits$, $dB$, $mm$, $g$)** |
+| **4** | **Bloomberg** | Financial Markets | **Sparkline Inlines, Real-Time Telemetry Ticker & Flash Highlights** |
+| **5** | **GitHub** | Code Collaboration | **Segmented Counter Buttons (`[★ Star \| 14.2k]`) & Monospace Hash Links** |
+| **6** | **Gov.uk** | Public Accessibility | **High-Visibility Dual Focus Ring & WCAG AAA Question-First Hierarchy** |
+| **7** | **Figma** | Pro Canvas Tooling | **Collapsible Multi-Inspector Accordion & Scrubbable Number Inputs** |
+| **8** | **McMaster-Carr** | Industrial B2B | **Parametric Sieve Navigation & Direct Table Ordering** |
+| **9** | **Wikipedia** | Knowledge Base | **Sticky TOC Reading Guides & Hover Footnote Definition Cards** |
+| **10** | **Ableton** | Pro Audio & DAW | **Session Matrix Grid, Tactile Knobs with Units & Channel Color Strips** |
+| **11** | **Porsche / Leica** | Industrial Luxury | **Blueprint Schematics, Material Swatches & Mass/Dynamics Calculators** |
+| **12** | **Flightradar24** | Aviation Logistics | **Aviation Telemetry Passports & Route Progress Timelines** |
+| **13** | **Substack / NYT** | Long-Form Reading | **Optimal 680px Measure, 1.65 Line-Height & Editorial Callouts** |
+| **14** | **Basecamp** | Calm Productivity | **Hill Chart Uncertainty Graphs & Calm Asynchronous Workflows** |
+| **15** | **Datadog** | Cloud Observability | **Host Heatmap Node Matrices, Crosshair Time Sync & SLA Guides** |
+| **16** | **IKEA / Uniqlo** | Physical Catalogs | **Dimensioned Vector Schematics & Bill-of-Materials (BOM)** |
+| **17** | **Raycast** | Hyper-Speed Tools | **Split-View Command Bar (⌘K) & Action Dock Keyboard Footers** |
+| **18** | **A24 / Monocle** | Cultural Studio | **Archival Index Numbering (`[ARCHIVE-ID]`) & Rigid 1px Poster Grids** |
+| **19** | **PostHog / Sentry** | Error Telemetry | **Breadcrumb Event Trails & Stack Trace Code Contexts** |
+| **20** | **Vercel / Cloudflare** | Edge Pipelines | **Terminal Build Loggers with Auto-Scroll & Inline-Editable Parametric Tables** |
 
 ---
 
@@ -41,11 +68,12 @@ When users look at AI-generated sites and say *"It looks okay, but it feels like
 
 ```css
 :root {
-  --r-xs: 2px;     /* Checkboxes, micro status indicators */
+  --r-none: 0px;   /* McMaster / Bloomberg dense grids */
+  --r-xs: 2px;     /* Checkboxes, micro status indicators, sparklines */
   --r-sm: 4px;     /* Tags, chips, inputs, search fields, segmented controls */
   --r-md: 6px;     /* Action buttons, cockpit cards, dropdown popovers */
   --r-lg: 8px;     /* Outer shells, data tables, main containers */
-  --r-xl: 10px;    /* Modals (absolute maximum ceiling) */
+  --r-xl: 10px;    /* Modals, command palette overlay (absolute maximum ceiling) */
   --r-pill: 4px;   /* BANNED 9999px pills — use technical 4px tags */
 }
 ```
@@ -57,23 +85,11 @@ When users look at AI-generated sites and say *"It looks okay, but it feels like
 All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeric: tabular-nums`):
 
 1. **Modern High-Tech (Linear / Raycast / Vercel)**: `Plus Jakarta Sans` (600..800) + `JetBrains Mono` (500)
-2. **Swiss Brutalism (Dieter Rams / Basel)**: `Space Grotesk` (600..700) + `Manrope` + `Space Mono`
-3. **FinTech & Infrastructure (Stripe / Ramp)**: `Outfit` (600..800) + `Inter` + `Fira Code`
+2. **Swiss Brutalism (Dieter Rams / Basel / A24)**: `Space Grotesk` (600..700) + `Manrope` + `Space Mono`
+3. **FinTech & Infrastructure (Stripe / Ramp / Bloomberg)**: `Outfit` (600..800) + `Inter` + `Fira Code`
 4. **DeepTech & Hardware AI (Scale AI / OpenAI)**: `Unbounded` (600..800) + `Onest` + `JetBrains Mono`
-5. **Editorial Craft (Notion / Pitch)**: `Manrope` (700..800) + `Onest` + `JetBrains Mono`
-6. **Enterprise Core & Gov (IBM / SAP)**: `IBM Plex Sans` (600..700) + `IBM Plex Mono` (500)
-
----
-
-## 🏛️ The 7 Universal Section Archetypes
-
-1. **Section 1: Hero & Live Action Canvas** (Asymmetric Split 60/40 + Live Action Cockpit)
-2. **Section 2: Core Engine & Master-Detail Split Inspector** (Entity list + Live property drawer)
-3. **Section 3: High-Density Parametric Matrix** (Data grid with instant filter, count, and export)
-4. **Section 4: Technical Specifications & Class Matrix** (Segmented spec sheet with verified physical units)
-5. **Section 5: Institutional Proof & Compliance Strip** (4-column monochromatic standards grid)
-6. **Section 6: Native Domain Commercial Engine** (Natural pricing model: class matrix, quote slider, volume tiers)
-7. **Section 7: Enterprise Quad-Column Footer** (System status ping, telemetry, and legal structure)
+5. **Editorial Craft (Notion / Pitch / Substack)**: `Manrope` (700..800) + `Onest` + `JetBrains Mono`
+6. **Enterprise Core & Gov (IBM / SAP / Gov.uk)**: `IBM Plex Sans` (600..700) + `IBM Plex Mono` (500)
 
 ---
 
@@ -81,8 +97,8 @@ All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeri
 
 * **[`SKILL.md`](./SKILL.md)** — The master universal prompt / skill instructions for LLMs.
 * **[`tokens.css`](./tokens.css)** — Production CSS design tokens (6 Google Fonts themes, Light/Dark WCAG AAA palettes, Swiss Micro-Radii).
-* **[`anti-patterns.md`](./anti-patterns.md)** — Detailed 7-layer visual comparison guide (AI Slop vs Human Senior Craft).
-* **[`index.html`](./index.html)** — Live reference showcase demonstrating the Swiss Micro-Radii and Google Fonts dynamic switching.
+* **[`anti-patterns.md`](./anti-patterns.md)** — Detailed 20-system visual comparison guide (AI Slop vs Human Senior Craft).
+* **[`index.html`](./index.html)** — Live reference showcase demonstrating the Swiss Micro-Radii, Command Palette ⌘K, Telemetry Ticker, and Split-View Inspector.
 
 ---
 
@@ -90,3 +106,4 @@ All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeri
 
 MIT License — Feel free to use in your commercial projects, prompts, and design systems.  
 Crafted for engineers and designers who demand high-fidelity web products.
+
