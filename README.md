@@ -1,6 +1,7 @@
-# ⚡ Ultimate Anti-AI UI Slop & Human-Craft Design System (v10.0)
+# ⚡ Ultimate Anti-AI UI Slop & Human-Craft Design System (v11.0)
+### Domain-Calibrated Universal Edition for LLMs & Frontend Architects
 
-> **The Universal System Prompt, Design Tokens, and Ruleset derived from 20 NON-AI living masterwork systems (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia) that forces ANY AI (ChatGPT, Claude, Cursor, Copilot, Gemini, Grok, DeepSeek, v0) to output production-grade, human-engineered Enterprise web applications without "AI smells" across ANY industry domain.**
+> **The Universal System Prompt, Design Tokens, and Invariant Ruleset derived from 20 NON-AI living masterwork systems (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia) that forces ANY AI (Claude, ChatGPT, Cursor, Gemini, Grok, DeepSeek, v0, 27B+ models) to output production-grade, human-engineered web applications without "AI smells" AND without "DevTools over-engineering".**
 
 ---
 
@@ -8,7 +9,7 @@
 
 ### Option 1: Copy-Paste into Chat / Custom Instructions
 Simply copy the entire contents of **[`SKILL.md`](./SKILL.md)** and paste it into:
-* **System Prompt / Custom Instructions** (ChatGPT, Claude Projects, Cursor `.cursorrules`, Windsurf, Copilot, v0)
+* **System Prompt / Custom Instructions / Projects** (Claude Projects, ChatGPT Custom Instructions, Cursor `.cursorrules`, Windsurf, Copilot, v0)
 * Or directly at the beginning of your prompt:  
   *«Adopt the following design system rules: [paste SKILL.md] Now build ...»*
 
@@ -16,7 +17,37 @@ Simply copy the entire contents of **[`SKILL.md`](./SKILL.md)** and paste it int
 ```bash
 git clone https://github.com/Radomir-Aksenenko/ultimate-anti-ai-ui-slop.git
 ```
-Include `tokens.css` into your CSS bundle for instant access to the 6 curated Google Fonts archetypes, Swiss micro-radii tokens, and high-visibility focus indicators.
+Include `tokens.css` into your CSS bundle for instant access to the 6 curated Google Fonts archetypes, domain-calibrated natural radii, and high-visibility focus indicators.
+
+---
+
+## 🧭 The 4 Domain Modes: Zero DevTools Over-Engineering
+
+To prevent AI from blindly dumping server terminals or JSON blocks onto everyday consumer or service sites, the system operates across 4 calibrated domain modes:
+
+```mermaid
+graph TD
+  Prompt["User Request / Domain"] --> Sieve{"Domain Context Sieve"}
+  
+  Sieve -->|"1. Consumer & Lifestyle"| D1["Mode 1: Consumer, Retail & Food<br/>• Radii: 8px–14px (Soft, Warm, Premium)<br/>• Artifacts: Menus, Booking, Real Ingredients, Hours<br/>• STRICT BAN: No Terminals, No JSON Drawers"]
+  Sieve -->|"2. Services & Medicine"| D2["Mode 2: Professional Services & Health<br/>• Radii: 6px–10px (Trustworthy, Clean)<br/>• Artifacts: Doctor/Lawyer Passports, Licenses, Schedules<br/>• STRICT BAN: No DevTools Widgets, No Fake SLA"]
+  Sieve -->|"3. E-commerce & Hardware"| D3["Mode 3: Physical Goods & Catalogs<br/>• Radii: 6px–10px (Modular, Clear)<br/>• Artifacts: Parametric Filters, Dimensions, SKU, BOM<br/>• STRICT BAN: No Server Logs"]
+  Sieve -->|"4. SaaS & DevTools"| D4["Mode 4: Cloud, B2B & Infrastructure<br/>• Radii: 4px–8px (Dense, Keyboard-First)<br/>• Artifacts: Master-Detail Inspectors, ⌘K, API Snippets<br/>• Full Telemetry Permitted"]
+```
+
+1. **Consumer, Food, Retail & Lifestyle** *(Bakeries, Restaurants, Coffee Shops, Boutiques, Salons, Hotels)*:
+   - **Geometry**: Natural, soft, tactile (`8px` buttons, `12px` cards, `16px` modals).
+   - **Artifacts**: Structured visual menus, table/appointment booking, opening hours, real ingredients, map passports.
+   - **Banned**: No terminal logs, no raw JSON boxes, no WebSocket pings, no commit hash badges.
+2. **Professional Services, Medicine & Legal** *(Law firms, Dental/medical clinics, Architecture, Consulting)*:
+   - **Geometry**: Clean, authoritative, balanced (`8px` buttons, `10px` cards, `14px` dialogs).
+   - **Artifacts**: Specialist credential passports, treatment/consultation protocols, transparent pricing, certifications.
+3. **E-commerce & Physical Goods** *(Furniture, Tools, Fashion, Hardware)*:
+   - **Geometry**: Precise, modular (`6px` controls, `10px` product cards).
+   - **Artifacts**: Parametric attribute sieve, dimensioned CAD/vector schematics, BOM parts list, live stock badge.
+4. **SaaS, DevTools & Enterprise** *(Cloud platforms, FinTech, Analytics)*:
+   - **Geometry**: Hyper-dense, keyboard-first (`4px–8px`).
+   - **Artifacts**: Master-Detail split inspectors, ⌘K command palette, live telemetry tickers, API payloads.
 
 ---
 
@@ -47,34 +78,31 @@ Include `tokens.css` into your CSS bundle for instant access to the 6 curated Go
 
 ---
 
-## 🎯 The Core Problem: Why AI Web Designs Feel "AI-ish"
+## 🎯 The Core Problem: Why AI Web Designs Feel "AI-ish" (And Why Fixes Failed)
 
-When users look at AI-generated sites and say *"It looks okay, but it feels like AI made it"*, they are reacting to 8 subconscious **AI Smells (Маркеры нейросети)**:
-
-| AI Slop Anti-Pattern 🚫 | Why LLMs Do It | The Human Senior Solution (The Inversion) ✅ |
+| AI Slop Anti-Pattern 🚫 | Naive Over-Correction Mistake ❌ | The Human Senior Solution (v11.0) ✅ |
 | :--- | :--- | :--- |
-| **1. Bubble UI & Inflatable Radii** | Applies `24px–48px` curves and `rounded-full` pills everywhere (Duolingo effect). | **Swiss Micro-Radii (4px–8px Max).** Strict geometry: `4px` tags/inputs, `6px` buttons, `8px` max outer shells. Zero pills. |
-| **2. Fake Tactile Gimmicks** | Injects SVG noise filters (`opacity: 0.03`) and `@keyframes sheen` button sweeps. | **Zero Noise. Zero Gimmicks.** Crystal-clean solid canvas, subtle 1px hairline borders (`rgba(15,23,42,0.08)`). |
-| **3. Typography Monotony or Serif Chaos** | Uses uncalibrated Inter everywhere or injects random *Playfair italic* into Sans H1s. | **6 Curated Google Fonts Archetypes.** High-character display grotesks paired with tabular mono (`tabular-nums`). |
-| **4. Bento-Spam & Monotonous 3-Card Grids** | Stacks identical `grid-cols-3` cards with stock circular icons from top to bottom. | **Universal Layout Rhythm & Alternation.** Alternates between Split-View Inspectors, Parametric Matrices, and Spec Sheets. |
-| **5. Toy Window 'Traffic Lights'** | Puts red/yellow/green Mac OS dots on preview containers. | **Authentic Enterprise Context.** Professional Breadcrumbs, Environment Badges, and live WebSocket telemetry. |
-| **6. Emoji & Icon Spam** | Puts `🚀`, `✨`, `⚡`, `💡` in headings, badges, and CTAs. | **Strict Vector Precision.** Monoline 1.5px SVG vectors (`stroke="currentColor"`). Zero emojis in UI. |
-| **7. Corporate AI Fluff & Buzzwords** | "Revolutionary platform unlocking the full potential of next-gen workflows". | **Factual Domain Reality (Humanizer-Pro 2.0).** "SU-214 • Gate B12 • p99 latency 14ms • HRC 62 alloy tolerance ±0.002mm • 100% compliance with ISO 27001". |
-| **8. Static Mockup Illusions** | Colored rectangles pretending to be software. | **Real Working Browser Micro-Apps.** Master-detail split inspectors, search filters, and working ⌘K modals. |
+| **1. Bubble UI & Inflatable Radii** | Makes everything a rigid `0px` DOS box. | **Domain-Calibrated Natural Radii.** Buttons `8px`, cards `10px–12px`, modals `16px`. Soft, elegant, zero balloons. |
+| **2. DevTools Contamination** | Puts JSON payloads and terminal logs on a bakery website. | **Authentic Business Artifacts.** Real menus, booking calendars, doctor credentials, opening hours. |
+| **3. Micro-Label Clutter** | Spams `[STATUS: OK]` above every heading. | **Visual Breathing Room (Zero-Fat Content).** Clear headlines, generous whitespace, zero redundant tags. |
+| **4. Fake Tactile Gimmicks** | Injects noisy SVG filters or moving button sweeps. | **Zero Noise. Zero Gimmicks.** Solid clean canvas, subtle 1px hairline borders (`rgba(15,23,42,0.08)`). |
+| **5. Monotonous Bento Grids** | Stacks identical `grid-cols-3` cards top to bottom. | **Universal Layout Alternation.** Alternates split showcases, parametric matrices, spec sheets, and proof strips. |
+| **6. Corporate AI Fluff & Buzzwords** | "Unlocking revolutionary synergy of tomorrow". | **Factual Physical Reality (Humanizer-Pro 3.0).** "Свежая выпечка каждое утро к 07:30 • Французская мука Т55 • Покровка, 12". |
 
 ---
 
-## 📐 The Swiss Micro-Radii Scale
+## 📐 Domain-Calibrated Natural Geometry Scale
 
 ```css
 :root {
-  --r-none: 0px;   /* McMaster / Bloomberg dense grids */
-  --r-xs: 2px;     /* Checkboxes, micro status indicators, sparklines */
-  --r-sm: 4px;     /* Tags, chips, inputs, search fields, segmented controls */
-  --r-md: 6px;     /* Action buttons, cockpit cards, dropdown popovers */
-  --r-lg: 8px;     /* Outer shells, data tables, main containers */
-  --r-xl: 10px;    /* Modals, command palette overlay (absolute maximum ceiling) */
-  --r-pill: 4px;   /* BANNED 9999px pills — use technical 4px tags */
+  --r-none: 0px;   /* Dense data tables, split dividers, editorial rules */
+  --r-xs: 3px;     /* Micro indicators, sparklines, table tag markers */
+  --r-sm: 6px;     /* Chips, filter tags, small badges, segmented controls */
+  --r-md: 8px;     /* Action buttons, form inputs, search fields, popovers */
+  --r-lg: 12px;    /* Cards, catalog items, pricing tiers, service blocks */
+  --r-xl: 16px;    /* Dialog modals, flyouts, media frames, command palette */
+  --r-2xl: 20px;   /* Large consumer hero cards, showcase surfaces */
+  --r-pill: 6px;   /* Adaptive technical/consumer tag (9999px pills STRICTLY BANNED) */
 }
 ```
 
@@ -88,17 +116,16 @@ All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeri
 2. **Swiss Brutalism (Dieter Rams / Basel / A24)**: `Space Grotesk` (600..700) + `Manrope` + `Space Mono`
 3. **FinTech & Infrastructure (Stripe / Ramp / Bloomberg)**: `Outfit` (600..800) + `Inter` + `Fira Code`
 4. **DeepTech & Hardware AI (Scale AI / OpenAI)**: `Unbounded` (600..800) + `Onest` + `JetBrains Mono`
-5. **Editorial Craft (Notion / Pitch / Substack)**: `Manrope` (700..800) + `Onest` + `JetBrains Mono`
+5. **Editorial Craft & Lifestyle (Notion / Pitch / Substack / Monocle)**: `Manrope` (700..800) + `Onest` + `JetBrains Mono`
 6. **Enterprise Core & Gov (IBM / SAP / Gov.uk)**: `IBM Plex Sans` (600..700) + `IBM Plex Mono` (500)
 
 ---
 
 ## 📂 Repository Contents
 
-* **[`SKILL.md`](./SKILL.md)** — The master universal prompt / skill instructions for LLMs.
-* **[`tokens.css`](./tokens.css)** — Production CSS design tokens (6 Google Fonts themes, Light/Dark WCAG AAA palettes, Swiss Micro-Radii).
+* **[`SKILL.md`](./SKILL.md)** — The master universal prompt / skill instructions for LLMs (v11.0).
+* **[`tokens.css`](./tokens.css)** — Production CSS design tokens (6 Google Fonts themes, Light/Dark WCAG AAA palettes, Natural Radii).
 * **[`anti-patterns.md`](./anti-patterns.md)** — Detailed 20-system visual comparison guide (AI Slop vs Human Senior Craft).
-* **[`index.html`](./index.html)** — Live reference showcase demonstrating the Swiss Micro-Radii, Command Palette ⌘K, Telemetry Ticker, and Split-View Inspector.
 
 ---
 
@@ -106,4 +133,3 @@ All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeri
 
 MIT License — Feel free to use in your commercial projects, prompts, and design systems.  
 Crafted for engineers and designers who demand high-fidelity web products.
-

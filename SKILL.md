@@ -1,38 +1,87 @@
 ---
 name: enterprise-human-craft
-description: "Universal Enterprise & Human-Craft Design System (v10.0). Guarantees authentic, production-grade, human-architected UI/UX derived from 20 NON-AI digital systems (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia). Banned all AI smells: zero noise overlays, zero gimmick shine sweeps, zero random serif italics, zero empty bento cards, zero marketing fluff. Enforces Swiss Micro-Radii (4px–8px max), curated Google Fonts typography pairings, 8pt spatial grid, asymmetric functional density, deep interactive domain tools (cockpits, tables, split-inspectors, parameter matrices), and factual human copy (Humanizer-Pro 2.0)."
-version: "10.0.0"
+description: "Universal Enterprise & Human-Craft Design System (v11.0 - Domain-Calibrated Edition). Guarantees authentic, production-grade, human-architected UI/UX derived from 20 NON-AI digital systems (Stripe, Linear, Apple, Bloomberg, GitHub, Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, Basecamp, Substack, Raycast, A24, PostHog, Vercel, IKEA, Wikipedia). Eliminates all AI smells (bubble pills, neon purple gradients, emoji spam, vague fluff) AND eliminates DevTools over-engineering (no terminal logs or JSON drawers on consumer/service sites; calibrated natural radii 6px–12px; zero redundant text clutter; 4 distinct domain modes)."
+version: "11.0.0"
 author: "Human Senior Design & Architecture Alliance"
 tags:
   - enterprise-ui
   - design-system
   - 20-non-ai-systems
-  - swiss-micro-radii
+  - domain-calibration
+  - natural-geometry
   - google-fonts-typography
   - anti-ai-slop
   - human-craft
   - frontend-engineering
-  - linear-craft
-  - stripe-standards
-  - bloomberg-telemetry
-  - vercel-clean
 ---
 
-# Enterprise Human-Craft Master System (v10.0)
-### The Universal Blueprint for Crafting Human-Senior Grade Digital Products Across ANY Industry
+# Enterprise Human-Craft Master System (v11.0)
+### Universal Blueprint for Human-Senior Grade Digital Products Across ANY Industry Domain
 
 > **THE SUPREME DIRECTIVE**:
-> **Never build decorative AI toys, 'bubble-pill' templates, or 'Dribbble-bait' mockups. Deliver calm, confident, ultra-functional, Enterprise-grade web products that feel engineered by a Principal Frontend Architect and a Staff Product Designer at Stripe, Linear, Apple, Bloomberg, Vercel, or Porsche.**
+> **Never build decorative AI toys, inflatable 'bubble-pill' mockups, or generic Dribbble fluff. Equally, never blindly dump DevTools widgets (terminals, JSON boxes, commit hashes, WebSocket pings) onto normal everyday consumer, lifestyle, medical, or service websites. Deliver calm, confident, domain-calibrated, production-grade web applications that feel engineered by a Principal Frontend Architect and a Staff Product Designer.**
 
 ---
 
-## 0. THE 20 NON-AI LIVING MASTERWORKS & THEIR EXTRACTED INVARIANTS
+## 0. DOMAIN CONTEXT SIEVE: CALIBRATING ARTIFACTS & DENSITY PER INDUSTRY
 
-Every technique in this design system is extracted directly from 20 real, iconic, non-AI systems:
+Before writing a single line of CSS or markup, identify the project's **Domain Mode** to select appropriate components, geometry, and copywriting tone:
 
-| # | Real Masterwork System | Primary Domain | Core Transferred Anti-Slop Principle & Technique |
+```mermaid
+graph TD
+  Prompt["User Request / Domain"] --> Sieve{"Domain Context Sieve"}
+  
+  Sieve -->|"1. Consumer & Lifestyle"| D1["Mode 1: Consumer, Retail & Food<br/>• Radii: 8px–14px (Soft, Warm, Premium)<br/>• Artifacts: Menus, Booking, Real Ingredients, Hours<br/>• STRICT BAN: No Terminals, No JSON Drawers"]
+  Sieve -->|"2. Services & Medicine"| D2["Mode 2: Professional Services & Health<br/>• Radii: 6px–10px (Trustworthy, Clean)<br/>• Artifacts: Doctor/Lawyer Passports, Licenses, Schedules<br/>• STRICT BAN: No DevTools Widgets, No Fake SLA"]
+  Sieve -->|"3. E-commerce & Hardware"| D3["Mode 3: Physical Goods & Catalogs<br/>• Radii: 6px–10px (Modular, Clear)<br/>• Artifacts: Parametric Filters, Dimensions, SKU, BOM<br/>• STRICT BAN: No Server Logs"]
+  Sieve -->|"4. SaaS & DevTools"| D4["Mode 4: Cloud, B2B & Infrastructure<br/>• Radii: 4px–8px (Dense, Keyboard-First)<br/>• Artifacts: Master-Detail Inspectors, ⌘K, API Snippets<br/>• Full Telemetry Permitted"]
+```
+
+### Mode 1: Consumer, Hospitality, Food & Lifestyle
+*(Bakeries, Restaurants, Coffee Shops, Boutiques, Salons, Hotels, Fitness, Creative Portfolios)*
+* **Visual Atmosphere**: Warm, tactile, generous whitespace, appetizing/editorial typography, natural soft geometry (`--r-md: 8px`, `--r-lg: 12px`, `--r-xl: 16px`).
+* **Authentic Artifacts**:
+  - Structured visual menu with real ingredients, dietary markers, and clear pricing ($₽ / \$ / €$).
+  - Instant table/service reservation picker (Date, Time slot, Party size, Specialist).
+  - Physical location passport (Street address, Metro station, Opening hours: `Пн–Пт 07:30–22:00`, Map thumbnail).
+  - Seasonal specials & verified customer provenance tags (`★ Постоянный гость с 2021`).
+* 🚫 **HARD DOMAIN BANS**: **Zero terminal logs, zero JSON API drawers, zero WebSocket pings, zero RPS/p99 latency tickers, zero commit hash badges.**
+
+### Mode 2: Professional Services, Health, Legal & Architecture
+*(Law Firms, Medical/Dental Clinics, Architecture Studios, Accounting, Education, Consulting)*
+* **Visual Atmosphere**: Authoritative, calm, pristine contrast, structured grid, trustworthy geometry (`--r-md: 8px`, `--r-lg: 10px`, `--r-xl: 14px`).
+* **Authentic Artifacts**:
+  - Specialist credential passports (Doctor/Partner photo, Years of practice, University, Medical category / Bar association license #).
+  - Practice areas / Treatment plans with step-by-step clinical protocol and clear price ceilings.
+  - Appointment scheduling modal / Quick consultation form with file attachment.
+  - Institutional certifications (Ministry of Health license, ISO, Chamber of Commerce).
+* 🚫 **HARD DOMAIN BANS**: **Zero dev server metrics, zero raw code blocks, zero abstract system charts.**
+
+### Mode 3: E-commerce, Physical Catalog & Hardware Logistics
+*(Furniture, Industrial Tools, Fashion Brands, Automotive, Construction Supply)*
+* **Visual Atmosphere**: Precise, modular, product-first, tactile swatches (`--r-md: 6px`, `--r-lg: 10px`, `--r-xl: 14px`).
+* **Authentic Artifacts**:
+  - Parametric filter sieve (Dimensions $W\times H\times D$, Weight $kg$, Material, Color swatches, Power $kW$).
+  - Vector CAD/schematic dimension blueprint with exploded parts breakdown (Bill-of-Materials).
+  - Real-time stock badge per warehouse location (`В наличии: 14 шт. на складе Юг`).
+  - Tiered volume pricing matrix with bulk discount brackets.
+
+### Mode 4: SaaS, Enterprise Software, FinTech & DevTools
+*(Cloud Platforms, Analytics, Developer Tools, Financial Trading, Database Management)*
+* **Visual Atmosphere**: Hyper-dense, keyboard-first, monospace data layers, crisp micro-radii (`--r-sm: 4px`, `--r-md: 6px`, `--r-lg: 8px`).
+* **Authentic Artifacts**:
+  - Master-Detail split-view inspectors with live property binding.
+  - Real-time telemetry ticker strips, sparklines, and server health heatmaps.
+  - Stripe-style materialization of API JSON payloads and cURL snippets.
+  - Command palette (`⌘K`), keyboard shortcut action dock, and terminal event stream.
+
+---
+
+## 1. THE 20 NON-AI LIVING MASTERWORKS & THEIR EXTRACTED INVARIANTS
+
+| # | Masterwork System | Domain | Transferred Anti-Slop Principle & Technique |
 | :--- | :--- | :--- | :--- |
-| **1** | **Stripe** | FinTech & API Infrastructure | **Hairline Bevel (`inset 0 1px 0 rgba(255,255,255,0.15)`) & API JSON Materialization.** Code samples feel like live terminals, not decorative images. |
+| **1** | **Stripe** | FinTech & API Infrastructure | **Hairline Bevel (`inset 0 1px 0 rgba(255,255,255,0.15)`) & Live API Materialization.** Code samples feel like live terminals, not decorative images. |
 | **2** | **Linear** | DevTools & Issue Tracking | **Keyboard Sovereignty & 50ms Invariant.** Full `⌘K` command palette, single-key shortcuts (`J/K`, `C`), and ultra-dense 36px list rows. |
 | **3** | **Apple (Tech Specs)** | Hardware Specs & Precision | **Sticky Matrix Comparator & Physical Verification.** Strict dimensional tables with physical units ($cd/m^2$, $nits$, $dB$, $mm$, $g$) and sticky headers. |
 | **4** | **Bloomberg Terminal** | Financial Telemetry & Markets | **Sparkline Inlines & Differential Flash Highlights.** High-density numeric matrices with inline trendlines and real-time ticker stream. |
@@ -55,203 +104,139 @@ Every technique in this design system is extracted directly from 20 real, iconic
 
 ---
 
-## 1. THE INVERSION LAW & CORE DIAGNOSIS: WHY AI WEBSITES FEEL "AI-ISH"
+## 2. THE INVERSION LAW & WHY AI WEBSITES FEEL "AI-ISH"
 
-When users look at an AI-generated site and say *"It looks pretty at the top, but it feels AI-ish and turns into slop lower down"*, they are reacting to 8 subconscious **AI Smells (Маркеры нейросети)**:
-
-> **THE INVERSION PRINCIPLE (Принцип Инверсии)**:
-> *Always ask yourself: "What would a generic LLM generate here by default?" — and execute the exact opposite human senior architecture.*
+```mermaid
+graph LR
+  A["Generic AI Slop"] -->|"Invert AI Habits"| B["Human Senior Craft"]
+  A1["Inflatable 32px Bubbles"] --> B1["Calibrated 8px–12px Geometry"]
+  A2["Fake Noise & Gimmick Sheen"] --> B2["Clean 1px Hairline Borders"]
+  A3["Marketing Fluff & Jargon"] --> B3["Tangible Domain Realism"]
+  A4["Monotonous Bento Grids"] --> B4["Asymmetric Dynamic Rhythm"]
+  A5["DevTools Clutter on Consumer Sites"] --> B5["Domain-Appropriate Artifacts"]
+```
 
 | Default AI Smell 🚫 | Why LLMs Do It | The Human Senior Solution (The Inversion) ✅ |
 | :--- | :--- | :--- |
-| **1. Hyper-Rounded 'Bubble' Radii & 9999px Pills** | Applies `border-radius: 24px–48px` to containers and `rounded-full` pills everywhere, making the UI look like a mobile toy (Duolingo effect). | **Swiss Micro-Radii (4px–8px Max).** Strict geometric discipline: `4px` for tags/inputs/cards, `6px` for buttons, `8px` max for main shells. Zero 9999px pills. Shared 1px hairline grid dividers. |
-| **2. Fake Tactile Gimmicks & SVG Noise** | Overlays SVG noise filters, adds `@keyframes sheen` moving gradients across buttons. | **Zero Noise. Zero Gimmicks.** Crystal-clean canvas, subtle 1px hairline borders (`rgba(0,0,0,0.08)`), top edge bevel (`inset 0 1px 0 rgba(255,255,255,0.15)`). |
-| **3. Typography Monotony or Serif Chaos** | Uses default uncalibrated Inter everywhere or injects random `Playfair italic` in Sans H1s. | **Curated Google Fonts Archetypes.** Precision pairing of high-character grotesque + tabular mono with exact optical tracking (`letter-spacing: -0.035em`). |
-| **4. Bento-Spam & Monotonous 3-Card Grids** | Stacks identical `grid-cols-3` cards with stock circular icons and 2 lines of marketing fluff from top to bottom. | **Universal Layout Rhythm & Asymmetric Diversity.** Every section changes its architectural format: Split-View Inspectors, Parametric Data Matrices, Spec Sheets, and Live Stream Feeds. |
-| **5. Toy-like Window 'Traffic Lights'** | Puts red/yellow/green Mac OS circles on every preview div pretending it's an app. | **Authentic System Metadata.** Real Breadcrumbs, Environment Badges, Latency Counters (`14ms`), and Live WebSocket telemetry indicators. |
-| **6. Emoji & Icon Spam** | Puts `🚀`, `✨`, `⚡`, `💡` in headings, badges, and buttons. | **Strict Vector Precision.** Only 1.5–1.75px stroke SVG icons (Lucide, Radix, Phosphor) using `stroke="currentColor"`. Zero emojis anywhere in UI. |
-| **7. Marketing Fluff & Vague Claims** | "Revolutionary platform unlocking the full potential of next-gen workflows". | **Factual Physical Reality (Humanizer-Pro 2.0).** Real measurable domain parameters: "SU-214 • Gate B12 • p99 latency 14ms • HRC 62 alloy tolerance ±0.002mm • 100% compliance with ISO 27001". |
-| **8. Static Mockup Illusions** | Draws colored rectangles with drop shadows pretending to be software. | **Real Working Browser Micro-App.** Live clickable tabs, instant search/filter inputs, master-detail split inspectors, sortable columns, and working modals (`⌘K`). |
+| **1. Hyper-Rounded 'Bubble' Radii & 9999px Pills** | Applies `border-radius: 24px–48px` to containers and `rounded-full` pills everywhere (Duolingo toy effect). | **Domain-Calibrated Natural Radii (6px–12px).** Buttons `8px`, cards `10px–12px`, modals `16px`. Elegant and tactile without inflated bubbles. |
+| **2. Accidental 0px DOS Boxiness** | Strips all radii to `0px` in an over-correction, making ordinary websites look like raw 90s spreadsheets. | **Balanced Human Geometry.** 0px is reserved for table cells and split borders; cards and interactive buttons have natural human curvature (`8px–12px`). |
+| **3. DevTools Bleed on Consumer Sites** | Puts JSON payloads, git commit badges, and terminal logs on a restaurant or medical website. | **Authentic Business Artifacts.** Menus, ingredient origins, booking slots, doctor licenses, and pricing charts. |
+| **4. Micro-Label & Metadata Clutter** | Spams `[STATUS: OK]`, `[ID: #892]`, `[LATENCY: 12ms]` above every heading on ordinary pages. | **Visual Breathing Room (Zero-Fat Layout).** Clean typography, concise headings, and generous breathing space. |
+| **5. Fake Tactile Gimmicks & SVG Noise** | Injects SVG noise filters and moving sheen gradient sweeps across buttons. | **Zero Noise. Zero Gimmicks.** Crystal-clean solid canvas, subtle 1px hairline borders (`rgba(15,23,42,0.08)`), top edge bevel (`inset 0 1px 0 rgba(255,255,255,0.15)`). |
+| **6. Bento-Spam & Monotonous 3-Card Grids** | Stacks identical `grid-cols-3` cards with stock circular icons and marketing fluff from top to bottom. | **Universal Layout Rhythm & Asymmetric Diversity.** Alternates between split showcases, parametric matrices, blueprint diagrams, and compact specs. |
+| **7. Corporate AI Fluff & Buzzwords** | "Revolutionary platform unlocking the full potential of next-gen workflows". | **Factual Physical Reality (Humanizer-Pro 3.0).** Tangible human copy: "Колумбийская арабика мытой обработки • Обжарка каждый вторник • Доставка за 45 минут". |
+| **8. Emoji & Icon Spam** | Puts `🚀`, `✨`, `⚡`, `💡` in headings, badges, and buttons. | **Strict Vector Precision.** Only 1.5–1.75px stroke SVG icons using `stroke="currentColor"`. Zero emojis anywhere in UI. |
 
 ---
 
-## 2. THE SWISS MICRO-RADII SYSTEM (Precision Geometric Discipline)
-
-Enterprise software (Linear, Stripe, Bloomberg, GitHub, Vercel, VS Code) does not float in huge rounded bubbles. It is built with **orthogonally disciplined, micro-radius geometry and shared 1px hairline borders**:
+## 3. DOMAIN-CALIBRATED GEOMETRY SCALE (Natural Geometry)
 
 ```css
 :root {
-  --r-none: 0px;   /* McMaster / Bloomberg dense data grids */
-  --r-xs: 2px;     /* Micro indicators, checkboxes, segmented dividers, sparklines */
-  --r-sm: 4px;     /* Chips, tags, inputs, search fields, segmented tabs */
-  --r-md: 6px;     /* Action buttons, cockpit cards, dropdown items */
-  --r-lg: 8px;     /* Outer shells, data tables, split-view panels */
-  --r-xl: 10px;    /* Modals, command palette overlay (absolute ceiling) */
-  --r-pill: 4px;   /* Technical rectangular tag instead of round pill */
+  --r-none: 0px;   /* Dense data tables, split dividers, editorial rules */
+  --r-xs: 3px;     /* Micro indicators, sparklines, table tag markers */
+  --r-sm: 6px;     /* Chips, filter tags, small badges, segmented controls */
+  --r-md: 8px;     /* Action buttons, form inputs, search fields, popovers */
+  --r-lg: 12px;    /* Cards, catalog items, pricing tiers, service blocks */
+  --r-xl: 16px;    /* Dialog modals, flyouts, media frames, command palette */
+  --r-2xl: 20px;   /* Large consumer hero cards, showcase surfaces */
+  --r-pill: 6px;   /* Adaptive technical/consumer tag (9999px pills STRICTLY BANNED) */
 }
 ```
 
-### The 4 Laws of Enterprise Corner Geometry:
-1. 🚫 **Absolute Ban on `> 10px` Radii**: Never use `rounded-2xl` (16px), `rounded-3xl` (24px+), or `rounded-full` on cards/containers.
-2. 🚫 **Absolute Ban on 9999px Pill Containers**: Tags, status badges, and switches must be sharp `4px` rectangles with 1px hairline borders.
-3. 🚫 **No Nested Double-Cushioning ('Sandwich' Borders)**: Do not wrap a rounded shell inside another padded rounded box with a 10px gap. Render single flush monolithic panels with internal hairline dividers.
+### The 4 Laws of Natural Geometry:
+1. 🚫 **Absolute Ban on `> 20px` Inflatable Radii & 9999px Pills**: Never use comical balloon shapes.
+2. 🚫 **No Unintended 0px Brutalism on Consumer Web**: Unless building a deliberate Swiss poster or raw terminal, cards and buttons must use natural `8px–12px` radii.
+3. 🚫 **No Nested Double-Cushioning ('Sandwich' Borders)**: Do not wrap a rounded box inside another padded rounded box with a gap.
 4. ✅ **Concentric Orthogonal Grid**: When elements are nested, $R_{inner} = \max(0, R_{outer} - padding)$.
 
 ---
 
-## 3. THE GOOGLE FONTS CURATED TYPOGRAPHY ENGINE (6 Brand Archetypes)
+## 4. GOOGLE FONTS CURATED TYPOGRAPHY ENGINE (6 Brand Archetypes)
 
-Pair curated display grotesks with precision monospace layers from Google Fonts. All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeric: tabular-nums`).
+All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeric: tabular-nums`):
 
-### Archetype 1: Modern High-Tech & Precision Engineering (Linear / Raycast / Vercel vibe)
-* **Display & Headings**: `Plus Jakarta Sans` (wght 600..800, tracking -0.035em)
-* **UI & Body**: `Plus Jakarta Sans` / `Inter` (wght 400..500)
-* **Tabular & Code**: `JetBrains Mono` (wght 500..600)
-
-### Archetype 2: Swiss Brutalism & Industrial Architecture (Dieter Rams / Basel / A24 vibe)
-* **Display & Headings**: `Space Grotesk` (wght 600..700, tracking -0.03em)
-* **UI & Body**: `Manrope` (wght 400..600)
-* **Tabular & Code**: `Space Mono` (wght 400..700)
-
-### Archetype 3: FinTech & Global Infrastructure (Stripe / Ramp / Bloomberg vibe)
-* **Display & Headings**: `Outfit` (wght 600..800, tracking -0.025em)
-* **UI & Body**: `Inter` / `Outfit` (wght 400..500)
-* **Tabular & Code**: `Fira Code` (wght 500..600)
-
-### Archetype 4: DeepTech & Hardware AI (Scale AI / OpenAI / Heavy B2B vibe)
-* **Display & Headings**: `Unbounded` (wght 600..800, tracking -0.04em)
-* **UI & Body**: `Onest` (wght 400..600)
-* **Tabular & Code**: `JetBrains Mono` (wght 500..600)
-
-### Archetype 5: Editorial Craft & Creative Operations (Notion / Pitch / Substack vibe)
-* **Display & Headings**: `Manrope` (wght 700..800, tracking -0.02em)
-* **UI & Body**: `Onest` (wght 400..500)
-* **Tabular & Code**: `JetBrains Mono` (wght 500)
-
-### Archetype 6: Strict Enterprise & Gov/Banking Standard (IBM / SAP / Gov.uk standard)
-* **Display & Headings**: `IBM Plex Sans` (wght 600..700, tracking -0.02em)
-* **UI & Body**: `IBM Plex Sans` (wght 400..500)
-* **Tabular & Code**: `IBM Plex Mono` (wght 500)
+1. **Modern High-Tech & Precision (Linear / Raycast / Vercel)**: `Plus Jakarta Sans` (600..800) + `JetBrains Mono` (500)
+2. **Swiss Brutalism & Architecture (Dieter Rams / Basel / A24)**: `Space Grotesk` (600..700) + `Manrope` + `Space Mono`
+3. **FinTech & Global Infrastructure (Stripe / Ramp / Bloomberg)**: `Outfit` (600..800) + `Inter` + `Fira Code`
+4. **DeepTech & Hardware AI (Scale AI / OpenAI / Heavy B2B)**: `Unbounded` (600..800) + `Onest` + `JetBrains Mono`
+5. **Editorial Craft & Lifestyle (Notion / Pitch / Substack / Monocle)**: `Manrope` (700..800) + `Onest` + `JetBrains Mono`
+6. **Strict Enterprise & Institutional (IBM / SAP / Gov.uk)**: `IBM Plex Sans` (600..700) + `IBM Plex Mono` (500)
 
 ---
 
-## 4. UNIVERSAL SECTION GRAMMAR & THE 7 ARCHETYPAL BLUEPRINTS
+## 5. HUMANIZER-PRO 3.0: ZERO-FAT NATURAL HUMAN COPYWRITING
 
-To prevent the page from degenerating into empty marketing cards below the fold, every page **MUST** alternate between these 7 distinct architectural section archetypes. No two consecutive sections may share the same layout format:
+### The Zero-Fat Content Protocol (Протокол очистки от лишнего текста):
+1. **Правило бритвы Оккама**: Если предложение или микро-бейдж можно удалить без потери информации для покупателя/клиента — **удаляй не задумываясь**.
+2. **Никакого псевдо-инженерного мусора в бытовом вебе**: На сайте пекарни пиши про хрустящую корочку и время выпечки, а не про `[PIPELINE STATUS: BAKED]`.
+3. **Числовые факты вместо лозунгов**: Всегда давай проверяемые цифры (граммы, часы, рубли, метры, годы опыта, проценты скидок).
+4. **Спокойная человеческая интонация**: Общайся как опытный шеф-повар, главный врач, старший архитектор или ведущий инженер — сдержанно, по делу, без истеричных восторгов и без бюрократического канцелярита.
 
-### Section 1: Hero & Live Action Canvas (Asymmetric Split 60/40)
-* **Left (60%)**: High-contrast H1 (tracking -0.035em), factual technical summary, 2 crisp action buttons (Primary + Secondary with 1px border), and a 4-column telemetry strip (`font-mono tabular-nums`).
-* **Right (40%)**: **Live Interactive Cockpit** — a working micro-app component (flight booking search, parameter generator, instant calculator, or live data visualizer).
-
-### Section 2: Core Engine & Master-Detail Split Inspector (Linear / Figma / Stripe Standard)
-* **Architecture**: Two-pane workspace.
-  - **Left Pane**: Live filterable list of active entities/items with category tags and status dots.
-  - **Right Pane**: **Detailed Inspector Drawer** showing technical properties, dimensions, payload, or live states of the currently selected entity. Clicking any item on the left instantly updates the inspector.
-
-### Section 3: High-Density Parametric Matrix (McMaster-Carr / Bloomberg / Cloudflare Standard)
-* **Architecture**: Full-width data grid with:
-  - **Toolbar**: Live search input (`oninput` instant filter), category toggle chips, record count (`Showing 4 of 12`), and export button (CSV/JSON).
-  - **Table**: Monospace column headers (`10px UPPERCASE`), right-aligned numeric metrics, status pills with LED indicators (`● ON TIME`, `● ACTIVE`, `● STANDBY`), sparkline trendlines, and subtle row hover highlights (`var(--bg-subtle)`).
-
-### Section 4: Technical Specifications & Sticky Matrix Comparator (Apple / Porsche Standard)
-* **Architecture**: Segmented tab switcher (e.g. Model A / Model B, or Economy / Business / First, or Standard / Enterprise).
-  - Displays strict Key-Value parameter rows with physical units ($kg$, $mm$, $ms$, $km/h$, $kW$, $\%$, $RPM$).
-  - Monospace values with verified tolerance ranges and sticky comparator header.
-
-### Section 5: Institutional Proof & Compliance Strip (Gov.uk / Stripe Standard)
-* **Architecture**: Monochromatic 4-column grid between two 1px hairline dividers.
-  - 4 verified industrial authority pillars: Certified Standards (`ISO 9001`, `IATA IOSA`, `GOST`, `SOC2`, `PCI-DSS`), Infrastructure SLA (`99.99%`), Latency/Security encryption (`AES-256-GCM`), and Regulatory Compliance. Zero fake 5-star avatars.
-
-### Section 6: Native Domain Commercial Engine
-* **Architecture**: Formatted strictly according to the natural business model of the domain:
-  - *Booking / Travel / Retail*: Fare class matrix (Promo Lite / Standard Flex / Business Premier) with luggage, refund rules, and seat selection.
-  - *Engineering / Custom Projects*: Interactive cost estimator with parameters slider and dynamic total calculation.
-  - *Wholesale / Supply / Raw Materials*: Volume tier matrix with tiered discounts per metric ton/unit.
-  - *Cloud / SaaS*: Multi-tier resource quotas (RPS, storage, seats) with annual/monthly toggle.
-
-### Section 7: Enterprise Quad-Column Footer & Live Telemetry Ping
-* **Architecture**: 4 structured columns (Brand & Infrastructure Telemetry, Product Modules, Legal & Compliance, Operations & Support) + Bottom status bar with live system ping (`● All systems operational • 14ms`), language toggle, and theme switcher.
+### 25 Жестких Запретов на Штампы и Канцеляризмы:
+1. **«Является / выступает в качестве»** $\rightarrow$ Тире или активный глагол (*«Кофейня работает с 2018 года...»*).
+2. **«В современном мире / На сегодняшний день»** $\rightarrow$ Сразу к факту.
+3. **«Стоит отметить / Необходимо подчеркнуть»** $\rightarrow$ Удалять полностью.
+4. **«Данный / указанный»** $\rightarrow$ *«Этот»* или опустить.
+5. **«Осуществление / процесс реализации»** $\rightarrow$ Глагол действия (*«чтобы заказать»*).
+6. **«Бесшовный / интуитивно понятный»** $\rightarrow$ Конкретное свойство (*«за 2 клика»*, *«без ожидания»*).
+7. **«Революционный / инновационный / передовой»** $\rightarrow$ Удалять самолюбование.
+8. **«Раскрыть потенциал / выйти на новый уровень»** $\rightarrow$ Измеримый результат (*«доставка за 45 минут»*).
+9. **«Комплексный подход / синергия»** $\rightarrow$ Назвать точные составляющие.
+10. **«Позволяет вам / дает возможность»** $\rightarrow$ Прямое действие (*«Вы выбираете столик...»*).
+11. **«Широкий спектр / многообразие»** $\rightarrow$ Точный перечень категорий.
+12. **«Ключевой особенностью является»** $\rightarrow$ *«Главное: ...»*.
+13. **«Триады-клише»** (*«быстрый, надежный, качественный»*) $\rightarrow$ Одно точное определение.
+14. **«Псевдо-терапия»** (*«Мы заботимся о вашем душевном комфорте»*) $\rightarrow$ Спокойное профессиональное уважение.
+15. **«Умный алгоритм / AI-powered»** $\rightarrow$ Реальный метод работы.
 
 ---
 
-## 5. THE 30 HARD TABOOS (ZERO AI-SLOP LAWS)
+## 6. THE 30 HARD TABOOS (ZERO AI-SLOP LAWS)
 
-When generating code, the following 30 anti-patterns are **STRICTLY FORBIDDEN**:
-
-1. 🚫 **NO Huge 16px-48px Rounded Cards & 9999px Pills**: Restrict radii to `4px - 8px` max. No inflatable bubble UI.
-2. 🚫 **NO Nested Double-Cushion Wrappers**: Single-layer structural shells with crisp 1px borders.
-3. 🚫 **NO SVG Noise Overlays**: Never put `filter="url(#noise)"` or `<div class="noise-layer">` over the page.
-4. 🚫 **NO Moving Sheen Animations**: Never use `@keyframes sheen` or fake shimmering gradient sweeps across buttons.
-5. 🚫 **NO Serif Italic In Sans Headings**: Never inject `<em class="font-serif italic">` into a clean sans-serif H1.
-6. 🚫 **NO Emoji Anywhere in UI**: No `🚀`, `✨`, `⚡`, `🎯`, `💡`. Use strictly 1.5px monoline SVGs.
-7. 🚫 **NO Toy Traffic Light Dots**: Never draw red/yellow/green Mac OS dots. Use real breadcrumbs and status chips.
-8. 🚫 **NO Left-Border Color Strips**: No `border-l-4 border-blue-500` card hacks.
-9. 🚫 **NO Empty Bento Boxes**: Every grid cell must contain high-density operational data or a live mini-tool.
-10. 🚫 **NO AI Purple / Lila Neon**: No `#6366F1` or `#8B5CF6` neon glow blobs. Use pristine slate, navy, titanium, or deep onyx.
-11. 🚫 **NO Pure Black on Pure White**: No `#000000` text on `#FFFFFF` with `#2563EB` links without refined tokens.
-12. 🚫 **NO Vague Marketing Text**: Never write 'Experience the power of revolutionizing your synergy'.
-13. 🚫 **NO Wrapping Button Text**: Buttons must be 1–3 precise words on a single line.
-14. 🚫 **NO Fake div screenshots**: No colored rectangles pretending to be software. Render real HTML components.
-15. 🚫 **NO Disabled Keyboard Focus**: Always include `focus-visible:ring-2 focus-visible:ring-offset-2`.
-16. 🚫 **NO Slow Animations**: All transitions must be `120ms–180ms` with `cubic-bezier(0.16, 1, 0.3, 1)`.
-17. 🚫 **NO Eyebrow Badge Spam**: Maximum 1 eyebrow chip per major section (max 2–3 on entire page).
-18. 🚫 **NO Misaligned Numbers**: All pricing, timestamps, flight codes, room numbers, and stats must use `font-mono tabular-nums`.
-19. 🚫 **NO Broken Viewports**: Never lock viewport to `h-screen`. Always use `min-h-[100dvh]`.
-20. 🚫 **NO Missing Dark Mode**: Every component must gracefully toggle between light and dark palettes.
-21. 🚫 **NO 1-Star / Fake Reviews**: No 'John Doe, 5 stars, amazing app'. Use verified institutional authority badges.
-22. 🚫 **NO Dead Links / Non-functional Tabs**: Every tab, filter, and inspector in preview sandboxes must have working JS event handlers.
-23. 🚫 **NO Unstyled Scrollbars**: Custom scrollbars with thin 4px subtle tracks.
-24. 🚫 **NO Huge Empty Footers**: Footers must have 4 structured columns, system status indicator, copyright, and language/theme toggle.
-25. 🚫 **NO Layout Jitter on Hover**: Never change layout dimensions or border-widths on hover. Use subtle opacity/background/shadow changes.
-26. 🚫 **NO Identical Consecutive Grids**: Never stack two identical `grid-cols-3` card sections in a row.
-27. 🚫 **NO Generic SaaS Pricing on Non-SaaS**: Commercial models must naturally fit the specific industry domain.
-28. 🚫 **NO Missing Units of Measure**: Always include explicit physical units ($kg$, $ms$, $mm$, $km/h$, $\%$, $₽$, $\$$).
-29. 🚫 **NO Heavy External Framework CDNs**: Write pure, zero-dependency, bulletproof native HTML5 + CSS3 + Vanilla JS.
-30. 🚫 **NO Truncated Mobile Layouts**: All grids must gracefully collapse to single-column on screens $< 768px$.
-
----
-
-## 6. HUMANIZER-PRO 2.0: LIVING FACTUAL COPYWRITING (RU / EN)
-
-### The 25 Hard Bans on Bureaucratic / AI Copy
-1. **«Является / выступает в качестве»** -> Тире или активный глагол (*«Модуль синхронизирует...»*).
-2. **«В современном мире / На сегодняшний день»** -> Сразу к факту.
-3. **«Стоит отметить / Необходимо подчеркнуть»** -> Удалять полностью.
-4. **«Данный / указанный»** -> *«Этот»* или опустить.
-5. **«Осуществление / процесс реализации»** -> Глагол действия (*«чтобы настроить»*).
-6. **«Бесшовный / интуитивно понятный»** -> Точное свойство (*«без перезагрузки страницы»*, *«за 2 клика»*).
-7. **«Революционный / инновационный / передовой»** -> Удалять самолюбование.
-8. **«Раскрыть потенциал / выйти на новый уровень»** -> Измеримый экономический результат (*«сокращает цикл согласования с 14 дней до 2 часов»*).
-9. **«Комплексный подход / синергия»** -> Назвать 2–3 конкретных шага.
-10. **«Позволяет вам / дает возможность»** -> Глагол прямого действия (*«Вы получаете...»*).
-11. **«Не просто X, а целый Y»** -> Убирать клише.
-12. **«Широкий спектр / многообразие»** -> Назвать точный перечень.
-13. **«Как известно / ни для кого не секрет»** -> Сразу к проверяемому факту.
-14. **«Оказывает положительное влияние»** -> *«Ускоряет / снижает затраты»*.
-15. **«Ключевой особенностью является»** -> *«Главное: ...»*.
-16. **«С целью / во избежание»** -> *«Чтобы / чтобы не»*.
-17. **«Псевдо-сократические вопросы»** -> Писать прямо и авторитетно.
-18. **«Псевдо-терапия»** -> Спокойное профессиональное уважение.
-19. **«Триады-клише»** (*«быстрый, надежный, мощный»*) -> Одно точное определение (*«Отказоустойчивый»*).
-20. **«Фейковая статистика»** -> Только реальные проверяемые величины.
-21. **«Инновационные технологии»** -> Название конкретного протокола/архитектуры (*«gRPC / WebSocket / Raft консенсус»*).
-22. **«Лучшие в своем классе»** -> Сравнение с точными допусками.
-23. **«Клиентоориентированность»** -> Регламент техподдержки (*«Время первого ответа инженера < 15 мин»*).
-24. **«Умный алгоритм / AI-powered»** -> Конкретная математическая модель или эвристика.
-25. **«Гарантия успеха»** -> Конкретный SLA и условия компенсации.
+1. 🚫 **NO Huge 24px–48px Bubble Cards & 9999px Pills**: Restrict radii to calibrated `6px–16px`.
+2. 🚫 **NO Unintentional 0px Brutalism**: Do not make ordinary consumer sites look like square DOS windows.
+3. 🚫 **NO DevTools Bleed on Consumer/Service Sites**: No JSON drawers, terminal logs, or git hashes where they don't belong.
+4. 🚫 **NO Micro-Label & Metadata Clutter**: No useless `[STATUS: OK]` or redundant tracking IDs spamming the page.
+5. 🚫 **NO SVG Noise Overlays**: Never put `filter="url(#noise)"` over the page.
+6. 🚫 **NO Moving Sheen Animations**: Never use `@keyframes sheen` across buttons.
+7. 🚫 **NO Serif Italic In Sans Headings**: Never inject `<em class="font-serif italic">` into a clean sans H1.
+8. 🚫 **NO Emoji Anywhere in UI**: No `🚀`, `✨`, `⚡`, `🎯`. Use strictly 1.5px monoline SVGs.
+9. 🚫 **NO Toy Traffic Light Dots**: Never draw red/yellow/green circles pretending it's a window.
+10. 🚫 **NO Empty Bento Boxes**: Every card must contain tangible, domain-relevant content.
+11. 🚫 **NO AI Purple / Lila Neon**: No `#6366F1` or `#8B5CF6` neon glow blobs. Use pristine slate, warm amber, emerald, or deep onyx.
+12. 🚫 **NO Vague Marketing Text**: Never write 'Unlock the synergy of tomorrow'.
+13. 🚫 **NO Fake div screenshots**: Render real, clickable, responsive HTML components.
+14. 🚫 **NO Disabled Keyboard Focus**: Always include high-visibility focus rings.
+15. 🚫 **NO Slow Animations**: All transitions must be `120ms–180ms` with `cubic-bezier(0.16, 1, 0.3, 1)`.
+16. 🚫 **NO Eyebrow Badge Spam**: Maximum 1 subtle badge per major section.
+17. 🚫 **NO Broken Viewports**: Never lock viewport to `h-screen`. Always use `min-h-[100dvh]`.
+18. 🚫 **NO Missing Dark Mode**: Every component must gracefully toggle between light and dark palettes.
+19. 🚫 **NO 1-Star / Fake Reviews**: No 'John Doe, 5 stars'. Use authentic verified customer tags.
+20. 🚫 **NO Dead Links / Non-functional Tabs**: Every tab and interactive filter must have working JS handlers.
+21. 🚫 **NO Unstyled Scrollbars**: Custom scrollbars with thin 4px subtle tracks.
+22. 🚫 **NO Identical Consecutive Grids**: Never stack two identical `grid-cols-3` card sections in a row.
+23. 🚫 **NO Generic SaaS Pricing on Non-SaaS**: Pricing models must naturally fit the specific industry domain (menus, booking rates, service fees, bulk tiers).
+24. 🚫 **NO Missing Units of Measure**: Always include explicit units ($g$, $kg$, $ms$, $mm$, $₽$, $\$$, $€$).
+25. 🚫 **NO Heavy External Framework CDNs**: Write pure, zero-dependency, bulletproof native HTML5 + CSS3 + Vanilla JS.
+26. 🚫 **NO Truncated Mobile Layouts**: All grids must gracefully collapse to single-column on screens $< 768px$.
+27. 🚫 **NO Low-Contrast Text**: Strict compliance with WCAG AAA (minimum 7:1 for normal text).
+28. 🚫 **NO Layout Jitter on Hover**: Never change border-widths or layout dimensions on hover.
+29. 🚫 **NO Inconsistent Spacing**: Adhere strictly to the 8pt spatial grid (`8px`, `16px`, `24px`, `32px`, `48px`, `64px`).
+30. 🚫 **NO Wall of Text**: Structure long explanations into bite-sized parameter rows, visual cards, or collapsible accordions.
 
 ---
 
 ## 7. PRE-FLIGHT COMPLIANCE AUDIT GATE
 
 Before outputting any code, verify all 10 points of this checklist:
-- [ ] **1. Zero AI Tells**: No noise SVG overlay, no shiny button sweeps, no serif italics in sans H1, no emoji, no toy window dots.
-- [ ] **2. Swiss Micro-Radii Applied**: All radii strictly `4px–8px` max. No 9999px pills, no nested double-cushioning.
-- [ ] **3. Curated Google Fonts Pair Applied**: Selected from 6 archetypes with tabular monospace layer.
-- [ ] **4. Layout Rhythm Enforced**: No two consecutive sections share the same layout grid (`grid-cols-3` ban).
-- [ ] **5. Physical Domain Entities Materialized**: Every block contains real physical objects, parameters, and explicit units ($kg$, $ms$, $mm$, $\%$, $₽$, $\$$).
-- [ ] **6. Master-Detail Split Inspector Included**: At least one live 2-pane interactive inspector where selecting an item updates detailed specs.
-- [ ] **7. High-Density Parametric Matrix Included**: Data table with live instant search, category filters, right-aligned monospace numbers, and sparklines.
-- [ ] **8. Keyboard-First & Command Palette (⌘K) Support**: Modal dialogs support `Esc`, input focus, and keyboard action hints.
-- [ ] **9. Native Commercial Model Applied**: Pricing/booking/quoting naturally matches the exact economic model of the domain.
-- [ ] **10. Humanizer-Pro 2.0 Clean**: All 25 marketing clichés eradicated. 100% calm, factual domain authority.
+- [ ] **1. Domain Mode Correctly Applied**: Consumer, Service, E-commerce, or SaaS mode matches user intent.
+- [ ] **2. Zero DevTools Contamination**: No terminals, JSON drawers, or git hashes on consumer/service sites.
+- [ ] **3. Natural Radii Applied**: Cards are `8px–14px`, buttons `8px`, inputs `8px`. No 0px boxiness, no 32px balloon bubbles.
+- [ ] **4. Zero-Fat Content & Visual Breathing Room**: No redundant micro-labels or useless filler text.
+- [ ] **5. Curated Google Fonts Pair Selected**: Authentic pairing from the 6 curated archetypes with tabular mono.
+- [ ] **6. Layout Rhythm Enforced**: Alternating layout blueprints across sections.
+- [ ] **7. Domain-Specific Authentic Artifacts**: Menus, booking forms, physician passports, or CAD blueprints present.
+- [ ] **8. Keyboard & Accessibility Checked**: Full keyboard focus rings, WCAG AAA contrast, semantic HTML5.
+- [ ] **9. Natural Commercial Model Applied**: Pricing matches the true business economics of the domain.
+- [ ] **10. Humanizer-Pro 3.0 Clean**: 100% human, calm, factual, and free of marketing fluff.

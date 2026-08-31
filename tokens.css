@@ -1,7 +1,6 @@
 /* ==========================================================================
-   ENTERPRISE HUMAN-CRAFT DESIGN TOKENS (v10.0)
-   Derived from 20 Non-AI Systems (Stripe, Linear, Apple, Bloomberg, GitHub,
-   Gov.uk, Figma, McMaster-Carr, Ableton, Porsche, Flightradar24, Datadog, etc.)
+   ENTERPRISE HUMAN-CRAFT DESIGN TOKENS (v11.0)
+   Domain-Calibrated Universal Human-Craft Design System
    ========================================================================== */
 
 :root {
@@ -28,7 +27,7 @@
   --brand-hover: #1D4ED8;
   --brand-soft: #EFF6FF;
   
-  /* Telemetry Semantic Indicators (Bloomberg / Datadog / Aviation) */
+  /* Telemetry & Domain Semantic Indicators */
   --success: #16A34A;
   --success-soft: #DCFCE7;
   --warning: #D97706;
@@ -50,14 +49,15 @@
   --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
   --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  /* Swiss Precision Micro-Radii Scale (Linear / Stripe / Swiss Graphic Invariants) */
-  --r-none: 0px;   /* McMaster / Bloomberg dense grid cells */
-  --r-xs: 2px;     /* Micro indicators, checkboxes, segmented dividers, sparklines */
-  --r-sm: 4px;     /* Chips, tags, inputs, search fields, segmented tabs */
-  --r-md: 6px;     /* Action buttons, cockpit cards, dropdowns, popovers */
-  --r-lg: 8px;     /* Outer shells, data tables, main workspace containers */
-  --r-xl: 10px;    /* Command palette (⌘K), modal dialogs (absolute ceiling) */
-  --r-pill: 4px;   /* Technical rectangular tag (9999px pills STRICTLY BANNED) */
+  /* Domain-Calibrated Geometry Scale (Natural & Adaptive Radii) */
+  --r-none: 0px;   /* Dense tables, editorial borders, split dividers */
+  --r-xs: 3px;     /* Micro indicators, sparklines, table tag markers */
+  --r-sm: 6px;     /* Chips, filter tags, small badges, segmented controls */
+  --r-md: 8px;     /* Action buttons, form inputs, search fields, popovers */
+  --r-lg: 12px;    /* Cards, catalog items, pricing tiers, service blocks */
+  --r-xl: 16px;    /* Dialog modals, flyouts, media frames, command palette */
+  --r-2xl: 20px;   /* Large consumer hero cards, showcase surfaces */
+  --r-pill: 6px;   /* Adaptive technical/consumer tag (9999px pills STRICTLY BANNED) */
 
   /* Hairline Shadows & Stripe Top-Edge Bevel */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -66,7 +66,7 @@
   --shadow-overlay: 0 20px 40px -12px rgba(15, 23, 42, 0.16);
   --bevel-top: inset 0 1px 0 rgba(255, 255, 255, 0.15);
   
-  /* 50ms-140ms Hyper-Speed Transitions (Linear standard) */
+  /* 80ms-180ms Natural Human Transitions */
   --ease-fast: 120ms cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: 200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
