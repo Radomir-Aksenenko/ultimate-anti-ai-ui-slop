@@ -1,41 +1,24 @@
-# Anti-Patterns Guide: AI Slop vs Modern High-End Craft (v13.0)
+# Anti-Patterns Guide: AI Slop vs Human Art Direction (v14.0)
 
-This reference guide details why standard AI-generated websites look cliché, unrefined, or over-engineered, contrasted against clean modern web design (Stripe, Linear, Apple, Vercel, Supabase tier).
-
----
-
-## 1. Structure & Visual Atmosphere
-
-| AI Slop Anti-Pattern 🚫 | Modern High-End Solution ✅ | Why It Matters |
-| :--- | :--- | :--- |
-| **Meta-Discussion & AI Jargon**: Outputting text about "Anti-Slop", "Honeypots", or "AI system guidelines" inside the generated site. | **100% Domain-Focused Content**: The site is solely about the user's actual product, business, or service. | Keeps the website professional and real. |
-| **Table Overload (SAP/Oracle Style)**: Slicing the page into 6 consecutive gray data tables filled with dry server metrics. | **Dynamic Feature Grids & Visual Cards**: Rich asymmetric bento layouts, interactive visual widgets, clean media cards, and generous whitespace. | Modern sites engage users with visual hierarchy, not spreadsheet grids. |
-| **Pseudo-Architectural Line Stamps**: Putting lines with section numbers like `05 / ЛОКАЦИЯ` or GPS coordinates `44.6051° N` in titles. | **Natural Section Headings**: Category eyebrow badge + bold H2 (28px–36px) + 1 concise sentence of description. | Elegant and readable without blueprint clichés. |
+This reference guide details why standard AI-generated websites look either like **unrefined clutter** OR like **sterile, cookie-cutter clone templates**, and how **Human Art Direction** creates authentic, living web products.
 
 ---
 
-## 2. Geometry & Corner Radii
+## 1. The Sterilization Trap vs Bespoke Art Direction
 
-| AI Slop Anti-Pattern 🚫 | Modern High-End Solution ✅ | Why It Matters |
+| AI Sterilization Anti-Pattern 🚫 | Human Art Direction Solution ✅ | Why It Matters |
 | :--- | :--- | :--- |
-| **Inflatable Bubble Cards**: Using `24px–48px` curves and `rounded-full` pills on containers (Duolingo effect). | **Balanced Natural Radii**: `8px` for buttons and inputs, `12px–16px` for cards and pricing tiers, `20px` for dialogs. | Tactile, modern, and clean without looking like a children's toy. |
-| **Accidental 0px DOS Boxiness**: Stripping all radii to `0px` in an over-correction, making normal websites look like 90s DOS spreadsheets. | **Natural Human Geometry**: Subtle soft curves on buttons and interactive components provide comfortable touch targets. | Creates an inviting, premium aesthetic. |
+| **Cookie-Cutter Clone Templates**: Every single website uses the exact same `Hero -> Bento 2x3 -> 3 Pricing -> FAQ` formula. A bakery looks identical to a crypto-exchange. | **Bespoke Industry Layouts**: A bakery is built around fresh baking times, chef notes, and visual menus; a residential complex is built around architectural panoramas, floor plans, and mortgage calculators. | Real businesses have completely different customer journeys. |
+| **Sterile Color Monotony (Inter + Slate Blue Everywhere)**: Every site uses `#0F172A` text with default `#2563EB` blue on `#F8FAFC`. Zero brand mood. | **4 Rich Emotional Atmospheres**: Warm Stone & Terracotta for food/living, Nordic Platinum for design/luxury, Ocean Teal for healthcare, Electric Indigo for software. | Color evokes brand trust and emotion. |
+| **Disembodied Robotic Copy**: "Our comprehensive paradigm delivers unparalleled synergistic efficiency". | **Human Touchpoints & Author Voice**: Real quotes from founders/chefs, exact operating hours, honest FAQ answers, and tangible facts. | Sincerity and facts convert real people. |
 
 ---
 
-## 3. Typography & Controls
+## 2. Structural & Typographic Discipline
 
-| AI Slop Anti-Pattern 🚫 | Modern High-End Solution ✅ | Why It Matters |
+| AI Gimmick Anti-Pattern 🚫 | Senior Human Craft Standard ✅ | Why It Matters |
 | :--- | :--- | :--- |
-| **Monospace Buttons & Menus**: Formatting navigation and CTAs in `font-mono` uppercase with wide letter-spacing. | **Clean Sans-Serif Controls**: Navigation and buttons use readable **`font-sans`** (13px–15px). `font-mono` is strictly reserved for prices, numbers, and dates. | Enhances readability and standard UI ergonomics. |
-| **Micro-Text Clutter (< 11px)**: Sprinkling tiny 8px–9px text and weird disclaimers everywhere. | **Accessible Readable Typography**: Body text is `14px–16px`, secondary tags are `11px–12px`. Zero unreadable 8px noise. | Ensures WCAG AA/AAA compliance and effortless scanning. |
-| **Emoji & Icon Spam**: Putting `🚀`, `✨`, `⚡`, `💡` in headings, badges, and CTAs. | **Clean 1.5px Monoline SVGs**: Minimal vector icons inside subtle 36px icon boxes (`bg-slate-100 rounded-lg`). | Establishes mature, high-end authority. |
-
----
-
-## 4. Copywriting & Tone
-
-| AI Slop Anti-Pattern 🚫 | Modern High-End Solution ✅ | Why It Matters |
-| :--- | :--- | :--- |
-| **Corporate Buzzword Fluff**: "Revolutionizing the seamless synergy of future-proof next-gen paradigms". | **Concise Factual Realism**: "Свежая выпечка каждое утро к 07:30 • 7 минут пешком от метро «Динамо» • Фиксированная ставка 6%". | Clear, tangible benefits convert customers. |
-| **Fake 5-Star Avatars**: "John Doe, 5 stars: Amazing revolutionary tool!". | **Verified Institutional Proof**: Real partner logos, clear certifications, transparent pricing, and concrete guarantees. | Builds authentic credibility. |
+| **Pseudo-Architectural Line Stamps**: Drawing 1px dividing lines with section numbers `05 / ЛОКАЦИЯ` or GPS coordinates `44.6051° N`. | **Natural Section Headers**: Clean category eyebrow badge + bold H2 (28px–36px) + 1 concise sentence of description. | Elegant, modern, and readable without blueprint clichés. |
+| **Monospace Buttons & Navigation**: Styling CTA buttons and header links in `font-mono` uppercase with wide letter-spacing. | **Clean Sans-Serif Controls**: Navigation and buttons use readable **`font-sans`** (13px–15px) with `8px` radius. `font-mono` is strictly reserved for prices and numbers. | UI standard ergonomics and fast readability. |
+| **Table Overload (SAP-Style)**: Slicing the page into 6 consecutive gray data tables. | **Dynamic Visual Cards & Working Sandboxes**: Asymmetric layouts, interactive floor plan filters, live calculators, and visual item cards. | Engages users through visual hierarchy and interaction. |
+| **Inflatable Bubbles vs DOS Boxiness**: Applying `32px–48px` balloon curves OR `0px` harsh square boxes. | **Calibrated Tactile Geometry**: `8px` for buttons/inputs, `12px–16px` for cards, `20px` for dialogs. | Clean, modern touch. |
