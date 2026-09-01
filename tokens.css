@@ -1,15 +1,16 @@
 /* ==========================================================================
-   HUMAN ART DIRECTION & BRAND SOUL DESIGN TOKENS (v14.0)
-   4 Distinct Brand Atmospheres, Curated Typography & Natural Geometry
+   ENTERPRISE HUMAN-CRAFT DESIGN TOKENS (v8.6 Base)
+   Swiss Micro-Radii, Curated Google Fonts, WCAG AAA 7:1 Contrast
    ========================================================================== */
 
 :root {
-  /* Default Atmosphere: High-Tech Precision */
+  /* Slate Core Palette (Default Light - WCAG AAA 7:1) */
   --bg-canvas: #F8FAFC;
   --bg-surface: #FFFFFF;
   --bg-subtle: #F1F5F9;
   --bg-elevated: #FFFFFF;
   --bg-overlay: rgba(255, 255, 255, 0.94);
+  --bg-terminal: #090B0E;
   
   --border-subtle: rgba(15, 23, 42, 0.08);
   --border-strong: rgba(15, 23, 42, 0.16);
@@ -26,6 +27,16 @@
   --brand-hover: #1D4ED8;
   --brand-soft: #EFF6FF;
   
+  /* Telemetry & Domain Semantic Indicators */
+  --success: #16A34A;
+  --success-soft: #DCFCE7;
+  --warning: #D97706;
+  --warning-soft: #FEF3C7;
+  --danger: #DC2626;
+  --danger-soft: #FEE2E2;
+  --info: #0284C7;
+  --info-soft: #E0F2FE;
+  
   /* Gov.uk High-Visibility Focus Ring */
   --focus-ring-color: #FCD34D;
   --focus-ring-outer: #0F172A;
@@ -36,114 +47,71 @@
   --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
   --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  /* Geometry Scale (Natural & Tactile) */
-  --r-none: 0px;
-  --r-xs: 4px;
-  --r-sm: 6px;     /* Chips, filter tags, small badges */
-  --r-md: 8px;     /* Action buttons, form inputs, search fields */
-  --r-lg: 12px;    /* Cards, catalog items, pricing tiers */
-  --r-xl: 16px;    /* Dialog modals, prominent preview frames */
-  --r-2xl: 20px;   /* Large hero cards, showcase surfaces */
-  --r-pill: 6px;
+  /* Swiss Micro-Radii Scale (Orthogonal Precision) */
+  --r-xs: 2px;     /* Micro indicators, checkboxes */
+  --r-sm: 4px;     /* Chips, tags, inputs, schedule cards, segmented pills */
+  --r-md: 6px;     /* Action buttons, cockpit cards, dropdowns */
+  --r-lg: 8px;     /* Outer shells, data tables, main containers */
+  --r-xl: 10px;    /* Modals, absolute maximum ceiling */
+  --r-pill: 4px;   /* Technical rectangular tag instead of round pill */
 
-  /* Multi-Layer Soft Elevation */
+  /* Hairline Shadows & Stripe Top-Edge Bevel */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
   --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
   --shadow-overlay: 0 20px 40px -12px rgba(15, 23, 42, 0.16);
   --bevel-top: inset 0 1px 0 rgba(255, 255, 255, 0.15);
   
+  /* 120ms-180ms Natural Human Transitions */
   --ease-fast: 120ms cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-smooth: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================================================
-   ATMOSPHERE 1: WARM ARTISAN & ORGANIC (Food, Hospitality, Real Estate)
-   ========================================================================== */
-[data-mood="warm"], [data-theme="warm"] {
-  --bg-canvas: #FAF8F5;
-  --bg-surface: #FFFFFF;
-  --bg-subtle: #F3EFEA;
-  --bg-elevated: #FFFFFF;
-  
-  --border-subtle: rgba(41, 37, 36, 0.09);
-  --border-strong: rgba(41, 37, 36, 0.18);
-  --border-accent: rgba(194, 65, 12, 0.4);
-  
-  --text-primary: #1C1917;
-  --text-secondary: #78716C;
-  --text-muted: #A8A29E;
-  
-  --accent: #1C1917;
-  --brand: #C2410C;       /* Terracotta / Amber */
-  --brand-hover: #9A3412;
-  --brand-soft: #FFF7ED;
-  
-  --font-display: 'Manrope', var(--font-fallback);
-  --font-sans: 'Manrope', var(--font-fallback);
-}
-
-/* ==========================================================================
-   ATMOSPHERE 2: NORDIC MONOCHROME & EDITORIAL (Architecture, Design, Luxury)
-   ========================================================================== */
-[data-mood="nordic"], [data-theme="nordic"] {
-  --bg-canvas: #F4F4F5;
-  --bg-surface: #FFFFFF;
-  --bg-subtle: #E4E4E7;
-  --bg-elevated: #FFFFFF;
-  
-  --border-subtle: rgba(24, 24, 27, 0.1);
-  --border-strong: rgba(24, 24, 27, 0.2);
-  --border-accent: #18181B;
-  
-  --text-primary: #18181B;
-  --text-secondary: #52525B;
-  --text-muted: #A1A1AA;
-  
-  --accent: #18181B;
-  --brand: #18181B;
-  --brand-hover: #27272A;
-  --brand-soft: #F4F4F5;
-  
-  --font-display: 'Space Grotesk', var(--font-fallback);
-  --font-sans: 'Plus Jakarta Sans', var(--font-fallback);
-}
-
-/* ==========================================================================
-   ATMOSPHERE 3: INSTITUTIONAL TRUST & CARE (Clinics, Legal, Consulting)
-   ========================================================================== */
-[data-mood="trust"], [data-theme="trust"] {
-  --bg-canvas: #F8FAFC;
-  --bg-surface: #FFFFFF;
-  --bg-subtle: #F0F9FF;
-  --bg-elevated: #FFFFFF;
-  
-  --border-subtle: rgba(15, 23, 42, 0.08);
-  --border-strong: rgba(15, 23, 42, 0.16);
-  --border-accent: rgba(2, 132, 199, 0.4);
-  
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
-  
-  --accent: #0F172A;
-  --brand: #0284C7;       /* Ocean Teal */
-  --brand-hover: #0369A1;
-  --brand-soft: #F0F9FF;
-  
+/* FONT ARCHETYPES FROM GOOGLE FONTS (Curated 6 Profiles) */
+[data-font="jakarta"] {
   --font-display: 'Plus Jakarta Sans', var(--font-fallback);
-  --font-sans: 'Inter', var(--font-fallback);
+  --font-sans: 'Plus Jakarta Sans', var(--font-fallback);
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
-/* ==========================================================================
-   DARK THEME (Deep Graphite / Charcoal)
-   ========================================================================== */
+[data-font="space"] {
+  --font-display: 'Space Grotesk', var(--font-fallback);
+  --font-sans: 'Manrope', var(--font-fallback);
+  --font-mono: 'Space Mono', monospace;
+}
+
+[data-font="outfit"] {
+  --font-display: 'Outfit', var(--font-fallback);
+  --font-sans: 'Outfit', var(--font-fallback);
+  --font-mono: 'Fira Code', monospace;
+}
+
+[data-font="unbounded"] {
+  --font-display: 'Unbounded', var(--font-fallback);
+  --font-sans: 'Onest', var(--font-fallback);
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-font="manrope"] {
+  --font-display: 'Manrope', var(--font-fallback);
+  --font-sans: 'Onest', var(--font-fallback);
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-font="ibm"] {
+  --font-display: 'IBM Plex Sans', var(--font-fallback);
+  --font-sans: 'IBM Plex Sans', var(--font-fallback);
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+/* DARK THEME TOKENS (Charcoal / Onyx) */
 [data-theme="dark"] {
   --bg-canvas: #090B0E;
   --bg-surface: #11141A;
   --bg-subtle: #181D26;
   --bg-elevated: #1E232E;
   --bg-overlay: rgba(17, 20, 26, 0.94);
+  --bg-terminal: #050709;
   
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);

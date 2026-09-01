@@ -1,139 +1,172 @@
 ---
-name: human-art-direction-craft
-description: "Universal Human Art Direction & Brand Soul System (v14.0). Forces AI models to design authentic, character-rich, bespoke web applications and landing pages that feel crafted by world-class human art directors. Completely eliminates generic cookie-cutter template cloning and sterile AI perfection. Enforces domain-specific storytelling layouts, rich emotional color atmospheres (Warm Artisan, High-Tech Precision, Nordic Monochrome, Institutional Trust), human touchpoints (founder quotes, interactive floor plans, live menus), and tactile 8px/12px geometry."
-version: "14.0.0"
-author: "Senior Art Direction & Digital Craft Alliance"
+name: enterprise-human-craft
+description: "Universal Enterprise & Human-Craft Design System (v8.6 Base Edition). Guarantees authentic, production-grade, human-architected UI/UX from ANY LLM tier (from Flash models to Opus/Pro). Banned all AI smells: no noise overlays, no gimmick shine buttons, no random serif italics, no empty bento cards, no marketing fluff, no section line stamps, no fake GPS coordinates. Enforces Swiss Micro-Radii (4px–8px max, zero bubble/pill UI), curated Google Fonts typography pairings, 8pt spatial grid, asymmetric functional density, deep interactive domain tools (cockpits, tables, inspectors, heatmaps), and factual human copy (Humanizer-Pro)."
+version: "8.6.2"
+author: "Human Senior Design & Architecture Alliance"
 tags:
-  - art-direction
-  - human-craft
-  - brand-soul
+  - enterprise-ui
   - design-system
-  - bespoke-web
-  - modern-ui
-  - tailwind-css
+  - swiss-micro-radii
+  - google-fonts-typography
+  - anti-ai-slop
+  - human-craft
+  - frontend-engineering
+  - linear-craft
+  - stripe-standards
+  - vercel-clean
+  - shadcn-ui
 ---
 
-# Human Art Direction & Brand Soul System (v14.0)
-### Bespoke, Character-Rich Digital Products Crafted with Human Emotion & Intent
+# Enterprise Human-Craft Master System (v8.6 Base)
+### The Universal Blueprint for Crafting Human-Senior Grade Digital Products
 
-> **THE GOLDEN ART DIRECTION LAW**:
-> **Never build identical, cookie-cutter, sterile templates where every website looks like the exact same generic SaaS clone. A boutique bakery, an architectural residential complex, a high-speed developer tool, and a medical clinic must each have their OWN distinct personality, visual atmosphere, typographic weight, and tailored layout structure.**
-
----
-
-## 1. THE 4 BRAND ATMOSPHERES & PALETTES
-
-Before designing, select the emotional atmosphere that matches the client's industry:
-
-```mermaid
-graph TD
-  Prompt["User Request / Business Domain"] --> Mood{"Brand Atmosphere Sieve"}
-  
-  Mood -->|"Food, Real Estate, Hospitality, Lifestyle"| A1["1. Warm Artisan & Organic<br/>• Canvas: #FAF8F5 (Warm Stone) | Text: #1C1917<br/>• Accent: Terracotta #C2410C or Forest #15803D<br/>• Feel: Tactile, Welcoming, Atmospheric, Earthy"]
-  Mood -->|"SaaS, DevTools, FinTech, Modern Cloud"| A2["2. High-Tech Precision<br/>• Canvas: #F8FAFC (Clean Slate) | Text: #0F172A<br/>• Accent: Electric Indigo #4F46E5 or Royal Blue #2563EB<br/>• Feel: Sharp, Ultra-Fast, Confident, Data-Driven"]
-  Mood -->|"Architecture, Fashion, Design Studio, Luxury"| A3["3. Nordic Monochrome & Editorial<br/>• Canvas: #F4F4F5 (Zinc/Platinum) | Text: #18181B<br/>• Accent: Deep Onyx #09090B with Warm Brass #B45309<br/>• Feel: Minimalist, Bold Typography, Magazine Balance"]
-  Mood -->|"Medicine, Health, Legal, Institutional"| A4["4. Institutional Trust & Care<br/>• Canvas: #F8FAFC (Crisp White/Sky) | Text: #0F172A<br/>• Accent: Ocean Teal #0284C7 or Deep Emerald #047857<br/>• Feel: Authoritative, Safe, Transparent, Human"]
-```
+> **THE SUPREME DIRECTIVE**:
+> **Never build decorative AI toys, 'bubble-pill' templates, or 'Dribbble-bait' mockups. Deliver calm, confident, ultra-functional, Enterprise-grade web products that feel engineered by a Principal Frontend Architect and a Staff Product Designer at Stripe, Linear, Apple, Vercel, or GitHub.**
 
 ---
 
-## 2. BESPOKE INDUSTRY-SPECIFIC LAYOUT SCENARIOS
+## 0. THE CORE DIAGNOSIS: WHY AI WEBSITES FEEL "AI-ISH"
 
-**STRICT BAN ON IDENTICAL COOKIE-CUTTER TEMPLATES**: Do not blindly copy the same generic `Hero -> Bento 2x3 -> 3 Pricing -> FAQ` layout for every site. Build a tailored narrative flow based on what real customers need:
+When users look at an AI-generated site and say *"It looks pretty, but it feels AI-ish"*, they are reacting to 8 specific subconscious **AI Smells (Маркеры нейросети)**:
 
-### Scenario A: Real Estate / Residential Complexes / Architecture
-1. **Hero**: Panoramic visual framing + key residential facts (metro distance, completion date, starting price).
-2. **Architectural Concept**: Editorial section with a quote from the lead architect and material swatches (brick, oak, brass).
-3. **Interactive Apartment Selector**: Working floor plan sieve with room filter (1-room, 2-room, penthouses), square meters, floor number, price, and visual SVG layout preview.
-4. **Surrounding Infrastructure Slider**: 4 key environment cards (parks, schools, transport, fitness) with walking times.
-5. **Mortgage & Payment Calculator**: Interactive slider (Down payment, Loan term) calculating the estimated monthly payment.
-6. **Sales Office & Visit Booking**: Real address, parking directions, opening hours, and phone consultation form.
-
-### Scenario B: Gastronomy / Restaurants / Cafes & Bakeries
-1. **Hero**: Atmospheric hero showcasing the daily specialty, kitchen philosophy, and today's baking time (e.g. «Выпекаем свежий хлеб к 07:30»).
-2. **Today's Seasonal Specials**: Highlight card with Chef's recommendation and flavor notes.
-3. **Interactive Menu**: Tabbed menu categories (Breakfast, Mains, Pastry, Wine list) with item weights, allergens, and clear prices.
-4. **Chef's Note & Team**: Photo card of the head chef/baker with a short 2-sentence quote about farm-fresh sourcing.
-5. **Table Reservation Widget**: Real working date/time selector with party size and special requests.
-6. **Location Passport**: Map card with subway exit, cozy neighborhood photos, and kitchen operating hours.
-
-### Scenario C: SaaS / Developer Tools / Cloud Platforms
-1. **Hero**: High-impact H1 + interactive product demo preview / terminal sandbox right in the hero viewport.
-2. **Key Capabilities by Role**: Segmented switcher («For Engineers», «For Product Managers», «For Security Teams»).
-3. **Interactive Playground / Configurator**: Live switcher showing code snippets (TypeScript, Python, cURL, Go).
-4. **Transparent Pricing Tiers**: 3 tiers with monthly/annual toggle, feature checklist, and instant signup buttons.
-5. **Customer Proof & Case Studies**: Real workflow impact cards with quantifiable metrics (e.g. «-65% deployment time»).
-6. **Candid FAQ**: Direct, honest answers to real objections (migration, data export, cancellation).
-
-### Scenario D: Clinics / Professional Legal / Consulting Practice
-1. **Hero**: Trustworthy headline focusing on patient care or legal success rate + immediate appointment button.
-2. **Specialist Credential Cards**: Profiles of doctors/lawyers with university degrees, years of active practice, and specialties.
-3. **Treatment / Practice Protocols**: Step-by-step visual roadmap (Diagnostics → Treatment Plan → Recovery).
-4. **Transparent Fee Matrix**: Clear breakdown of primary consultation and procedure costs with no hidden fees.
-5. **Certificates & Accreditations**: Verified state licenses and clinical partner badges.
-6. **Direct Booking Form**: Specialist and date/time selector with privacy guarantee.
+| The AI Smell 🚫 | Why LLMs Do It | The Human Senior Solution ✅ |
+| :--- | :--- | :--- |
+| **1. Hyper-Rounded 'Bubble' Radii & Pills** | Applies `border-radius: 24px–48px` to containers and `9999px` pills everywhere, making the UI look like a mobile toy (Duolingo effect). | **Swiss Micro-Radii (4px–8px Max).** Strict geometric discipline: `4px` for tags/inputs/cards, `6px` for buttons, `8px` max for main shells. Zero 9999px pills. Shared 1px hairline grid dividers. |
+| **2. Fake Tactile Gimmicks** | Overlays SVG noise filters, adds `@keyframes sheen` moving gradients across buttons. | **Zero Noise. Zero Gimmicks.** Crystal-clean canvas, subtle 1px hairline borders (`rgba(0,0,0,0.08)`), top edge bevel (`inset 0 1px 0 rgba(255,255,255,0.15)`). |
+| **3. Typography Boredom or Serif Chaos** | Uses default uncalibrated Inter everywhere or injects random `Playfair italic` in Sans H1s. | **Curated Google Fonts Archetypes.** Precision pairing of high-character grotesque + tabular mono with exact optical tracking. |
+| **4. Symmetrical Card-itis / Bento-Spam** | 6 identical floating white cards on a grey background with circular icons and 2 lines of text. | **Asymmetric Functional Architecture.** Live interactive consoles, real data tables, split-view panels, metric streams, and inspector sidebars. |
+| **5. Toy-like Window 'Traffic Lights'** | Puts red/yellow/green Mac OS circles on every preview div. | **Authentic Enterprise Context.** Professional Breadcrumbs, Environment Badges, and Live Sync telemetry indicators. |
+| **6. Emoji & Icon Spam** | Puts `🚀`, `✨`, `⚡`, `💡` in headings, badges, and buttons. | **Strict Vector Precision.** Only 1.5–1.75px stroke SVG icons (Lucide, Radix, Phosphor) using `stroke="currentColor"`. Zero emojis in headings/CTAs. |
+| **7. Marketing Fluff & Vague Claims** | "Revolutionary platform unlocking the full potential of next-gen workflows". | **Factual Technical Reality.** Concrete numbers, real workflow steps, exact hours, and measurable results. |
+| **8. Static Mockup Illusions** | Draws colored rectangles with drop shadows pretending to be an app. | **Real Working Browser Micro-App.** Live clickable tabs, search/filter inputs, conflict resolution toggles, sortable columns, and working modals. |
 
 ---
 
-## 3. HUMAN TOUCHPOINTS (THE SOUL OF THE WEBSITE)
+## 1. THE SWISS MICRO-RADII SYSTEM (Precision Geometric Discipline)
 
-To make a website feel authentically crafted by a human product team, infuse these **Human Touchpoints**:
-
-1. **The Human Voice / Author Note**: Include a sincere quote block with a portrait photo, name, and role (e.g. *«Мы открыли эту пекарню, чтобы на Покровке снова пахло настоящим хлебом» — шеф-пекарь Анна Смирнова*).
-2. **Concrete Real-World Factual Details**:
-   - Exact hours of operation (`пн–пт: 07:30–22:00, сб–вс: 08:30–23:00`).
-   - Exact physical weights, distances, and specs ($180\text{ г}$, $45.2\text{ м²}$, $7\text{ мин пешком}$).
-   - Transparent pricing in local currency with explicit tax details.
-3. **Thoughtful Micro-Interactions**:
-   - Tab switchers that instantly update content.
-   - Expandable FAQ accordions with smooth open/close states.
-   - Working search/filter bars with immediate results.
-   - Interactive sliders with live recalculation.
-
----
-
-## 4. DESIGN TOKENS & VISUAL DISCIPLINE
+Enterprise software (Linear, Stripe, Bloomberg, GitHub, Vercel, VS Code) does not float in huge rounded bubbles. It is built with **orthogonally disciplined, micro-radius geometry and shared 1px hairline borders**:
 
 ```css
 :root {
-  /* Geometry: Tactile & Human */
-  --radius-sm: 6px;    /* Chips, filter tags, small badges */
-  --radius-md: 8px;    /* Action buttons, form inputs, search fields */
-  --radius-lg: 12px;   /* Content cards, catalog items, pricing tiers */
-  --radius-xl: 16px;   /* Modal dialogs, prominent feature frames */
-  
-  /* Shadows: Soft & Layered */
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px -2px rgba(15, 23, 42, 0.04);
-  --shadow-elevated: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --r-xs: 2px;     /* Micro indicators, checkboxes */
+  --r-sm: 4px;     /* Chips, tags, inputs, schedule cards, segmented pills */
+  --r-md: 6px;     /* Action buttons, cockpit cards, dropdowns */
+  --r-lg: 8px;     /* Outer shells, data tables, main containers */
+  --r-xl: 10px;    /* Modals, absolute maximum ceiling */
+  --r-pill: 4px;   /* Technical rectangular tag instead of round pill */
 }
 ```
 
-### Typography Hierarchy:
-* **Primary UI & Text**: `Plus Jakarta Sans`, `Inter`, or `Manrope` in clean `font-sans`.
-* **Headings**: Tight tracking (`tracking-[-0.03em]`), bold weights (700/800), clean line height (1.1–1.2).
-* **Numbers & Prices**: Tabular figures (`font-variant-numeric: tabular-nums font-mono`) for numerical precision.
+### The 4 Laws of Enterprise Corner Geometry:
+1. 🚫 **Absolute Ban on `> 10px` Radii**: Never use `rounded-2xl` (16px), `rounded-3xl` (24px+), or `rounded-full` on cards/containers.
+2. 🚫 **Absolute Ban on 9999px Pill Containers**: Tags, status badges, and switches must be sharp `4px` rectangles with 1px hairline borders.
+3. 🚫 **No Nested Double-Cushioning ('Sandwich' Borders)**: Do not wrap a rounded shell inside another padded rounded box with a 10px gap. Render single flush monolithic panels with internal hairline dividers.
+4. ✅ **Concentric Orthogonal Grid**: When elements are nested, $R_{inner} = \max(0, R_{outer} - padding)$.
 
 ---
 
-## 5. HARD INVARIANTS (WHAT IS STRICTLY FORBIDDEN)
+## 2. THE GOOGLE FONTS CURATED TYPOGRAPHY ENGINE (6 Brand Archetypes)
 
-1. 🚫 **NO Cookie-Cutter Cloning**: Never use the exact same template structure for different industries. Tailor the sections to the specific topic!
-2. 🚫 **NO Meta-Theory or AI Jargon**: Never output text about "Anti-Slop", "AI models", or "Honeypots". The site is 100% about the user's real business.
-3. 🚫 **NO Pseudo-Architectural Line Stamps**: Never draw horizontal lines with stamps like `05 / ЛОКАЦИЯ` or `07 / ГАЛЕРЕЯ`. Use clean category tags above H2.
-4. 🚫 **NO Fake GPS Coordinates in Titles**: Write normal human addresses: `Екатеринбург, ул. Брусничная, 7 (м. Динамо)`.
-5. 🚫 **NO Vertical 'SCROLL' Sticks & Marquees**: Keep vertical rhythm calm and natural with 60px–100px padding.
-6. 🚫 **NO Monospace Font on Navigation & Buttons**: Buttons and header links MUST use readable `font-sans` (13px–15px).
-7. 🚫 **NO Micro-Text Below 11px**: Minimum font size is 11px for badges, 14px–16px for body text.
-8. 🚫 **NO Emoji in Interface**: No `🚀`, `✨`, `⚡`, `💡` in headings or badges. Use clean 1.5px monoline SVGs.
-9. 🚫 **NO Dead Controls**: Every tab, filter, accordion, and slider must have working JavaScript handlers.
+Pair curated display grotesks with precision monospace layers from Google Fonts. All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeric: tabular-nums`).
+
+### Archetype 1: Modern High-Tech & Precision Engineering (Raycast / Vercel vibe)
+* **Display & Headings**: `Plus Jakarta Sans` (wght 600..800, tracking -0.03em)
+* **UI & Body**: `Plus Jakarta Sans` / `Inter` (wght 400..500)
+* **Tabular & Code**: `JetBrains Mono` (wght 500..600)
+
+### Archetype 2: Swiss Brutalism & Industrial Architecture (Linear / Dieter Rams vibe)
+* **Display & Headings**: `Space Grotesk` (wght 600..700, tracking -0.035em)
+* **UI & Body**: `Manrope` (wght 400..600)
+* **Tabular & Code**: `Space Mono` (wght 400..700)
+
+### Archetype 3: FinTech & Global Infrastructure (Stripe / Ramp vibe)
+* **Display & Headings**: `Outfit` (wght 600..800, geometric modern clarity)
+* **UI & Body**: `Inter` / `Outfit` (wght 400..500)
+* **Tabular & Code**: `Fira Code` (wght 500..600)
+
+### Archetype 4: DeepTech & AI Intelligence (Scale AI / Futuristic B2B)
+* **Display & Headings**: `Unbounded` (wght 600..800, heavy geometric tech)
+* **UI & Body**: `Onest` (wght 400..600, ultra-clean humanist grotesk)
+* **Tabular & Code**: `JetBrains Mono` (wght 500..600)
+
+### Archetype 5: Editorial Craft & Enterprise Operations (Notion / Pitch vibe)
+* **Display & Headings**: `Manrope` (wght 700..800, warm, solid, authentic)
+* **UI & Body**: `Onest` (wght 400..500)
+* **Tabular & Code**: `JetBrains Mono` (wght 500)
+
+### Archetype 6: Strict Enterprise & Gov Standard (IBM / SAP modern standard)
+* **Display & Headings**: `IBM Plex Sans` (wght 600..700, authoritative, precise)
+* **UI & Body**: `IBM Plex Sans` (wght 400..500)
+* **Tabular & Code**: `IBM Plex Mono` (wght 500)
 
 ---
 
-## 6. PRE-FLIGHT ART DIRECTION AUDIT
+## 3. THE 25 HARD TABOOS (ZERO AI-SLOP LAWS)
 
-Before outputting code, verify:
-- [ ] **1. Unique Brand Character**: The design reflects the specific industry mood (Warm Artisan / Tech / Nordic / Trust).
-- [ ] **2. Bespoke Layout Flow**: Sections match the real user journey, not a sterile generic template.
-- [ ] **3. Human Touchpoints Present**: Sincere quotes, concrete numbers, and authentic details.
-- [ ] **4. Working Interactivity**: All filters, sliders, tabs, and accordions respond to user clicks.
-- [ ] **5. Zero Gimmicks**: No line stamps `05/TITLE`, no GPS coords, no monospace buttons, no emoji spam.
+When generating code, the following anti-patterns are **STRICTLY FORBIDDEN**:
+
+1. 🚫 **NO Huge 16px-48px Rounded Cards & 9999px Pills**: Restrict radii to `4px - 8px` max. No inflatable bubble UI.
+2. 🚫 **NO Nested Double-Cushion Wrappers**: Single-layer structural shells with crisp 1px borders.
+3. 🚫 **NO SVG Noise Overlays**: Never put `filter="url(#noise)"` or `<div class="noise-layer">` over the page.
+4. 🚫 **NO Moving Sheen Animations**: Never use `@keyframes sheen` or fake shimmering gradient sweeps across buttons.
+5. 🚫 **NO Serif Italic In Sans Headings**: Never inject `<em class="font-serif italic">` into a clean sans-serif H1.
+6. 🚫 **NO Emoji Anywhere in UI**: No `🚀`, `✨`, `⚡`, `🎯`, `💡`. Use strictly 1.5px monoline SVGs.
+7. 🚫 **NO Toy Traffic Light Dots**: Never draw red/yellow/green Mac OS dots. Use real breadcrumbs and status chips.
+8. 🚫 **NO Section Numbering on Horizontal Dividing Lines**: Never slice sections with lines containing stamps like `05 / ЛОКАЦИЯ`. Use natural H2 headers.
+9. 🚫 **NO Fake GPS Coordinates in Titles**: Never put `44.6051° N` in titles. Write normal human addresses.
+10. 🚫 **NO Monospace Font on Navigation & Buttons**: Buttons and header links MUST use readable `font-sans` (13px–15px). `font-mono` is strictly for tabular numbers and prices.
+11. 🚫 **NO Left-Border Color Strips**: No `border-l-4 border-blue-500` card hacks.
+12. 🚫 **NO Empty Bento Boxes**: Every grid cell must contain high-density operational data or a live mini-tool.
+13. 🚫 **NO AI Purple / Lila Neon**: No `#6366F1` or `#8B5CF6` neon glow blobs. Use pristine slate, navy, or deep onyx.
+14. 🚫 **NO Pure Black on Pure White**: No `#000000` text on `#FFFFFF` with `#2563EB` links without refined tokens.
+15. 🚫 **NO Vague Marketing Text**: Never write 'Experience the power of revolutionizing your synergy'.
+16. 🚫 **NO Wrapping Button Text**: Buttons must be 1–3 precise words on a single line.
+17. 🚫 **NO Fake div screenshots**: No colored rectangles pretending to be software. Render real HTML components.
+18. 🚫 **NO Disabled Keyboard Focus**: Always include `focus-visible:ring-2 focus-visible:ring-offset-2`.
+19. 🚫 **NO Slow Animations**: All transitions must be `140ms–200ms` with `cubic-bezier(0.16, 1, 0.3, 1)`.
+20. 🚫 **NO Eyebrow Badge Spam**: Maximum 1 eyebrow chip per major section (max 2–3 on entire page).
+21. 🚫 **NO Misaligned Numbers**: All pricing, timestamps, room codes, and stats must use `font-mono tabular-nums`.
+22. 🚫 **NO Broken Viewports**: Never lock viewport to `h-screen`. Always use `min-h-[100dvh]`.
+23. 🚫 **NO Missing Dark Mode**: Every component must gracefully toggle between light and dark palettes.
+24. 🚫 **NO 1-Star / Fake Reviews**: No 'John Doe, 5 stars, amazing app'. Use verified role + organization badges.
+25. 🚫 **NO Dead Links / Non-functional Tabs**: Every tab in preview sandboxes must have JS click handlers that switch views.
+
+---
+
+## 4. HUMANIZER-PRO: LIVING FACTUAL COPYWRITING (RU / EN)
+
+### The 20 Hard Bans on Bureaucratic / AI Copy
+1. **«Является / выступает в качестве»** -> Тире или активный глагол (*«Сервис синхронизирует...»*).
+2. **«В современном мире / На сегодняшний день»** -> Сразу к факту.
+3. **«Стоит отметить / Необходимо подчеркнуть»** -> Удалять полностью.
+4. **«Данный / указанный»** -> *«Этот»* или опустить.
+5. **«Осуществление / процесс реализации»** -> Глагол (*«чтобы настроить»*).
+6. **«Бесшовный / интуитивно понятный»** -> Точное свойство (*«без перезагрузки страницы»*, *«за 2 клика»*).
+7. **«Революционный / инновационный / передовой»** -> Удалять самолюбование.
+8. **«Раскрыть потенциал / выйти на новый уровень»** -> Измеримый результат (*«сокращает время сборки расписания с 2 недель до 40 минут»*).
+9. **«Комплексный подход / синергия»** -> Назвать конкретные шаги.
+10. **«Позволяет вам / дает возможность»** -> Глагол действия (*«Вы получаете...»*).
+11. **«Не просто X, а Y»** -> Убирать клише.
+12. **«Широкий спектр / многообразие»** -> Назвать 2–3 примера.
+13. **«Как известно / ни для кого не секрет»** -> Сразу факт.
+14. **«Оказывает положительное влияние»** -> *«Ускоряет / снижает затраты»*.
+15. **«Ключевой особенностью является»** -> *«Главное: ...»*.
+16. **«С целью / во избежание»** -> *«Чтобы / чтобы не»*.
+17. **«Псевдо-сократические вопросы»** -> Писать прямо.
+18. **«Псевдо-терапия»** -> Спокойное профессиональное уважение.
+19. **«Триады-клише»** (*«быстрый, надежный, мощный»*) -> Одно точное слово.
+20. **«Фейковая статистика»** -> Только реальные проверяемые данные.
+
+---
+
+## 5. PRE-FLIGHT COMPLIANCE AUDIT GATE
+
+Before outputting code, run this 8-point checklist:
+- [ ] **1. Zero AI Tells**: No noise SVG overlay, no shiny button sweeps, no serif italics in sans H1, no emoji, no toy window dots.
+- [ ] **2. Swiss Micro-Radii Applied**: All radii strictly `4px–8px` max. No 9999px pills, no double-cushioning.
+- [ ] **3. Curated Google Fonts Pair Applied**: Selected from 6 archetypes with tabular mono layer.
+- [ ] **4. Enterprise Palette Applied**: Clean Slate, Titanium, Azure, or Emerald palette with WCAG AAA contrast.
+- [ ] **5. Strict 8pt Grid & Proportions**: All margins/paddings follow multiples of 4/8px.
+- [ ] **6. Asymmetric Living Cockpit**: The Hero contains a working, clickable browser application demo with live inspector/heatmap.
+- [ ] **7. High-Density Data Tables & Sandboxes**: Tables include real domain data, sorting, statuses, category filters, and monospace values.
+- [ ] **8. Humanizer-Pro Text Clean**: 20 AI clichés eradicated. Zero fluff, 100% factual domain authority.
