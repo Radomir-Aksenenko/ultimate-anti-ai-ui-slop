@@ -1,74 +1,85 @@
-# ⚡ Ultimate Anti-AI UI Slop & Human-Craft Design System (v8.6 Base)
-### The Original Universal Ruleset for Linear / Stripe / Apple Grade Web Engineering
+# 🏛️ Human Senior Web Architecture & Craft System (v9.0 Base)
+### The Living Blueprint for Authentic, Non-AI-Looking Web Products Built on 105+ Iconic Real-World Benchmarks
 
-> **The Universal System Prompt and Design Tokens that force ANY AI model (Claude, ChatGPT, Cursor, Gemini, Grok, DeepSeek, v0, 27B+ models) to output high-density, production-grade, human-engineered web applications without "AI smells", without "inflatable bubble UI", and without "sterile template cloning".**
+> **The Universal System Prompt and Design Tokens that force ANY AI model (Claude, Cursor, ChatGPT, Gemini, Grok, DeepSeek, v0, Windsurf) to stop producing generic AI-slop, stop copying rigid "Linear-only" templates, and design digital experiences like a Staff Product Designer and Principal Web Architect.**
 
 ---
 
-## 🚀 Quick Start: How to Feed to Your AI
+## ⚡ Quick Start: How to Feed to Your AI
 
-### Option 1: Copy-Paste into Chat / Custom Instructions
-Copy the entire contents of **[`SKILL.md`](./SKILL.md)** and paste it into:
-* **System Prompt / Custom Instructions / Projects** (Claude Projects, ChatGPT Custom Instructions, Cursor `.cursorrules`, Windsurf, Copilot, v0)
+### Option 1: Copy-Paste System Prompt (Claude / Cursor / ChatGPT / Gemini / v0)
+Copy the entire contents of **[`SKILL.md`](./SKILL.md)** into:
+* **System Prompt / Custom Instructions / Projects** (Claude Projects, Cursor `.cursorrules`, ChatGPT Custom Instructions, Windsurf, Copilot, v0)
 * Or directly at the beginning of your prompt:  
-  *«Adopt the following design system rules: [paste SKILL.md] Now build ...»*
+  *«Adopt the Human Senior Web Architecture framework: [paste SKILL.md]. Now build a web platform for...»*
 
-### Option 2: Clone & Use Tokens
+### Option 2: Clone & Link CSS Tokens
 ```bash
 git clone https://github.com/Radomir-Aksenenko/ultimate-anti-ai-ui-slop.git
 ```
-Include `tokens.css` into your CSS bundle for instant access to the Swiss Micro-Radii scale (4px–8px), 6 Google Fonts archetypes, and WCAG AAA palettes.
-
----
-
-## 🏛️ The 8 AI Smells & Swiss Human Solutions
-
-| The AI Smell 🚫 | Why LLMs Do It | The Human Senior Solution ✅ |
-| :--- | :--- | :--- |
-| **1. Hyper-Rounded 'Bubble' Radii & Pills** | Applies `24px–48px` curves and `9999px` pills everywhere (Duolingo effect). | **Swiss Micro-Radii (4px–8px Max).** Strict geometric discipline. Zero 9999px pills. Shared 1px hairline dividers. |
-| **2. Fake Tactile Gimmicks** | Overlays SVG noise filters, adds `@keyframes sheen` moving gradients across buttons. | **Zero Noise. Zero Gimmicks.** Crystal-clean canvas, subtle 1px hairline borders (`rgba(0,0,0,0.08)`), top edge bevel. |
-| **3. Typography Boredom or Serif Chaos** | Uses default uncalibrated Inter everywhere or injects random `Playfair italic` in Sans H1s. | **Curated Google Fonts Archetypes.** Precision pairing of high-character grotesque + tabular mono with exact tracking. |
-| **4. Symmetrical Card-itis / Bento-Spam** | 6 identical floating white cards on a grey background with circular icons and 2 lines of text. | **Asymmetric Functional Architecture.** Live interactive consoles, real data tables, split-view panels, and inspector toolbars. |
-| **5. Toy-like Window 'Traffic Lights'** | Puts red/yellow/green Mac OS circles on every preview div. | **Authentic Enterprise Context.** Professional breadcrumbs, environment badges, and live sync status indicators. |
-| **6. Emoji & Icon Spam** | Puts `🚀`, `✨`, `⚡`, `💡` in headings, badges, and buttons. | **Strict Vector Precision.** Only 1.5–1.75px stroke SVG icons using `stroke="currentColor"`. Zero emojis in headings/CTAs. |
-| **7. Marketing Fluff & Vague Claims** | "Revolutionary platform unlocking the full potential of next-gen workflows". | **Factual Technical Reality.** Concrete numbers, real workflow steps, exact hours, and measurable results (Humanizer-Pro). |
-| **8. Static Mockup Illusions** | Draws colored rectangles with drop shadows pretending to be an app. | **Real Working Browser Micro-App.** Live clickable tabs, search/filter inputs, conflict resolution toggles, and working modals. |
-
----
-
-## 📐 Swiss Micro-Radii Scale (Orthogonal Precision)
-
-```css
-:root {
-  --r-xs: 2px;     /* Micro indicators, checkboxes */
-  --r-sm: 4px;     /* Chips, tags, inputs, schedule cards, segmented pills */
-  --r-md: 6px;     /* Action buttons, cockpit cards, dropdowns */
-  --r-lg: 8px;     /* Outer shells, data tables, main containers */
-  --r-xl: 10px;    /* Modals, absolute maximum ceiling */
-  --r-pill: 4px;   /* Technical rectangular tag instead of round pill */
-}
+Include `tokens.css` in your HTML / CSS bundle:
+```html
+<link rel="stylesheet" href="tokens.css">
+<!-- Set the archetype that matches your brand -->
+<body data-archetype="fintech" data-theme="light">
+  ...
+</body>
 ```
 
 ---
 
-## 🔤 Curated Google Fonts Typography Engine (6 Archetypes)
+## 🎨 The 7 Design Archetypes (Intent > Formula)
 
-All pairs support **Cyrillic + Latin** and tabular figures (`font-variant-numeric: tabular-nums`):
+Instead of forcing every website to look like a dark developer dashboard, the framework provides **7 distinct aesthetic archetypes** grounded in real companies:
 
-1. **Modern High-Tech (Raycast / Vercel)**: `Plus Jakarta Sans` (600..800) + `JetBrains Mono` (500..600)
-2. **Swiss Brutalism (Linear / Dieter Rams)**: `Space Grotesk` (600..700) + `Manrope` + `Space Mono`
-3. **FinTech & Global Infrastructure (Stripe / Ramp)**: `Outfit` (600..800) + `Inter` + `Fira Code`
-4. **DeepTech & AI Intelligence (Scale AI)**: `Unbounded` (600..800) + `Onest` + `JetBrains Mono`
-5. **Editorial Craft & Enterprise (Notion / Pitch)**: `Manrope` (700..800) + `Onest` + `JetBrains Mono`
-6. **Strict Enterprise & Gov Standard (IBM / SAP)**: `IBM Plex Sans` (600..700) + `IBM Plex Mono` (500)
+| Archetype | Key Benchmark Companies | Visual & Geometric Identity | Typography Pair (Google Fonts) |
+| :--- | :--- | :--- | :--- |
+| **1. Modern Swiss** | Vercel, Linear, Raycast, Framer | Razor-sharp `4px–8px` micro-radii, 1px hairlines, laser focus | `Plus Jakarta Sans` + `JetBrains Mono` |
+| **2. High-End FinTech** | Stripe, Ramp, Mercury, Brex | Balanced `8px–12px`, whisper-soft shadows, top bevel highlight | `Outfit` + `Inter` + `Fira Code` |
+| **3. Warm Humanist Editorial**| Notion, Pitch, Stripe Press, ReadCV | Soft `6px–12px`, warm ivory canvas (`#FBFBFA`), generous whitespace | `Manrope` + `Onest` + `JetBrains Mono` |
+| **4. Bold Neo-Brutalist** | Wise, Cash App, The Verge, Gumroad | Raw `0px–4px`, 2px solid black borders, hard offset shadow (`4px 4px 0`) | `Space Grotesk` + `Space Mono` |
+| **5. Industrial Tactile** | Teenage Engineering, Nothing, Panic | Mechanical `2px–6px`, knurled borders, inset displays, rotary dials | `Silkscreen` / `Space Mono` + `IBM Plex Sans` |
+| **6. Luxury Sanctuary** | Apple, Polestar, Aesop, Bang & Olufsen | Organic `18px–28px` squircles or `0px` borderless airy layout | `Plus Jakarta Sans` + `Onest` |
+| **7. Technical Cockpit** | GitHub, Supabase, Grafana, Datadog | Compact `4px–6px`, maximum data density, split diffs & heatmaps | `IBM Plex Sans` + `IBM Plex Mono` |
+
+---
+
+## 🌐 The 105 Real-World Benchmark Corpus
+
+The entire system is reverse-engineered from **105 world-class websites** across 7 sectors:
+* **Developer Platforms & Cloud** (15): Stripe, Vercel, Linear, Supabase, GitHub, Cloudflare, Resend, Raycast, PostHog, PlanetScale, Render, Railway, Fly.io, Datadog, Sentry.
+* **FinTech & Banking** (15): Wise, Ramp, Mercury, Cash App, Brex, Revolut, Monzo, Klarna, Robinhood, Wealthfront, Square, Shopify, Adyen, Carta, Plaid.
+* **Productivity & Tools** (15): Notion, Figma, Framer, Pitch, Arc Browser, ReadCV, Teenage Engineering, Nothing, Panic, Basecamp, Loom, Miro, Typeform, Cron, Obsidian.
+* **Hardware & Luxury** (15): Apple, Polestar, Rivian, Tesla, Bang & Olufsen, Rimowa, Leica, Aesop, Dyson, Sonos, Vitra, Herman Miller, Hasselblad, Braun, Framework.
+* **Lifestyle & D2C** (15): Oatly, Nike, Airbnb, Duolingo, Spotify, Strava, Headspace, Patagonia, Gymshark, Allbirds, Monocle, Rapha, On Running, WHOOP, Our Place.
+* **Editorial & Media** (15): Stripe Press, The Verge, NYT, The Atlantic, Readymag, Cargo, Are.na, Cosmos, Minimalissimo, It’s Nice That, Awwwards, The Pudding, Pitchfork, Dwell, Wallpaper*.
+* **World-Class Studios** (15): Pentagram, Collins, Koto, Studio Freight, Locomotive, Instrument, Work & Co, Unseen Studio, Active Theory, Basic/Agency, Huge, Fantasy, MetaLab, Clay Global, Ueno.
+
+👉 *See full breakdown in **[`benchmarks-100.md`](./benchmarks-100.md)**.*
+
+---
+
+## 📐 The Human Story Arc & Compositional Rhythm
+
+A human senior architect never stacks 5 identical 3-column card grids. Every page has dynamic narrative rhythm:
+
+1. **Hero & Living Sandbox**: Instant interactive proof (currency converter, API language switcher, 3D customizer).
+2. **Monochrome Proof Strip**: Subtle, low-contrast client badges (opacity 0.4–0.6).
+3. **Split-Screen Mechanics**: Sticky narrative on the left, scrollable live screens/code on the right.
+4. **Macro Display Metric**: Single massive typography statement (`1.4s`, `42% faster`) with verifiable source.
+5. **Interactive Playground**: Hands-on browser tabs with real JS event switching.
+6. **Deep Domain Case Study**: Real story with real names, concrete metrics, and architecture.
+7. **Transparent Pricing / Matrix**: Clear comparison without marketing fluff.
+8. **Institutional Closing & Footer**: Multi-column footer with status and legal links.
 
 ---
 
 ## 📂 Repository Contents
 
-* **[`SKILL.md`](./SKILL.md)** — Master universal prompt / ruleset for LLMs (v8.6 Base).
-* **[`tokens.css`](./tokens.css)** — Production CSS design tokens with Swiss Micro-Radii & Google Fonts Archetypes.
-* **[`anti-patterns.md`](./anti-patterns.md)** — Visual comparison guide (8 AI Smells vs Swiss Human Craft).
+* **[`SKILL.md`](./SKILL.md)** — Master universal prompt / ruleset for LLMs (v9.0 Base).
+* **[`benchmarks-100.md`](./benchmarks-100.md)** — Comprehensive directory of 105 world-class websites.
+* **[`tokens.css`](./tokens.css)** — Production CSS design tokens supporting all 7 archetypes and themes.
+* **[`anti-patterns.md`](./anti-patterns.md)** — Visual comparison guide (12 AI Slop Traps vs Human Senior Solutions).
 
 ---
 

@@ -1,129 +1,367 @@
 /* ==========================================================================
-   ENTERPRISE HUMAN-CRAFT DESIGN TOKENS (v8.6 Base)
-   Swiss Micro-Radii, Curated Google Fonts, WCAG AAA 7:1 Contrast
+   HUMAN-SENIOR DESIGN SYSTEM TOKENS (v9.0 Base)
+   7 Design Archetypes | Fluid Typography Scale | WCAG AAA Contrast
    ========================================================================== */
 
 :root {
-  /* Slate Core Palette (Default Light - WCAG AAA 7:1) */
-  --bg-canvas: #F8FAFC;
-  --bg-surface: #FFFFFF;
-  --bg-subtle: #F1F5F9;
-  --bg-elevated: #FFFFFF;
-  --bg-overlay: rgba(255, 255, 255, 0.94);
-  --bg-terminal: #090B0E;
+  /* --------------------------------------------------------------------------
+     1. GLOBAL CORE TOKENS & FLUID SCALE
+     -------------------------------------------------------------------------- */
+  --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   
-  --border-subtle: rgba(15, 23, 42, 0.08);
-  --border-strong: rgba(15, 23, 42, 0.16);
-  --border-accent: rgba(15, 23, 42, 0.32);
-  
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
-  --text-inverse: #FFFFFF;
-  
-  --accent: #0F172A;
-  --accent-contrast: #FFFFFF;
-  --brand: #2563EB;
-  --brand-hover: #1D4ED8;
-  --brand-soft: #EFF6FF;
-  
-  /* Telemetry & Domain Semantic Indicators */
-  --success: #16A34A;
-  --success-soft: #DCFCE7;
-  --warning: #D97706;
-  --warning-soft: #FEF3C7;
-  --danger: #DC2626;
-  --danger-soft: #FEE2E2;
-  --info: #0284C7;
-  --info-soft: #E0F2FE;
-  
-  /* Gov.uk High-Visibility Focus Ring */
+  /* Fluid Golden Ratio Typography Scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);   /* 12px - 13px */
+  --text-sm: clamp(0.8125rem, 0.775rem + 0.3vw, 0.875rem);  /* 13px - 14px */
+  --text-base: clamp(0.9375rem, 0.9rem + 0.35vw, 1.0625rem);/* 15px - 17px */
+  --text-lg: clamp(1.125rem, 1.05rem + 0.5vw, 1.25rem);     /* 18px - 20px */
+  --text-xl: clamp(1.375rem, 1.25rem + 0.8vw, 1.625rem);    /* 22px - 26px */
+  --text-2xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem);      /* 28px - 36px */
+  --text-3xl: clamp(2.25rem, 1.8rem + 2.0vw, 3.25rem);      /* 36px - 52px */
+  --text-hero: clamp(2.75rem, 2.2rem + 3.5vw, 4.75rem);     /* 44px - 76px */
+
+  /* Optical Letter Spacing */
+  --tracking-tight: -0.035em;
+  --tracking-normal: -0.01em;
+  --tracking-wide: +0.06em;
+
+  /* Line Heights */
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+  --leading-loose: 1.75;
+
+  /* Natural Human Spring Transitions */
+  --ease-fast: 120ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: 240ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Accessible Focus Indicator (Gov.uk Standard) */
   --focus-ring-color: #FCD34D;
   --focus-ring-outer: #0F172A;
 
-  /* Typography Defaults */
-  --font-display: 'Plus Jakarta Sans', var(--font-fallback);
-  --font-sans: 'Plus Jakarta Sans', var(--font-fallback);
-  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
-  --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  /* Swiss Micro-Radii Scale (Orthogonal Precision) */
-  --r-xs: 2px;     /* Micro indicators, checkboxes */
-  --r-sm: 4px;     /* Chips, tags, inputs, schedule cards, segmented pills */
-  --r-md: 6px;     /* Action buttons, cockpit cards, dropdowns */
-  --r-lg: 8px;     /* Outer shells, data tables, main containers */
-  --r-xl: 10px;    /* Modals, absolute maximum ceiling */
-  --r-pill: 4px;   /* Technical rectangular tag instead of round pill */
-
-  /* Hairline Shadows & Stripe Top-Edge Bevel */
+  /* Compound Soft Elevation Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
   --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
   --shadow-overlay: 0 20px 40px -12px rgba(15, 23, 42, 0.16);
   --bevel-top: inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  
-  /* 120ms-180ms Natural Human Transitions */
-  --ease-fast: 120ms cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-smooth: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Status Colors */
+  --status-success: #16A34A;
+  --status-success-soft: rgba(22, 163, 74, 0.12);
+  --status-warning: #D97706;
+  --status-warning-soft: rgba(217, 119, 6, 0.12);
+  --status-danger: #DC2626;
+  --status-danger-soft: rgba(220, 38, 38, 0.12);
+  --status-info: #0284C7;
+  --status-info-soft: rgba(2, 132, 199, 0.12);
 }
 
-/* FONT ARCHETYPES FROM GOOGLE FONTS (Curated 6 Profiles) */
-[data-font="jakarta"] {
+/* --------------------------------------------------------------------------
+   2. THE 7 DESIGN ARCHETYPES
+   -------------------------------------------------------------------------- */
+
+/* Archetype 1: Modern Swiss (Vercel, Linear, Raycast) */
+:root,
+[data-archetype="modern-swiss"] {
   --font-display: 'Plus Jakarta Sans', var(--font-fallback);
-  --font-sans: 'Plus Jakarta Sans', var(--font-fallback);
-  --font-mono: 'JetBrains Mono', monospace;
-}
+  --font-body: 'Inter', var(--font-fallback);
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
 
-[data-font="space"] {
-  --font-display: 'Space Grotesk', var(--font-fallback);
-  --font-sans: 'Manrope', var(--font-fallback);
-  --font-mono: 'Space Mono', monospace;
-}
+  --r-xs: 2px;
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 8px;
+  --r-xl: 10px;
 
-[data-font="outfit"] {
-  --font-display: 'Outfit', var(--font-fallback);
-  --font-sans: 'Outfit', var(--font-fallback);
-  --font-mono: 'Fira Code', monospace;
-}
-
-[data-font="unbounded"] {
-  --font-display: 'Unbounded', var(--font-fallback);
-  --font-sans: 'Onest', var(--font-fallback);
-  --font-mono: 'JetBrains Mono', monospace;
-}
-
-[data-font="manrope"] {
-  --font-display: 'Manrope', var(--font-fallback);
-  --font-sans: 'Onest', var(--font-fallback);
-  --font-mono: 'JetBrains Mono', monospace;
-}
-
-[data-font="ibm"] {
-  --font-display: 'IBM Plex Sans', var(--font-fallback);
-  --font-sans: 'IBM Plex Sans', var(--font-fallback);
-  --font-mono: 'IBM Plex Mono', monospace;
-}
-
-/* DARK THEME TOKENS (Charcoal / Onyx) */
-[data-theme="dark"] {
   --bg-canvas: #090B0E;
   --bg-surface: #11141A;
   --bg-subtle: #181D26;
   --bg-elevated: #1E232E;
-  --bg-overlay: rgba(17, 20, 26, 0.94);
-  --bg-terminal: #050709;
   
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
-  --border-accent: rgba(255, 255, 255, 0.28);
   
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
-  --text-inverse: #0F172A;
   
-  --accent: #F8FAFC;
-  --brand: #3B82F6;
-  --brand-hover: #60A5FA;
-  --brand-soft: rgba(59, 130, 246, 0.14);
+  --accent-primary: #10B981;
+  --accent-contrast: #090B0E;
+}
+
+[data-archetype="modern-swiss"][data-theme="light"] {
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-elevated: #FFFFFF;
+
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.16);
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+
+  --accent-primary: #0F172A;
+  --accent-contrast: #FFFFFF;
+}
+
+/* Archetype 2: High-End FinTech & Enterprise (Stripe, Ramp, Mercury) */
+[data-archetype="fintech"] {
+  --font-display: 'Outfit', var(--font-fallback);
+  --font-body: 'Inter', var(--font-fallback);
+  --font-mono: 'Fira Code', monospace;
+
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+
+  --bg-canvas: #F6F9FC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #EEF2F6;
+  --bg-elevated: #FFFFFF;
+
+  --border-subtle: rgba(10, 37, 64, 0.08);
+  --border-strong: rgba(10, 37, 64, 0.16);
+
+  --text-primary: #0A2540;
+  --text-secondary: #425466;
+  --text-muted: #8898AA;
+
+  --accent-primary: #00D4B2;
+  --accent-contrast: #0A2540;
+  --brand-primary: #635BFF;
+}
+
+[data-archetype="fintech"][data-theme="dark"] {
+  --bg-canvas: #0A2540;
+  --bg-surface: #103358;
+  --bg-subtle: #17426E;
+  --bg-elevated: #1E4E80;
+
+  --border-subtle: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.20);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #ADBDCC;
+  --text-muted: #728096;
+
+  --accent-primary: #00D4B2;
+  --accent-contrast: #0A2540;
+  --brand-primary: #7A73FF;
+}
+
+/* Archetype 3: Warm Humanist & Editorial (Notion, Pitch, Stripe Press) */
+[data-archetype="editorial"] {
+  --font-display: 'Manrope', var(--font-fallback);
+  --font-body: 'Onest', var(--font-fallback);
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --r-xs: 3px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+
+  --bg-canvas: #FBFBFA;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F0ED;
+  --bg-elevated: #FFFFFF;
+
+  --border-subtle: rgba(55, 53, 47, 0.09);
+  --border-strong: rgba(55, 53, 47, 0.18);
+
+  --text-primary: #22252A;
+  --text-secondary: #585A5E;
+  --text-muted: #8B8D91;
+
+  --accent-primary: #D9730D;
+  --accent-contrast: #FFFFFF;
+}
+
+[data-archetype="editorial"][data-theme="dark"] {
+  --bg-canvas: #191919;
+  --bg-surface: #202020;
+  --bg-subtle: #2F2F2F;
+  --bg-elevated: #373737;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --text-primary: #EBEBEB;
+  --text-secondary: #9B9B9B;
+  --text-muted: #6B6B6B;
+
+  --accent-primary: #F28C28;
+  --accent-contrast: #191919;
+}
+
+/* Archetype 4: Bold Neo-Brutalist (Wise, Cash App, The Verge) */
+[data-archetype="neo-brutalist"] {
+  --font-display: 'Space Grotesk', var(--font-fallback);
+  --font-body: 'Space Grotesk', var(--font-fallback);
+  --font-mono: 'Space Mono', monospace;
+
+  --r-xs: 0px;
+  --r-sm: 2px;
+  --r-md: 4px;
+  --r-lg: 4px;
+  --r-xl: 6px;
+
+  --bg-canvas: #FFFFFF;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F3F4F6;
+  --bg-elevated: #FFFFFF;
+
+  --border-subtle: #000000;
+  --border-strong: #000000;
+  --shadow-brutal: 4px 4px 0px #000000;
+
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+
+  --accent-primary: #9EF01A;
+  --accent-contrast: #000000;
+  --brand-primary: #FAFF00;
+}
+
+/* Archetype 5: Industrial Tactile (Teenage Engineering, Nothing, Panic) */
+[data-archetype="industrial"] {
+  --font-display: 'Space Grotesk', var(--font-fallback);
+  --font-body: 'IBM Plex Sans', var(--font-fallback);
+  --font-mono: 'IBM Plex Mono', 'Space Mono', monospace;
+
+  --r-xs: 2px;
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 6px;
+  --r-xl: 8px;
+
+  --bg-canvas: #D8D8D8;
+  --bg-surface: #E8E8E8;
+  --bg-subtle: #C8C8C8;
+  --bg-elevated: #FFFFFF;
+
+  --border-subtle: rgba(0, 0, 0, 0.18);
+  --border-strong: rgba(0, 0, 0, 0.35);
+
+  --text-primary: #141414;
+  --text-secondary: #404040;
+  --text-muted: #707070;
+
+  --accent-primary: #FF5500;
+  --accent-contrast: #FFFFFF;
+  --brand-primary: #FFB700;
+}
+
+[data-archetype="industrial"][data-theme="dark"] {
+  --bg-canvas: #141414;
+  --bg-surface: #1E1E1E;
+  --bg-subtle: #282828;
+  --bg-elevated: #333333;
+
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.25);
+
+  --text-primary: #EEEEEE;
+  --text-secondary: #AAAAAA;
+  --text-muted: #666666;
+
+  --accent-primary: #FF5500;
+  --accent-contrast: #FFFFFF;
+}
+
+/* Archetype 6: Luxury Sanctuary (Apple, Polestar, Aesop, Rimowa) */
+[data-archetype="luxury"] {
+  --font-display: 'Plus Jakarta Sans', var(--font-fallback);
+  --font-body: 'Onest', var(--font-fallback);
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+
+  --bg-canvas: #000000;
+  --bg-surface: #121212;
+  --bg-subtle: #1C1C1C;
+  --bg-elevated: #242424;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --text-primary: #F5F5F7;
+  --text-secondary: #86868B;
+  --text-muted: #515154;
+
+  --accent-primary: #F5F5F7;
+  --accent-contrast: #000000;
+}
+
+[data-archetype="luxury"][data-theme="light"] {
+  --bg-canvas: #F5F5F7;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #E8E8ED;
+  --bg-elevated: #FFFFFF;
+
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-strong: rgba(0, 0, 0, 0.12);
+
+  --text-primary: #1D1D1F;
+  --text-secondary: #6E6E73;
+  --text-muted: #86868B;
+
+  --accent-primary: #1D1D1F;
+  --accent-contrast: #FFFFFF;
+}
+
+/* Archetype 7: Deep Technical Cockpit (GitHub, Supabase, Grafana) */
+[data-archetype="technical-cockpit"] {
+  --font-display: 'IBM Plex Sans', var(--font-fallback);
+  --font-body: 'IBM Plex Sans', var(--font-fallback);
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+
+  --r-xs: 2px;
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 6px;
+  --r-xl: 8px;
+
+  --bg-canvas: #0D1117;
+  --bg-surface: #161B22;
+  --bg-subtle: #21262D;
+  --bg-elevated: #30363D;
+
+  --border-subtle: #30363D;
+  --border-strong: #8B949E;
+
+  --text-primary: #C9D1D9;
+  --text-secondary: #8B949E;
+  --text-muted: #484F58;
+
+  --accent-primary: #238636;
+  --accent-contrast: #FFFFFF;
+  --brand-primary: #58A6FF;
+}
+
+/* --------------------------------------------------------------------------
+   3. ACCESSIBLE FOCUS RING UTILITY
+   -------------------------------------------------------------------------- */
+*:focus-visible {
+  outline: 2px solid var(--focus-ring-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. TABULAR NUMERICS
+   -------------------------------------------------------------------------- */
+.tabular-nums,
+[data-tabular] {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
 }
