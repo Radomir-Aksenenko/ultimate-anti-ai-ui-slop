@@ -1,56 +1,38 @@
 /**
- * ANTI-AI-SLOP DESIGN TOKENS (v2.0 MASTERPIECE EDITION)
- * Rigorously extracted from the production design systems and source code of:
- * Apple, Google DeepMind, Cloudflare, GitHub, Linear, Vercel (Geist), Teenage Engineering, and Stripe.
- *
- * Core Principles:
- * - ZERO decorative saturated purple-pink mesh gradients
- * - ZERO ungrounded blur orbs
- * - Physical surface elevations with real lighting math
- * - Optical typographic tracking compensations
- * - Sub-pixel hairlines and tactile feedback
+ * ANTI-AI-SLOP DESIGN TOKENS
+ * Design tokens extracted from Apple, Google DeepMind, Cloudflare, GitHub, Microsoft, and Linear.
+ * Zero decorative gradients. Zero saturated purple glow. Pure physical surfaces and optical precision.
  */
 
 :root {
   /* ==========================================================================
-     1. GLOBAL TYPOGRAPHIC CONSTANTS
+     GLOBAL BASE SYSTEM
      ========================================================================== */
-  --font-serif-editorial: "Newsreader", "Charter", "Georgia", "Iowan Old Style", serif;
-  --font-sans-display: "SF Pro Display", "Geist", "Google Sans Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-sans-text: "SF Pro Text", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono-code: "SF Mono", "Geist Mono", "JetBrains Mono", ui-monospace, Menlo, Monaco, Consolas, monospace;
+  --font-display-serif: "Newsreader", "Charter", "Georgia", serif;
+  --font-display-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Google Sans Flex", "Segoe UI", sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", "Fira Code", ui-monospace, Menlo, Monaco, Consolas, monospace;
 
-  /* Optical tracking compensation scale (negative tracking for large display type) */
-  --tracking-display-hero: -0.035em;
-  --tracking-display-h1: -0.025em;
-  --tracking-display-h2: -0.02em;
-  --tracking-display-h3: -0.015em;
-  --tracking-body: -0.005em;
-  --tracking-mono: 0em;
-  --tracking-eyebrow: 0.08em;
-  --tracking-caps: 0.05em;
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.05em;
+  --tracking-widest: 0.1em;
 
-  /* Line-height ratios */
-  --leading-hero: 1.05;
-  --leading-tight: 1.15;
+  --leading-tight: 1.1;
   --leading-snug: 1.25;
-  --leading-body: 1.6;
-  --leading-relaxed: 1.75;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
 
-  /* Physics-based easings */
-  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
-  --ease-apple: cubic-bezier(0.25, 1, 0.5, 1);
-
-  --duration-instant: 80ms;
-  --duration-fast: 150ms;
-  --duration-normal: 220ms;
-  --duration-moderate: 350ms;
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-slow: 350ms;
 }
 
 /* ==========================================================================
-   ARCHETYPE 1: GOOGLE DEEPMIND EDITORIAL (Frontier Science Lab)
+   ARCHETYPE 1: GOOGLE DEEPMIND EDITORIAL (High-Tech Science Laboratory)
    ========================================================================== */
 [data-archetype="deepmind"],
 .theme-deepmind {
@@ -58,109 +40,90 @@
   --dm-surface-0: #0e1017;
   --dm-surface-1: #151821;
   --dm-surface-2: #1e222e;
-  --dm-surface-inset: #050608;
-
   --dm-border-subtle: rgba(255, 255, 255, 0.07);
-  --dm-border-medium: rgba(255, 255, 255, 0.12);
-  --dm-border-strong: rgba(255, 255, 255, 0.2);
+  --dm-border-strong: rgba(255, 255, 255, 0.15);
 
   --dm-text-primary: #f5f6f8;
   --dm-text-secondary: #9ea4b0;
   --dm-text-muted: #5c6270;
   --dm-text-accent: #8ab4f8;
-  --dm-text-rule: rgba(255, 255, 255, 0.08);
 
-  --dm-font-heading: var(--font-serif-editorial);
-  --dm-font-body: var(--font-sans-display);
-  --dm-font-mono: var(--font-mono-code);
+  --dm-rule-color: rgba(255, 255, 255, 0.09);
+  --dm-font-heading: var(--font-display-serif);
+  --dm-font-body: var(--font-display-sans);
   --dm-radius: 0px;
 }
 
 .theme-deepmind-light {
-  --dm-bg-canvas: #fafafc;
+  --dm-bg-canvas: #fbfbfb;
   --dm-surface-0: #ffffff;
-  --dm-surface-1: #f1f3f6;
-  --dm-surface-2: #e4e7ed;
-  --dm-surface-inset: #edeef2;
-
-  --dm-border-subtle: rgba(0, 0, 0, 0.07);
-  --dm-border-medium: rgba(0, 0, 0, 0.12);
-  --dm-border-strong: rgba(0, 0, 0, 0.22);
+  --dm-surface-1: #f3f4f6;
+  --dm-surface-2: #e5e7eb;
+  --dm-border-subtle: rgba(0, 0, 0, 0.08);
+  --dm-border-strong: rgba(0, 0, 0, 0.18);
 
   --dm-text-primary: #111215;
   --dm-text-secondary: #4b5563;
   --dm-text-muted: #9ca3af;
   --dm-text-accent: #1a73e8;
-  --dm-text-rule: rgba(0, 0, 0, 0.08);
 
-  --dm-font-heading: var(--font-serif-editorial);
-  --dm-font-body: var(--font-sans-display);
-  --dm-font-mono: var(--font-mono-code);
+  --dm-rule-color: rgba(0, 0, 0, 0.08);
+  --dm-font-heading: var(--font-display-serif);
+  --dm-font-body: var(--font-display-sans);
   --dm-radius: 0px;
 }
 
 /* ==========================================================================
-   ARCHETYPE 2: APPLE MONUMENTAL (Hardware Minimalism & Cinematic Space)
+   ARCHETYPE 2: APPLE MONUMENTAL (Hardware Minimalism & Cinematic Spacing)
    ========================================================================== */
 [data-archetype="apple"],
 .theme-apple-dark {
   --apple-bg: #000000;
   --apple-surface: #161617;
   --apple-surface-raised: #1d1d1f;
-  --apple-surface-card: #121213;
-
   --apple-border: rgba(255, 255, 255, 0.12);
-  --apple-border-hairline: rgba(255, 255, 255, 0.07);
-  --apple-highlight-top: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --apple-border-hairline: rgba(255, 255, 255, 0.08);
 
   --apple-text-primary: #f5f5f7;
   --apple-text-secondary: #a1a1a6;
   --apple-text-tertiary: #6e6e73;
   --apple-accent: #2997ff;
-  --apple-accent-hover: #47a7ff;
 
-  --apple-glass-bg: rgba(22, 22, 23, 0.76);
-  --apple-glass-blur: blur(24px) saturate(180%);
-
-  --apple-radius-xs: 6px;
-  --apple-radius-sm: 10px;
-  --apple-radius-md: 16px;
-  --apple-radius-lg: 24px;
-  --apple-radius-pill: 9999px;
+  --apple-glass-bg: rgba(22, 22, 23, 0.72);
+  --apple-glass-blur: blur(20px) saturate(180%);
+  --apple-radius-sm: 8px;
+  --apple-radius-md: 14px;
+  --apple-radius-lg: 20px;
+  --apple-radius-pill: 980px;
 }
 
 .theme-apple-light {
   --apple-bg: #ffffff;
   --apple-surface: #f5f5f7;
   --apple-surface-raised: #e8e8ed;
-  --apple-surface-card: #ffffff;
-
-  --apple-border: rgba(0, 0, 0, 0.1);
-  --apple-border-hairline: rgba(0, 0, 0, 0.05);
-  --apple-highlight-top: inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  --apple-border: rgba(0, 0, 0, 0.12);
+  --apple-border-hairline: rgba(0, 0, 0, 0.06);
 
   --apple-text-primary: #1d1d1f;
   --apple-text-secondary: #6e6e73;
   --apple-text-tertiary: #86868b;
   --apple-accent: #0071e3;
-  --apple-accent-hover: #0077ed;
 
-  --apple-glass-bg: rgba(255, 255, 255, 0.82);
-  --apple-glass-blur: blur(24px) saturate(180%);
+  --apple-glass-bg: rgba(255, 255, 255, 0.8);
+  --apple-glass-blur: blur(20px) saturate(180%);
 }
 
 /* ==========================================================================
-   ARCHETYPE 3: CLOUDFLARE TELEMETRY (Live Metric Density & High-Throughput)
+   ARCHETYPE 3: CLOUDFLARE TELEMETRY (Engineering Density & Live Metrics)
    ========================================================================== */
 [data-archetype="cloudflare"],
 .theme-cloudflare {
   --cf-bg-canvas: #0f1117;
   --cf-surface-0: #141720;
   --cf-surface-1: #1a1e2a;
-  --cf-surface-hover: #212635;
+  --cf-surface-hover: #222736;
   --cf-border: #262b3a;
-  --cf-border-hover: #3b455d;
-  --cf-border-focus: #f6821f;
+  --cf-border-hover: #3d455d;
 
   --cf-text-primary: #f3f4f6;
   --cf-text-secondary: #9ca3af;
@@ -169,26 +132,21 @@
   --cf-accent: #f6821f;
   --cf-accent-hover: #fa9738;
   --cf-metric-green: #10b981;
-  --cf-metric-yellow: #f59e0b;
-  --cf-metric-red: #ef4444;
   --cf-metric-blue: #3b82f6;
 
   --cf-radius: 4px;
 }
 
 /* ==========================================================================
-   ARCHETYPE 4: GITHUB PRIMER (Developer Tools & Git Engineering)
+   ARCHETYPE 4: GITHUB PRIMER (Developer Tooling & Terminal Aesthetics)
    ========================================================================== */
 [data-archetype="github"],
 .theme-github-dark {
   --gh-bg-default: #0d1117;
   --gh-surface-subtle: #161b22;
-  --gh-surface-overlay: #21262d;
   --gh-surface-inset: #010409;
-
   --gh-border-default: #30363d;
   --gh-border-muted: #21262d;
-  --gh-border-active: rgba(56, 139, 253, 0.4);
 
   --gh-text-primary: #e6edf3;
   --gh-text-secondary: #848d97;
@@ -196,9 +154,6 @@
 
   --gh-accent: #2f81f7;
   --gh-success: #238636;
-  --gh-warning: #9e6a03;
-  --gh-danger: #da3633;
-
   --gh-badge-bg: rgba(56, 139, 253, 0.1);
   --gh-badge-border: rgba(56, 139, 253, 0.4);
 
@@ -206,7 +161,7 @@
 }
 
 /* ==========================================================================
-   ARCHETYPE 5: LINEAR ULTRA-SAAS (Micro-Borders, Obsidian & Shortcuts)
+   ARCHETYPE 5: LINEAR ULTRA-SAAS (Micro-Borders & Keyboard Ergonomics)
    ========================================================================== */
 [data-archetype="linear"],
 .theme-linear {
@@ -214,19 +169,14 @@
   --linear-surface-0: #0f1011;
   --linear-surface-1: #151618;
   --linear-surface-2: #1c1d20;
-  --linear-surface-hover: rgba(255, 255, 255, 0.04);
-
   --linear-border: rgba(255, 255, 255, 0.08);
   --linear-border-hover: rgba(255, 255, 255, 0.16);
-  --linear-border-bright: rgba(255, 255, 255, 0.24);
 
   --linear-text-primary: #f7f8f8;
   --linear-text-secondary: #8a8f98;
   --linear-text-tertiary: #52555a;
 
   --linear-accent: #5e6ad2;
-  --linear-accent-hover: #6f7be0;
-
   --linear-kbd-bg: rgba(255, 255, 255, 0.06);
   --linear-kbd-border: rgba(255, 255, 255, 0.12);
 
@@ -236,156 +186,39 @@
 }
 
 /* ==========================================================================
-   ARCHETYPE 6: VERCEL GEIST (Monochromatic Precision & Shadow-as-Border)
+   MICRO-UTILITIES (PHYSICAL BORDERS & OPTICAL HAIRLINES)
    ========================================================================== */
-[data-archetype="vercel"],
-.theme-vercel-dark {
-  --vercel-bg: #000000;
-  --vercel-surface-1: #0a0a0a;
-  --vercel-surface-2: #141414;
-  --vercel-surface-3: #1f1f1f;
-
-  --vercel-border-subtle: #262626;
-  --vercel-border-medium: #333333;
-  --vercel-border-strong: #474747;
-
-  --vercel-text-primary: #ededed;
-  --vercel-text-secondary: #a1a1a1;
-  --vercel-text-muted: #707070;
-
-  --vercel-accent: #ffffff;
-  --vercel-accent-contrast: #000000;
-  --vercel-blue: #0070f3;
-  --vercel-cyan: #50e3c2;
-
-  --vercel-shadow-border: 0 0 0 1px #333333;
-  --vercel-radius: 6px;
-}
-
-.theme-vercel-light {
-  --vercel-bg: #ffffff;
-  --vercel-surface-1: #fafafa;
-  --vercel-surface-2: #eaeaea;
-  --vercel-surface-3: #dfdfdf;
-
-  --vercel-border-subtle: #ebebeb;
-  --vercel-border-medium: #d4d4d4;
-  --vercel-border-strong: #a3a3a3;
-
-  --vercel-text-primary: #171717;
-  --vercel-text-secondary: #666666;
-  --vercel-text-muted: #8f8f8f;
-
-  --vercel-accent: #000000;
-  --vercel-accent-contrast: #ffffff;
-  --vercel-blue: #0070f3;
-
-  --vercel-shadow-border: 0 0 0 1px #eaeaea;
-  --vercel-radius: 6px;
-}
-
-/* ==========================================================================
-   ARCHETYPE 7: TEENAGE ENGINEERING (Hardware Brutalism & 5-Color Constraint)
-   ========================================================================== */
-[data-archetype="teenage"],
-.theme-teenage {
-  --te-bg: #e6e6e6;
-  --te-chassis: #d8d8d8;
-  --te-panel: #ffffff;
-  --te-dark-bg: #141414;
-
-  --te-border-raw: 1px solid #000000;
-  --te-border-light: 1px solid rgba(0, 0, 0, 0.15);
-  --te-border-dark: 1px solid rgba(255, 255, 255, 0.2);
-
-  --te-text-black: #000000;
-  --te-text-dark-muted: #666666;
-  --te-text-white: #ffffff;
-
-  /* Strict 5-color hardware accent palette */
-  --te-orange: #ff5e00;
-  --te-screen-green: #25d366;
-  --te-signal-yellow: #ffcc00;
-  --te-blue-potentiometer: #0066ff;
-  --te-gray-aluminum: #9c9c9c;
-
-  --te-font: var(--font-mono-code);
-  --te-radius: 0px;
-}
-
-/* ==========================================================================
-   ARCHETYPE 8: STRIPE CRAFT (Kinetic Precision & Multi-Surface Harmony)
-   ========================================================================== */
-[data-archetype="stripe"],
-.theme-stripe {
-  --stripe-bg: #0a2540;
-  --stripe-canvas: #f6f9fc;
-  --stripe-surface: #ffffff;
-  --stripe-surface-raised: #f8fafc;
-
-  --stripe-border-subtle: rgba(200, 210, 225, 0.4);
-  --stripe-border-strong: #0a2540;
-
-  --stripe-text-primary: #0a2540;
-  --stripe-text-secondary: #425466;
-  --stripe-text-muted: #727f96;
-  --stripe-accent: #635bff;
-  --stripe-accent-cyan: #00d4ff;
-
-  --stripe-shadow-card: 0 13px 27px -5px rgba(50, 50, 93, 0.1), 0 8px 16px -8px rgba(0, 0, 0, 0.15);
-  --stripe-radius: 8px;
-}
-
-/* ==========================================================================
-   PRODUCTION MICRO-UTILITIES (PHYSICAL MATERIALS & RIGID ALIGNMENT)
-   ========================================================================== */
-
-/* Hairline borders (strictly sub-pixel or 1px hairline without blur) */
 .hairline-b {
   border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
 }
+
 .hairline-t {
   border-top: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
 }
-.hairline-x {
-  border-left: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  border-right: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-}
+
 .hairline-all {
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
 }
 
-/* Physical surface elevation with dual-layer physics (no neon halos) */
 .card-physical {
-  background-color: var(--surface-0, #0e1017);
+  background: var(--surface-0, #0e1017);
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: border-color var(--duration-fast) var(--ease-out-expo),
               box-shadow var(--duration-fast) var(--ease-out-expo);
 }
 
 .card-physical:hover {
-  border-color: var(--border-hover, rgba(255, 255, 255, 0.2));
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.25);
+  border-color: var(--border-hover, rgba(255, 255, 255, 0.18));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-/* Tactile button feedback (physical depression state on :active) */
-.btn-tactile {
-  transition: transform var(--duration-instant) var(--ease-out-expo),
-              box-shadow var(--duration-instant) var(--ease-out-expo),
-              background-color var(--duration-fast) var(--ease-out-expo);
-}
-.btn-tactile:active {
-  transform: translateY(1px) scale(0.99);
-}
-
-/* Real Keyboard Badge (<kbd>) */
 .kbd-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 2px 6px;
-  font-family: var(--font-mono-code);
+  font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 500;
   line-height: 1;
@@ -393,52 +226,13 @@
   border: 1px solid var(--kbd-border, rgba(255, 255, 255, 0.12));
   border-radius: 4px;
   color: var(--text-secondary, #9ca3af);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Tabular numbers for financial, time, and telemetry charts */
-.tabular-nums {
-  font-variant-numeric: tabular-nums lining-nums;
-}
-
-/* Telemetry live status dot */
 .telemetry-dot {
-  position: relative;
-  display: inline-block;
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background-color: var(--status-color, #10b981);
+  display: inline-block;
   box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
-}
-
-/* Hardware Dot Matrix Pattern (Teenage Engineering & DeepMind) */
-.dot-matrix-bg {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 16px 16px;
-}
-.dot-matrix-light {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px);
-  background-size: 16px 16px;
-}
-
-/* Hardware switch active indicator */
-.hardware-switch {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid #000000;
-  background: #ffffff;
-  padding: 2px;
-  font-family: var(--font-mono-code);
-  font-size: 11px;
-  text-transform: uppercase;
-}
-.hardware-switch .switch-active {
-  background: #000000;
-  color: #ffffff;
-  padding: 2px 8px;
-}
-.hardware-switch .switch-inactive {
-  color: #666666;
-  padding: 2px 8px;
 }
