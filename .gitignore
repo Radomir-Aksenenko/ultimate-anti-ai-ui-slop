@@ -1,0 +1,5 @@
+node_modules/
+presentation-video/node_modules/
+presentation-video/out/
+.DS_Store
+Thumbs.db

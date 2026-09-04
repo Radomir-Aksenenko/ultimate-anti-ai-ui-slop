@@ -1,236 +1,323 @@
 ---
-name: human-architect-craft
-description: "Universal Human-Senior Design & Web Architecture Framework (v9.0 Base Edition). Built from the reverse-engineering of 105+ iconic world-class websites (Apple, Stripe, Wise, Notion, Teenage Engineering, Aesop, Vercel, Supabase, Pentagram, Collins). Eradicates both generic AI-slop (bubble pills, neon glows) and rigid formulaic templates (Linear-only clones). Equips any LLM to design and architect websites like a Staff Product Designer and Creative Director: intent-driven archetype selection (7 distinct visual styles), dynamic compositional rhythm, living interactive Hero sandboxes, curated Google Fonts typography (Cyrillic + Latin), fluid spatial scaling, and factual human copywriting (Humanizer-Pro)."
-version: "9.0.0"
-author: "Human Senior Architecture & Design Guild"
-tags:
-  - human-craft
-  - web-architecture
-  - design-system
-  - 100-benchmarks
-  - anti-ai-slop
-  - intentional-design
-  - frontend-engineering
-  - dynamic-layouts
-  - google-fonts
-  - humanizer-pro
+name: anti-ai-ui-slop
+description: Universal production framework to create human-grade, anti-AI-slop web designs based on design systems of Apple, Google DeepMind, Cloudflare, GitHub, Microsoft, and Linear. Eliminates generic gradients, boilerplate layouts, synthetic copy, and poor typography.
 ---
 
-# Human-Senior Design & Architecture Master Framework (v9.0 Base)
-### The Living Blueprint for Architecting Websites with Human Intent, Taste & Rigor
+# ANTI-AI-SLOP: РУКОВОДСТВО ПО СОЗДАНИЮ ВЕБ-ИНТЕРФЕЙСОВ МИРОВОГО УРОВНЯ
 
-> **THE SUPREME DIRECTIVE**:
-> **Never build decorative AI toys, predictable formulaic clones, or 'Dribbble-bait' mockups. Design and engineer digital experiences as a world-class Staff Product Designer and Principal Web Architect. Start with brand intent, choose the authentic design archetype, build real living browser micro-tools, enforce dynamic compositional rhythm, and write crisp, factual human copy.**
+Данный скилл является обязательной директивой для проектирования и верстки веб-сайтов, лендингов, дашбордов и компонентов. Он полностью устраняет паттерны так называемого 'нейросетевого мусора' (AI UI Slop) и переводит генерацию интерфейсов на уровень ведущих технологических компаний: Apple, Google DeepMind, Cloudflare, GitHub, Microsoft, Linear и Stripe.
 
 ---
 
-## 0. THE CORE DIAGNOSIS: HOW AI DESIGNS VS HOW A HUMAN ARCHITECT DESIGNS
+## ЧАСТЬ 1: ФИЛОСОФИЯ ЧЕЛОВЕЧЕСКОГО РЕМЕСЛА ПРОТИВ СТАТИСТИЧЕСКОГО СЛОПА
 
-| Phase | Generic AI Generation (Slop 1.0 & 2.0) 🚫 | The Human Senior Architect (Human Craft) ✅ |
-| :--- | :--- | :--- |
-| **1. Starting Point** | Reaches for a default template: either generic pastel bubble cards with 24px radii OR a dark Linear clone with 4px borders regardless of brand. | **Analyzes Intent, Audience & Brand DNA.** Selects from 7 curated design archetypes matching the true physical/digital identity of the product. |
-| **2. Layout & Rhythm** | Repeats 4–6 identical 3-column bento grids down the entire page. Symmetrical monotony. | **Asymmetric Compositional Rhythm.** Alternates full-bleed statements, split-screen sticky deep dives, macro metrics, and interactive sandboxes. |
-| **3. Hero Section** | Abstract title ("Unlock next-gen potential"), 2 shiny buttons, and a static fake screenshot div. | **Living Interactive Micro-App.** Embeds a working sandbox, calculator, live API switcher, or product customizer directly into the Hero. |
-| **4. Typography** | Unstyled default font or chaotic decorative serif italics thrown randomly inside sans headers. | **Curated Google Fonts Pairing with Optical Tracking.** Tight negative tracking on display titles, positive tracking on micro-labels, tabular mono for data. |
-| **5. Copywriting** | Vague, hyperbolic marketing fluff: *"Revolutionize your seamless synergy with our innovative platform"*. | **Factual Technical Reality (Humanizer-Pro).** Concrete numbers, real workflow steps, exact hours saved, verifiable metrics, zero buzzwords. |
-| **6. Tactility & State** | Flashing neon gradient borders, random SVG noise overlays, and fake macOS traffic lights. | **Engineered Affordance.** Crisp 1px hairline dividers, subtle elevation, natural spring bezier curves (120–180ms), complete keyboard focus. |
+### Почему типовой дизайн нейросетей выглядит плохо:
+Нейросеть обучалась на миллионах шаблонов и средних кодовых баз. Когда ей задают команду 'сделай современный сайт', она вычисляет статистическое медианное значение:
+1. Фиолетовый градиент `from-purple-600 to-indigo-600` на темно-синем фоне `slate-900`.
+2. Огромные размытые круги свечения (`blur-[120px]`).
+3. Три одинаковые карточки фич (`grid-cols-3`) с иконками в кружочках.
+4. Бессмысленный водянистый копирайтинг ('Supercharge your workflow', 'Seamless future').
+5. Отсутствие реальных данных, таблиц, кода, телеметрии и клавиатурных подсказок.
+
+### Главный закон анти-слопа:
+**Дизайн создается через ограничения, конкретику и физику материалов, а не через декоративные украшательства.**
 
 ---
 
-## 1. THE 7 REAL-WORLD DESIGN ARCHETYPES
+## ЧАСТЬ 2: THE BAN LIST (ЧЕРНЫЙ СПИСОК НЕЙРОСЕТЕВЫХ КЛИШЕ)
 
-A luxury cosmetic brand (Aesop) does not look like a developer cloud platform (Vercel), and a rebellious cross-border bank (Wise) does not look like a book publisher (Stripe Press). **Always select the archetype that matches the product**:
+При генерации интерфейсов КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНО использовать:
+1. **Градиентные заголовки `bg-clip-text text-transparent`**: запрещены переходы розовый-фиолетовый-синий. Заголовок должен быть контрастным, сплошным и четким (`#ffffff`, `#f5f5f7` или `#111215`). Допустим только легкий вертикальный оптический спад (100% white -> 85% white).
+2. **Неоновые размытые пятна (Blurred Orbs)**: никаких абсолютных кругов с `filter: blur(80px...150px)`. Структура создается границами и разделителями, а не цветной грязью.
+3. **Шаблон '3 одинаковые карточки'**: никогда не выстраивать 3 одинаковые карточки с иконкой по центру и двумя предложениями текста. Использовать асимметричные Bento-сетки (2:1, 1:2, 3:1).
+4. **Летающие абстрактные 3D-объекты**: никаких парящих стеклянных сфер, кубов и хромированных колец, не несущих смысловой нагрузки.
+5. **Синтетический маркетинговый копирайтинг**: слова 'Supercharge', 'Unleash', 'Next-gen', 'Seamless synergy', 'Revolutionize' запрещены. Текст обязан описывать конкретную инженерную функцию, предмет и числовой результат.
+6. **Круглые кнопки-таблетки с гигантской размытой тенью**: запрещен `shadow-[0_10px_30px_rgba(...)]`. Использовать аккуратные микро-тени с внутренним хайлайтом `inset 0 1px 0 rgba(255,255,255,0.1)`.
+7. **Декоративные эмодзи**: запрещено использовать смайлики (ракеты, молнии, лампочки, огонь) в заголовках, карточках и бейджах.
+8. **Голый неуправляемый шрифт**: запрещено использовать стандартный Inter без компенсации отрицательного трекинга на крупных кеглях.
 
+---
+
+## ЧАСТЬ 3: ПЯТЬ ИНДУСТРИАЛЬНЫХ АРХЕТИПОВ
+
+Перед написанием любой строки кода выберите ровно ОДИН архетип. Смешивание архетипов запрещено.
+
+### АРХЕТИП 1: GOOGLE DEEPMIND EDITORIAL (Научно-исследовательский лаб)
+- **Для чего**: ИИ-исследования, фундаментальная наука, технические публикации, аналитические платформы, глубокие технологии.
+- **Шрифтовая пара**: Классическая антиква (Serif) для заголовков (`Newsreader`, `Charter`, `Georgia`) + высокоточный гротеск для интерфейса (`Google Sans Flex`, `SF Pro Display`).
+- **Палитра**: Глубокий обсидиан (`#090a0f`), графит (`#12141c`), ледяной синий акцент (`#8ab4f8`), тончайшие разделители `rgba(255, 255, 255, 0.08)`.
+- **Композиция**:
+  - Асимметричный сплит: заголовок и исследовательский вопрос слева (40%), тезисы и авторы справа (60%).
+  - Горизонтальные линейки `hairline-b` вместо рамок и карточек.
+  - Строгие капсы метаданных: `RESEARCH PAPER // ARCHITECTURE // 2026.09`.
+  - Монохромные схемы архитектуры нейросетей или математические диаграммы.
+
+### АРХЕТИП 2: APPLE MONUMENTAL (Аппаратный минимализм и масштаб)
+- **Для чего**: Презентация физических продуктов, премиальные приложения, флагманские SaaS-платформы, дизайн-системы.
+- **Шрифтовая пара**: `SF Pro Display` (заголовки 56px-96px с жестким трекингом `-0.03em`) + `SF Pro Text` (17px-21px, relaxed line-height).
+- **Палитра**: 90% монохром (чистый черный `#000000`, сатинированный серый `#161617`, титановый `#1d1d1f`, белый `#f5f5f7`), строго 1 функциональный акцент (фирменный синий `#0071e3` или `#2997ff`).
+- **Композиция**:
+  - Монументальный масштаб: экранное пространство 120-180px паддингов. Продукт дышит.
+  - Физичные материалы: сатинированный металл, матовое стекло (`backdrop-filter: saturate(180%) blur(20px)`), внутренний микро-кант `inset 0 0 0 1px rgba(255, 255, 255, 0.08)`.
+  - Микро-eyebrow над заголовком: мелкий плотный текст, обозначающий контекст.
+
+### АРХЕТИП 3: CLOUDFLARE TELEMETRY (Инженерная плотность и живые метрики)
+- **Для чего**: Сетевая инфраструктура, облачные сервисы, DevOps, мониторинг, кибербезопасность, базы данных.
+- **Шрифтовая пара**: Технический гротеск (`Inter`, `Segoe UI`, `-apple-system`) + моноширинный шрифт для всех цифр и метрик (`JetBrains Mono`, `SF Mono`, `ui-monospace`).
+- **Палитра**: Темный графит (`#0f1117`, `#141720`), границы `#262b3a`, фирменный оранжевый акцент `#f6821f`, зеленый телеметрический статус `#10b981`.
+- **Композиция**:
+  - Высокая информационная плотность: живые счетчики запросов, таблицы задержек, графики пинга, распределение по точкам PoP.
+  - Bento-сетки с неравномерными блоками (2:1 и 1:2).
+  - Подсветка границ: при наведении мыши карточка не прыгает вверх, а плавно меняет цвет границы (`border-color: #3d455d`).
+
+### АРХЕТИП 4: GITHUB PRIMER (Инструментарий разработчика и терминал)
+- **Для чего**: Open Source проекты, CLI-утилиты, компиляторы, API-платформы, SDK.
+- **Шрифтовая пара**: Системный стек GitHub (`-apple-system, BlinkMacSystemFont, 'Segoe UI'`) + моноширинный код (`ui-monospace, SFMono-Regular, Consolas`).
+- **Палитра**: Официальная палитра Primer Dark: фон `#0d1117`, панели `#161b22`, границы `#30363d`, приглушенные границы `#21262d`, синий акцент `#2f81f7`.
+- **Композиция**:
+  - Терминальный блок как центральный элемент: шапка окна с кнопкой копирования, реальная команда вставки (`$ npm i @core/engine`), вывод версии.
+  - Визуализация git-деревьев, коммитов, веток и статусов проверок CI/CD.
+  - Четкие утилитарные бейджи со строгими рамками: `border: 1px solid rgba(56, 139, 253, 0.4); background: rgba(56, 139, 253, 0.1)`.
+
+### АРХЕТИП 5: LINEAR ULTRA-SAAS (Микро-бордеры и хоткеи)
+- **Для чего**: B2B продуктивность, таск-трекеры, финтех, CRM нового поколения, профессиональные SaaS.
+- **Шрифтовая пара**: Геометрический нейтральный гротеск с оптической компенсацией + моноширинные теги клавиш.
+- **Палитра**: Глубокий обсидиан `#08090a`, уровни поверхностей `#0f1011` (surface-0), `#151618` (surface-1), `#1c1d20` (surface-2), фиолетово-серый деликатный акцент `#5e6ad2`.
+- **Композиция**:
+  - Интегрированные подсказки горячих клавиш: бейджи `<kbd class="kbd-badge">⌘K</kbd>`, `<kbd class="kbd-badge">G then I</kbd>`.
+  - Границы hairline (1px solid rgba(255,255,255,0.08)) с направленным градиентным светом по верхнему ребру.
+  - Табличные рабочие процессы: плотные строки, статусные индикаторы, выпадающие меню с моментальным откликом без задержек.
+
+---
+
+## ЧАСТЬ 4: ПОШАГОВЫЙ ПРОТОКОЛ СОЗДАНИЯ СТРАНИЦЫ
+
+Каждый раз, когда вам поручено сверстать страницу или компонент, строго выполняйте следующие 6 шагов:
+
+### ШАГ 1: ФИКСАЦИЯ АРХЕТИПА
+Определите сущность задачи и зафиксируйте архетип. В коде укажите корневой атрибут, например `data-archetype="deepmind"` или `data-archetype="cloudflare"`.
+
+### ШАГ 2: ТИПОГРАФИЧЕСКАЯ КАЛИБРОВКА
+- Для главного заголовка H1 используйте адаптивный размер через `clamp()`:
+  `font-size: clamp(2.5rem, 5vw, 4.5rem);`
+  `line-height: 1.1;`
+  `letter-spacing: -0.03em;`
+  `font-weight: 600;`
+- Длина строки текста (body) никогда не должна превышать 65-70 символов: ограничение `max-w-xl` или `max-w-[65ch]`.
+- Добавьте микро-заголовок (Eyebrow): 11-13px, semi-bold, uppercase, letter-spacing: 0.08em.
+
+### ШАГ 3: МАТЕМАТИКА ПОВЕРХНОСТЕЙ И СВЕТА
+Создайте иерархию слоев (Elevations):
+- Canvas (Фон страницы): `#000000` или `#090a0f`.
+- Surface-0 (Контейнеры/карточки): `#0e1017` или `#141720`.
+- Surface-1 (Вложенные элементы, поля ввода): `#151821` или `#1a1e2a`.
+- Border: `1px solid rgba(255, 255, 255, 0.08)`.
+- Никаких цветных неоновых теней. Тени только физические: `box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.2)`.
+
+### ШАГ 4: СТРУКТУРИРОВАНИЕ BENTO-СЕТКИ
+Вместо 3 одинаковых колонок создайте функциональную сетку с переменным размахом:
+- Колонка 1 (Span 2): Основной интерактивный артефакт (терминал, график, визуализатор структуры).
+- Колонка 2 (Span 1): Числовая инженерная метрика с моноширинным значением и статусной точкой.
+- Колонка 3 (Span 1): Компактный список технических параметров или стек протоколов.
+- Колонка 4 (Span 2): Полноразмерный интерактивный блок с вкладками кода.
+
+### ШАГ 5: ИНЖЕНЕРНЫЙ КОПИРАЙТИНГ
+Замените всю абстрактную воду на реальные термины:
+- Плохо: 'Our AI delivers unparalleled performance.'
+- Отлично: 'Optimized inference latency under 8.4ms with INT4 quantization on Hopper architecture.'
+- Плохо: 'Easy integration with your stack.'
+- Отлично: 'Zero-config SDK with native bindings for TypeScript, Python, Rust, and Go.'
+
+### ШАГ 6: ПРОВЕРКА ЧЕРЕЗ QUALITY GATE
+Перед выводом кода сверьтесь с 10 пунктами контрольного списка из Части 6.
+
+---
+
+## ЧАСТЬ 5: ПРИМЕРЫ ЭТАЛОННЫХ КОМПОНЕНТОВ
+
+### 1. ЭТАЛОН: Google DeepMind Editorial Hero
+```html
+<section class="theme-deepmind min-h-[85vh] bg-[#090a0f] text-[#f5f6f8] px-6 py-24 border-b border-white/10 flex flex-col justify-between">
+  <!-- Верхний бар метаданных -->
+  <div class="max-w-7xl mx-auto w-full flex items-center justify-between text-xs font-mono text-[#9ea4b0] tracking-wider uppercase border-b border-white/10 pb-4">
+    <span>Research Architecture // Core Lab</span>
+    <span>Document Ref: 2026-DM-094</span>
+  </div>
+
+  <!-- Редакционный асимметричный заголовок -->
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 my-auto pt-16">
+    <div class="lg:col-span-7">
+      <p class="text-xs font-mono uppercase tracking-widest text-[#8ab4f8] mb-4">Frontier Reasoning</p>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal tracking-[-0.025em] leading-[1.08] text-white">
+        Scalable verification in autonomous neural reasoning.
+      </h1>
+    </div>
+    <div class="lg:col-span-5 flex flex-col justify-end">
+      <p class="text-lg text-[#9ea4b0] font-sans leading-relaxed max-w-lg mb-8">
+        We introduce formal mathematical constraints into generative pipelines, eliminating hallucinations and delivering deterministic proof graphs at scale.
+      </p>
+      <div class="flex items-center gap-6 text-sm font-mono">
+        <a href="#paper" class="inline-flex items-center gap-2 text-white border-b border-white pb-1 hover:border-[#8ab4f8] hover:text-[#8ab4f8] transition-colors">
+          <span>Read Research Paper [PDF]</span>
+          <span>-></span>
+        </a>
+        <a href="#code" class="text-[#9ea4b0] hover:text-white transition-colors">
+          View Weights & Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Техническая плашка метрик -->
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/10 text-xs font-mono text-[#9ea4b0]">
+    <div>
+      <span class="block text-white text-lg font-sans font-semibold">99.42%</span>
+      <span>Formal Verification Rate</span>
+    </div>
+    <div>
+      <span class="block text-white text-lg font-sans font-semibold">&lt; 14ms</span>
+      <span>Proof Generation P95</span>
+    </div>
+    <div>
+      <span class="block text-white text-lg font-sans font-semibold">Zero-Leak</span>
+      <span>Differential Privacy</span>
+    </div>
+    <div>
+      <span class="block text-white text-lg font-sans font-semibold">Apache 2.0</span>
+      <span>Model Weights License</span>
+    </div>
+  </div>
+</section>
 ```
-                                  [ THE ARCHETYPE SPECTRUM ]
-   Minimal/Utility <-------------------------------------------------------> Rich/Sensory
-   [Modern Swiss]   [FinTech Infra]   [Technical Cockpit]   [Humanist Editorial]   [Neo-Brutalist]   [Industrial Tactile]   [Luxury Sanctuary]
-    Vercel/Linear     Stripe/Ramp       GitHub/Supabase       Notion/Stripe Press     Wise/The Verge     Teenage Eng/Nothing    Apple/Aesop/Polestar
+
+### 2. ЭТАЛОН: Cloudflare Telemetry Bento Grid
+```html
+<section class="theme-cloudflare bg-[#0f1117] text-[#f3f4f6] py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Секция заголовка -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-[#262b3a]">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="telemetry-dot bg-[#10b981]"></span>
+          <span class="text-xs font-mono uppercase tracking-widest text-[#9ca3af]">Global Edge Status: All Systems Operational</span>
+        </div>
+        <h2 class="text-3xl font-sans font-semibold tracking-[-0.02em] text-white">
+          Edge compute metrics across 330 points of presence.
+        </h2>
+      </div>
+      <div class="mt-4 md:mt-0 font-mono text-xs text-[#9ca3af]">
+        Sample Interval: 1000ms // Live Stream
+      </div>
+    </div>
+
+    <!-- Асимметричный Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Большой блок: P95 Latency (Span 2) -->
+      <div class="md:col-span-2 bg-[#141720] border border-[#262b3a] rounded-[4px] p-6 hover:border-[#3d455d] transition-colors">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white">Synthetic Route Latency (Global P95)</h3>
+          <span class="text-xs font-mono text-[#f6821f] bg-[#f6821f]/10 px-2 py-1 rounded">11.8ms Median</span>
+        </div>
+        <!-- Симуляция графика -->
+        <div class="h-40 flex items-end gap-1.5 pt-4 border-b border-[#262b3a]">
+          <div class="flex-1 bg-[#262b3a] hover:bg-[#f6821f] transition-colors h-[40%] rounded-t-sm" title="Tokyo: 14ms"></div>
+          <div class="flex-1 bg-[#262b3a] hover:bg-[#f6821f] transition-colors h-[65%] rounded-t-sm" title="London: 9ms"></div>
+          <div class="flex-1 bg-[#262b3a] hover:bg-[#f6821f] transition-colors h-[35%] rounded-t-sm" title="Frankfurt: 11ms"></div>
+          <div class="flex-1 bg-[#262b3a] hover:bg-[#f6821f] transition-colors h-[80%] rounded-t-sm" title="San Francisco: 8ms"></div>
+          <div class="flex-1 bg-[#262b3a] hover:bg-[#f6821f] transition-colors h-[50%] rounded-t-sm" title="Singapore: 15ms"></div>
+          <div class="flex-1 bg-[#262b3a] hover:bg-[#f6821f] transition-colors h-[45%] rounded-t-sm" title="Sydney: 18ms"></div>
+          <div class="flex-1 bg-[#f6821f] h-[30%] rounded-t-sm" title="Origin Edge: 4ms"></div>
+        </div>
+        <div class="flex justify-between text-[11px] font-mono text-[#9ca3af] mt-3">
+          <span>NRT (Tokyo)</span>
+          <span>LHR (London)</span>
+          <span>FRA (Frankfurt)</span>
+          <span>SFO (Silicon Valley)</span>
+          <span>SIN (Singapore)</span>
+          <span>SYD (Sydney)</span>
+          <span>EDGE (Local)</span>
+        </div>
+      </div>
+
+      <!-- Малый блок: Rate Limiting & Protection (Span 1) -->
+      <div class="bg-[#141720] border border-[#262b3a] rounded-[4px] p-6 hover:border-[#3d455d] transition-colors flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-mono text-[#9ca3af] uppercase tracking-wider mb-2">Automated Threat Mitigation</div>
+          <div class="text-3xl font-mono font-bold text-white mb-1">184.2 M/s</div>
+          <div class="text-xs text-[#10b981] font-mono">DDoS Requests Mitigated at L3/L4/L7</div>
+        </div>
+        <div class="border-t border-[#262b3a] pt-4 mt-6">
+          <div class="flex justify-between text-xs font-mono mb-2">
+            <span class="text-[#9ca3af]">BGP Anycast Convergence</span>
+            <span class="text-white">&lt; 300ms</span>
+          </div>
+          <div class="flex justify-between text-xs font-mono">
+            <span class="text-[#9ca3af]">TLS 1.3 0-RTT Handshake</span>
+            <span class="text-[#10b981]">Enabled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 ```
 
-### Archetype 1: Modern Swiss / Neo-Modernist (Vercel, Linear, Raycast, Framer)
-* **Design Intent**: Velocity, precision engineering, developer clarity, extreme focus.
-* **Corner Radii & Borders**: Sharp `4px–8px` max, 1px hairline dividers (`rgba(255,255,255,0.08)` or `rgba(15,23,42,0.08)`). Zero bubbles.
-* **Typography Pair**: `Plus Jakarta Sans` / `Geist` (Display -0.03em tracking) + `JetBrains Mono` / `Geist Mono` (Tabular).
-* **Color World**: Deep onyx (`#090B0E`), pure canvas white, zinc borders, single laser-sharp accent (Emerald `#10B981` or Electric Indigo `#4F46E5`).
-* **Signature Components**: Command palettes (`Cmd+K`), keyboard shortcut badges, live deploy pipelines, code tabs with copy feedback.
+### 3. ЭТАЛОН: Linear Keyboard-Driven Command Bar
+```html
+<div class="theme-linear bg-[#08090a] p-8">
+  <div class="max-w-2xl mx-auto bg-[#0f1011] border border-white/[0.08] rounded-lg shadow-2xl overflow-hidden">
+    <!-- Поле ввода с клавиатурной подсказкой -->
+    <div class="flex items-center gap-3 px-4 py-3.5 border-b border-white/[0.08]">
+      <svg class="w-4 h-4 text-[#8a8f98]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input type="text" placeholder="Type a command or search deployments..." class="bg-transparent text-sm text-white placeholder-[#52555a] focus:outline-none w-full font-sans" />
+      <span class="kbd-badge text-[10px] text-[#8a8f98] bg-white/[0.06] border border-white/[0.1] px-1.5 py-0.5 rounded font-mono">ESC</span>
+    </div>
 
-### Archetype 2: High-End FinTech & Enterprise Infrastructure (Stripe, Ramp, Mercury, Brex)
-* **Design Intent**: Impeccable financial trust, global scale, institutional elegance, speed.
-* **Corner Radii & Borders**: Balanced `8px–12px`, whisper-soft compound elevation shadows (`0 4px 12px rgba(15,23,42,0.06)`), 1px top bevel highlight.
-* **Typography Pair**: `Outfit` / `Inter` (Display -0.025em tracking) + `Fira Code` / Tabular Figures.
-* **Color World**: Deep midnight navy (`#0A2540`), crisp slate canvas (`#F6F9FC`), radiant turquoise (`#00D4B2`) & cobalt accents.
-* **Signature Components**: Dynamic currency/fee calculators, transaction stream cards, multi-account cards, interactive tax/spending sliders.
-
-### Archetype 3: Warm Humanist & Editorial (Notion, Pitch, Stripe Press, Monocle, ReadCV)
-* **Design Intent**: Intellectual depth, thoughtful craft, literary authority, calm productivity.
-* **Corner Radii & Borders**: Soft `6px–12px`, natural warm dividers, generous whitespace, textured paper feel.
-* **Typography Pair**: `Newsreader` / `Manrope` / `Playfair Display` + `Onest` / `Inter` + `JetBrains Mono`.
-* **Color World**: Warm ivory canvas (`#FBFBFA` / `#F7F5F0`), deep ink charcoal (`#22252A`), warm sand, terracotta, sage green.
-* **Signature Components**: Interactive block-based document sandboxes, pull-quotes with author bios, table-of-contents navigation, book/essay cards.
-
-### Archetype 4: Bold Neo-Brutalist & Dynamic Punch (Wise, Cash App, Gumroad, The Verge)
-* **Design Intent**: Rebel energy, radical honesty, unapologetic confidence, high-contrast cultural punch.
-* **Corner Radii & Borders**: Raw `0px–4px`, thick 2px–3px solid black borders, hard offset drop shadows (`4px 4px 0 #000000`).
-* **Typography Pair**: `Space Grotesk` / `Unbounded` / `Archivo Black` + `Space Mono`.
-* **Color World**: High-voltage neon lime (`#9EF01A`), signal yellow (`#FAFF00`), deep solid black (`#000000`), stark white.
-* **Signature Components**: "Us vs The Greedy Monopolies" price comparison tables, large numerical scoreboards, sticker badges, currency swap toggles.
-
-### Archetype 5: Industrial Tactile & Hardware Retro-Futurism (Teenage Engineering, Nothing, Panic)
-* **Design Intent**: Physical hardware nostalgia, mechanical tactility, quirky engineer joy, transparent casing.
-* **Corner Radii & Borders**: Precise `2px–6px`, knurled metal borders, inset shadow displays, screw/pin alignment markers.
-* **Typography Pair**: `Silkscreen` / `Space Mono` / `Dot Matrix` + `IBM Plex Sans`.
-* **Color World**: Anodized aluminum grey (`#D8D8D8`), matte industrial black (`#141414`), warning orange (`#FF5500`), LED amber (`#FFB700`).
-* **Signature Components**: Interactive rotary knobs (dials), mechanical toggle switches, VU meters, pixel-art parameter screens, audio synth engines.
-
-### Archetype 6: Luxury Sanctuary & Clean Living (Apple, Polestar, Aesop, Rimowa, Bang & Olufsen)
-* **Design Intent**: Timeless luxury, quiet confidence, cinematic scrollytelling, bespoke physical materials.
-* **Corner Radii & Borders**: Generous organic `18px–28px` squircles (Apple style) OR `0px` borderless airy layout (Aesop style).
-* **Typography Pair**: `Plus Jakarta Sans` / `Manrope` (Ultra-refined, tracking -0.04em) + subtle technical mono captions.
-* **Color World**: Monochromatic titanium, pearl white, deep graphite, brushed bronze, warm oak.
-* **Signature Components**: 3D product interactive visualizer, material finish/color selector, full-bleed cinematic video frames, specification tables.
-
-### Archetype 7: Deep Technical Cockpit & Data Density (GitHub, Supabase, Grafana, Datadog)
-* **Design Intent**: Maximum information density, zero cognitive overhead, mission-critical operations.
-* **Corner Radii & Borders**: Compact `4px–6px`, shared grid borders, high-density cell padding (`8px–12px`).
-* **Typography Pair**: `IBM Plex Sans` / `Inter` + `IBM Plex Mono` / `JetBrains Mono` with mandatory `tabular-nums`.
-* **Color World**: Deep terminal graphite (`#0D1117`), status-driven accents (Git green `#238636`, alert amber `#D29922`, incident crimson `#DA3633`).
-* **Signature Components**: Interactive SQL/CLI query sandboxes, split-view git diffs, server heatmaps, live time-series telemetry charts.
-
----
-
-## 2. THE HUMAN ARCHITECT'S COMPOSITIONAL RHYTHM & STORY ARC
-
-A senior human designer never stacks 5 identical 3-column card grids. Every page must follow a **Dynamic Narrative Rhythm**:
-
-```
-[ 1. HERO & LIVING SANDBOX ]   -> Hook + Immediate Interactive Proof (Calculator, SDK switcher, Live Demo)
-[ 2. PROOF STRIP / LOGOS ]    -> Subtle monochromatic context (opacity 0.4–0.6), zero colored clown badges
-[ 3. SPLIT-VIEW MECHANICS ]    -> Left: Sticky step-by-step narrative. Right: Scrollable live code/screens
-[ 4. MACRO DISPLAY METRIC ]    -> Single massive typography statement (e.g. "1.4s", "42% faster") with context
-[ 5. INTERACTIVE PLAYGROUND ]  -> Hands-on browser playground (tabs, search filters, state toggles)
-[ 6. DEEP DOMAIN CASE STUDY ]  -> Concrete story with real names, exact before/after metrics and architecture
-[ 7. HONEST PRICING / MATRIX ] -> Transparent comparison without hidden traps, interactive tier switcher
-[ 8. CLOSING ACTION & FOOTER ] -> Frictionless next step + structured multi-column institutional footer
+    <!-- Список действий -->
+    <div class="py-2 text-xs">
+      <div class="px-4 py-1 text-[11px] font-mono uppercase tracking-wider text-[#52555a]">Recent Actions</div>
+      <div class="px-3 py-2 mx-2 rounded flex items-center justify-between hover:bg-white/[0.04] cursor-pointer group">
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+          <span class="text-[#f7f8f8] group-hover:text-white font-medium">Deploy release v2.14.0 to production</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <span class="kbd-badge font-mono text-[10px]">⌘</span>
+          <span class="kbd-badge font-mono text-[10px]">D</span>
+        </div>
+      </div>
+      <div class="px-3 py-2 mx-2 rounded flex items-center justify-between hover:bg-white/[0.04] cursor-pointer group">
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-[#8ab4f8]"></span>
+          <span class="text-[#f7f8f8] group-hover:text-white font-medium">Rebuild vector index partitions</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <span class="kbd-badge font-mono text-[10px]">⌘</span>
+          <span class="kbd-badge font-mono text-[10px]">R</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
-### The Law of the Living Hero Micro-Tool:
-Every Hero section MUST contain a **functional, clickable micro-tool**:
-- For FinTech: Live currency converter or ROI savings slider.
-- For DevTools: Interactive multi-language code switcher (cURL / JS / Python / Go) with real runnable output.
-- For SaaS / Workflow: Working kanban card drag-triage or filterable data table.
-- For E-Commerce / Hardware: Interactive color/finish customizer with 360 preview state.
-
 ---
 
-## 3. THE GOOGLE FONTS CURATED TYPOGRAPHY ENGINE (Latin + Cyrillic)
+## ЧАСТЬ 6: QUALITY GATE (КОНТРОЛЬНЫЙ СПИСОК САМОПРОВЕРКИ)
 
-All font pairings are production-tested for **both Latin and Cyrillic** character sets with precise optical letter-spacing:
+Перед выдачей сгенерированного макета, страницы или компонента, проверьте результат по следующим 10 критериям. При хотя бы одном ответе 'ДА' на вопросы 1-5 код считается браком и подлежит немедленной переработке:
 
-```css
-/* FLUID TYPOGRAPHY SCALE (Golden Ratio Clamps) */
-:root {
-  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);  /* 12px - 13px */
-  --text-sm: clamp(0.8125rem, 0.775rem + 0.3vw, 0.875rem); /* 13px - 14px */
-  --text-base: clamp(0.9375rem, 0.9rem + 0.35vw, 1.0625rem); /* 15px - 17px */
-  --text-lg: clamp(1.125rem, 1.05rem + 0.5vw, 1.25rem);    /* 18px - 20px */
-  --text-xl: clamp(1.375rem, 1.25rem + 0.8vw, 1.625rem);   /* 22px - 26px */
-  --text-2xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem);     /* 28px - 36px */
-  --text-3xl: clamp(2.25rem, 1.8rem + 2.0vw, 3.25rem);     /* 36px - 52px */
-  --text-hero: clamp(2.75rem, 2.2rem + 3.5vw, 4.75rem);    /* 44px - 76px */
-  
-  --tracking-tight: -0.035em;  /* For large Display H1/H2 */
-  --tracking-normal: -0.01em;  /* For body text */
-  --tracking-wide: +0.06em;    /* For micro uppercase tags & mono */
-}
-```
-
-### Curated Pairings by Archetype:
-1. **Modern Swiss**: `Plus Jakarta Sans` (Display 700) + `Inter` (Body 400..500) + `JetBrains Mono`
-2. **FinTech**: `Outfit` (Display 600..800) + `Inter` (Body 400..500) + `Fira Code`
-3. **Warm Humanist**: `Manrope` (Display 700..800) + `Onest` (Body 400..500) + `JetBrains Mono`
-4. **Bold Neo-Brutalist**: `Space Grotesk` (Display 700) + `Space Grotesk` (Body 400..600) + `Space Mono`
-5. **Industrial Tactile**: `Space Grotesk` / `Silkscreen` + `IBM Plex Sans` + `IBM Plex Mono`
-6. **Luxury Sanctuary**: `Plus Jakarta Sans` / `Manrope` (Display 600) + `Onest` (Body 400) + `JetBrains Mono`
-7. **Technical Cockpit**: `IBM Plex Sans` (Display 600) + `IBM Plex Sans` (Body 400..500) + `IBM Plex Mono`
-
----
-
-## 4. THE 25 HARD TABOOS (ZERO AI-SLOP LAWS)
-
-When generating code, the following anti-patterns are **STRICTLY FORBIDDEN**:
-
-1. 🚫 **NO Rainbow / Neon Gradient Headlines**: Never do `bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent`. Use solid, confident typography.
-2. 🚫 **NO Symmetrical Bento-Spam**: Never stack 6 identical floating cards with round circle icons. Use asymmetric, diverse layouts.
-3. 🚫 **NO Fake macOS Traffic Light Circles**: Never draw red/yellow/green dots on container divs. Use real breadcrumbs, URL bars, or telemetry tags.
-4. 🚫 **NO Emoji Spam in UI**: Never put `🚀`, `✨`, `⚡`, `💡`, `🎯` in headings, badges, or buttons. Use crisp 1.5px monoline vector SVGs.
-5. 🚫 **NO Random Serif Italic in Sans Titles**: Never randomly inject `<em class="font-serif italic">` into a technical sans headline.
-6. 🚫 **NO SVG Noise Overlays**: Never stretch `<div class="noise-layer">` or `feTurbulence` over the viewport.
-7. 🚫 **NO Shimmer / Shiny Sweep Buttons**: Never use `@keyframes sheen` or moving gradient sweeps across buttons.
-8. 🚫 **NO Vague Marketing Fluff**: Never write *"Unlock the future of seamless synergy"*. State exact domain facts and measurable metrics.
-9. 🚫 **NO Static Fake Mockup Divs**: Never draw grey rectangles pretending to be software. Render real working HTML tabs, search filters, and interactive tables.
-10. 🚫 **NO Monospace Font on Navigation & Buttons**: Navigation links and primary CTAs must use readable `font-sans`. `font-mono` is strictly for data, code, prices, and timestamps.
-11. 🚫 **NO Pure Black on Pure White**: Avoid harsh `#000000` text on `#FFFFFF` with raw `#2563EB` links. Use refined slate/ink palettes with calibrated contrast.
-12. 🚫 **NO Inappropriate Radii Mismatch**: Do not use 24px bubble cards for a high-density developer console, and do not use 0px raw brutalism for a luxury spa. Match the archetype.
-13. 🚫 **NO Eyebrow Badge Spam**: Maximum 1 eyebrow chip per major section (max 2–3 on entire page).
-14. 🚫 **NO Left-Border Accent Strips**: Avoid cheap `border-l-4 border-blue-500` card hacks. Use complete structural containment.
-15. 🚫 **NO Wrapping Button Text**: Action buttons must be 1–3 precise words on a single line.
-16. 🚫 **NO Disabled Keyboard Focus**: Always include complete `:focus-visible` states with visible contrast rings.
-17. 🚫 **NO Uncalibrated Slow Transitions**: Never use sluggish 500ms transitions. Use natural human physics: `120ms–180ms cubic-bezier(0.16, 1, 0.3, 1)`.
-18. 🚫 **NO Misaligned Tabular Numbers**: All prices, metrics, percentages, and timestamps must use `font-mono tabular-nums` or `font-variant-numeric: tabular-nums`.
-19. 🚫 **NO Broken Viewports**: Never lock viewports to `h-screen`. Always use `min-h-[100dvh]` with proper bottom padding.
-20. 🚫 **NO Missing Dark/Light Consideration**: Every layout must have intentional contrast tokens that function in both light and dark environments.
-21. 🚫 **NO Generic Placeholder Testimonials**: Never write *"John Doe, 5 stars, great app"*. Use verified full names, exact job titles, real company badges, and quantifiable results.
-22. 🚫 **NO Dead Tab Buttons**: Every tab or pill button in preview sandboxes must have active JavaScript event listeners that switch views smoothly.
-23. 🚫 **NO Nested Double-Cushioning**: Do not wrap a padded card inside another padded card with a 12px gap. Render flush monolithic panels with internal hairline dividers.
-24. 🚫 **NO Centered Body Paragraphs**: Never center long 3-line body paragraphs. Left-align body copy for natural human eye tracking; center only short 1-line display statements.
-25. 🚫 **NO Cookie-Cutter Linear Clone Default**: Do not force every single website to be a dark-mode developer cockpit. Always evaluate the product domain and choose the right archetype.
-
----
-
-## 5. HUMANIZER-PRO: LIVING FACTUAL COPYWRITING (RU / EN)
-
-### The 25 Banned Marketing Clichés vs Human Senior Solutions:
-
-| Banned AI Fluff 🚫 | Why It Fails | Human Senior Solution ✅ |
-| :--- | :--- | :--- |
-| **«Является / выступает в качестве»** | Бюрократический паразит | Используйте тире или активный глагол (*«Сервис синхронизирует остатки...»*). |
-| **«В современном мире / На сегодняшний день»** | Пустой заполнитель | Сразу к факту и сути проблемы. |
-| **«Стоит отметить / Необходимо подчеркнуть»** | Вода | Удаляйте полностью, пишите тезис прямо. |
-| **«Данный / указанный»** | Канцелярит | Заменяйте на *«этот»* или опускайте. |
-| **«Осуществление / процесс реализации»** | Отглагольное существительное | Заменяйте на глагол действия (*«чтобы развернуть»*). |
-| **«Бесшовный / интуитивно понятный»** | Заезженный эпитет | Опишите механику (*«за 2 клика»*, *«без перезагрузки страницы»*). |
-| **«Революционный / инновационный / передовой»** | Пустое самолюбование | Удаляйте. Покажите цифру производительности (*«обрабатывает 14 000 RPS»*). |
-| **«Раскрыть потенциал / выйти на новый уровень»** | Шаблон тренингов | Измеримый результат (*«сокращает время закрытия месяца с 5 дней до 3 часов»*). |
-| **«Комплексный подход / синергия»** | Размытые абстракции | Назовите 3 конкретных модуля системы. |
-| **«Позволяет вам / дает возможность»** | Пассивная конструкция | Активный залог (*«Вы управляете...»*, *«Команда видит...»*). |
-| **«Не просто X, а целый Y»** | Рекламная банальщина | Убирайте конструкцию, пишите четко. |
-| **«Широкий спектр / многообразие»** | Неопределенность | Перечислите 2–3 ключевых примера. |
-| **«Как известно / ни для кого не секрет»** | Ложная эрудиция | Удаляйте. |
-| **«Оказывает положительное влияние»** | Вялая фраза | *«Ускоряет загрузку на 40%»*, *«Снижает отток клиентов»*. |
-| **«Ключевой особенностью является»** | Канцелярский оборот | *«Главное: ...»* или сразу факт. |
-| **«С целью / во избежание»** | Юридический суржик | *«Чтобы»*, *«чтобы не»*. |
-| **"Unlock next-gen synergies"** | Empty corporate buzzwords | *"Automate reconciliation across 12 currencies in real-time."* |
-| **"Seamless experience tailored for you"** | Meaningless cliché | *"Zero setup. Connect your PostgreSQL database in under 45 seconds."* |
-| **"Revolutionize your workflow"** | Unprovable hype | *"Cut PR review cycles from 4 hours to 18 minutes."* |
-| **"The all-in-one powerful solution"** | Lazy feature soup | *"Git-backed CMS with instant preview branches and role-based access."* |
-| **"Supercharge your team's productivity"** | Vague promise | *"Automated sprint velocity tracking with GitHub and Jira sync."* |
-| **"Built for the future of work"** | Empty slogan | *"Async video feedback with timestamped Figma and Linear integrations."* |
-| **"Effortless integration at scale"** | Passive boast | *"Drop 3 lines of JavaScript into your `<head>` and start collecting events."* |
-| **"Game-changing capabilities"** | Exaggerated jargon | State the exact feature: *"Single-click database branching with instant rollback."* |
-| **"Empowering businesses worldwide"** | Meaningless grandiosity | *"Used by 4,200+ engineering teams processing \$1.2B in transactions."* |
-
----
-
-## 6. PRE-FLIGHT HUMAN-CRAFT AUDIT GATE
-
-Before outputting any code or architecture, verify these 8 criteria:
-
-- [ ] **1. Intentional Archetype Selected**: The visual style, radii scale, and palette strictly match one of the 7 archetypes (not a default cookie-cutter clone).
-- [ ] **2. Living Hero Micro-Tool Active**: The first screen includes a real working interactive widget (calculator, code switcher, sandbox, customizer) with working JS listeners.
-- [ ] **3. Dynamic Compositional Rhythm**: Sections vary in layout (Hero -> Split-Screen Sticky -> Macro Stat -> Interactive Playground -> Deep Case Study). Zero 3-column card spam.
-- [ ] **4. Curated Google Fonts Pair with Tracking**: Display headings use tight negative tracking (`-0.025em` to `-0.035em`), micro badges use positive tracking (`+0.05em`), and data uses `font-mono tabular-nums`.
-- [ ] **5. Zero AI Smells**: No rainbow gradient texts, no fake macOS traffic lights, no SVG noise overlays, no moving shimmer buttons, no emoji in headings/CTAs.
-- [ ] **6. Humanizer-Pro Verified**: All copy in RU and EN is 100% factual, concise, and free of the 25 banned clichés.
-- [ ] **7. Accessible & Tactile States**: Full `:focus-visible` contrast rings, natural 120–180ms spring bezier transitions, WCAG AAA text contrast.
-- [ ] **8. 105 Benchmarks Grounding**: Every component has a real-world equivalent inspired by the 105 master benchmark index.
+| № | Проверка на признаки AI Slop | Статус |
+|---|---|---|
+| 1 | Присутствуют ли фиолетово-индиговые градиенты текста или фона? | ДОЛЖНО БЫТЬ НЕТ |
+| 2 | Присутствуют ли размытые цветные круги (`blur-[100px]`) на заднем плане? | ДОЛЖНО БЫТЬ НЕТ |
+| 3 | Используется ли заезженная сетка из 3 одинаковых карточек? | ДОЛЖНО БЫТЬ НЕТ |
+| 4 | Содержит ли копирайтинг пустые фразы ('Supercharge', 'Seamless', 'Next-gen')? | ДОЛЖНО БЫТЬ НЕТ |
+| 5 | Присутствуют ли декоративные эмодзи в разметке? | ДОЛЖНО БЫТЬ НЕТ |
+| 6 | Выбран ли один четкий архетип (DeepMind, Apple, Cloudflare, GitHub, Linear)? | ДОЛЖНО БЫТЬ ДА |
+| 7 | Задан ли отрицательный трекинг (`-0.02em...-0.03em`) для заголовков больше 32px? | ДОЛЖНО БЫТЬ ДА |
+| 8 | Ограничена ли длина строк текста параграфов (`max-w-xl` / 65 символов)? | ДОЛЖНО БЫТЬ ДА |
+| 9 | Присутствуют ли физические границы (1px hairline) и внутренний микро-рельеф? | ДОЛЖНО БЫТЬ ДА |
+| 10 | Содержит ли макет реальные артефакты (терминалы, таблицы, графики, метрики, kbd)? | ДОЛЖНО БЫТЬ ДА |
