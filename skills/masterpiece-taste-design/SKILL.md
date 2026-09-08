@@ -64,10 +64,12 @@ Set these three values (baseline: 7 / 5 / 4):
 - [BANNED] **Micro-Label & Side-Metadata Clutter:** Peppering corners, card headers, and sidebars with useless tiny labels (`SYSTEM // v1.0`, `TELEMETRY: ACTIVE`, `LATENCY: 12ms`, `ID: #49281`, fake coordinates). If a label does not inform a real user decision, DELETE IT.
 - [BANNED] **Egg-like Bubble Radii ("Яишность"):** Slapping extreme `rounded-full` or huge bubble `rounded-3xl` on normal cards, or conversely making everything completely 0px rigid without architectural justification.
 - [BANNED] **Spurious Table-ness:** Slicing every section into pseudo-spreadsheets and hairline-underlined rows. Content must breathe in spacious editorial blocks.
+- [BANNED] **Semantic Emptiness & Corporate AI Buzzword Water:** Headlines like "Transform your workflow with next-gen AI", "Seamless collaboration for modern teams", "Empowering intelligent insights". Copy MUST be tangible, domain-specific, and concrete (real metrics, real physical/software actions).
+- [BANNED] **Mono-Font Flatness:** Using a single generic font (`Inter` or `Roboto`) for every headline, body, and button with zero character or tension. Always pair an expressive display face with a clean workhorse body.
+- [BANNED] **Section Cadence Monotony ("Слишком одинаково"):** Stacking sections that all use identical heights, identical 3-column cards, and centered headlines. Alternating visual rhythm is mandatory (Impact Hero -> Dense Bento -> Giant Metric Break -> Asymmetric CTA).
 - [BANNED] Generic purple/cyan glowing gradient buttons (`from-purple-600 to-indigo-600`).
 - [BANNED] Three identical feature cards centered in a row.
 - [BANNED] Centered hero headline over generic dark mesh background.
-- [BANNED] Defaulting to `Inter` for everything or `Fraunces`/`Instrument Serif` for creative briefs.
 - [BANNED] CTA buttons with labels wrapping to 2 lines on desktop.
 - [BANNED] Hand-rolled div rectangles pretending to be fake UI screenshots.
 - [BANNED] More than 1 uppercase tracking eyebrow per 3 sections.
@@ -81,20 +83,30 @@ If you are a smaller, faster model (e.g. Qwen 2.5 27B/32B, Gemini Flash, Claude 
 1. **Never treat Figma as abstract geometry.** Always build a full product/website section structure.
 2. **Follow the 8-Section Narrative Arc:**
    - Header -> Hero (Asymmetric 60/40) -> Social Proof -> Value Hook -> Bento (7:5) -> Specs (2-col) -> Conversion CTA -> Footer.
-3. **No Decorative Clutter:**
+3. **No Decorative Clutter & No Buzzword Fluff:**
    - NO pulsing status dots.
    - NO tiny corner metadata badges.
    - NO gratuitous table lines under every text item.
-4. **Concentric Non-Standard Curvature (Anti-Egg Rule):**
-   - Use intentional, calibrated radii: `radius: 10px - 14px` for cards (modern squircle feel).
+   - NO AI buzzword headlines ("Transform", "Seamless", "Next-gen"). Use real domain terminology and numbers.
+4. **Typographic Pairing Presets (Kill the Mono-Inter Boredom):**
+   - **Modern Editorial Tech:** `Cabinet Grotesk` (Display Headline) + `Geist` or `Plus Jakarta Sans` (Body) + `JetBrains Mono` (Specs).
+   - **Futuristic Hardware:** `Clash Display` or `PP Neue Machina` (Headline) + `Satoshi` (Body).
+   - **Warm Luxury / Studio:** `Instrument Serif` (Italic Accent Word in Headline) + `General Sans` (Heavy Grotesk Headline) + `Inter` (Neutral Body).
+5. **Concentric Non-Standard Curvature (Anti-Egg Rule):**
+   - Use intentional, calibrated radii: `radius: 12px - 16px` for cards (modern squircle feel).
    - Concentric math: Inner element radius = `max(0, outer_radius - padding)`. Never put a pill inside a rounded rectangle.
    - Buttons: Match card curvature (`rounded-lg` / `rounded-xl`, 8-10px), NEVER full pills (`rounded-full`) unless the brand specifically calls for it.
-5. **Use pre-calculated color codes:**
+6. **Break the Uniform Box Grid:**
+   - At least 1 visual asset MUST partially break out of its container or overlap the text layer (`-mt-12` or `translate-y-6 relative z-10`).
+   - Alternate pacing: do not repeat the same 3-column card block twice in a row.
+7. **Use pre-calculated color codes with temperature:**
+   - Warm Obsidian: `#131211` with `#1E1D1B` cards.
+   - Deep Ink Navy: `#090D16` with `#111726` cards.
    - Forest Emerald: `#096D23`
    - Royal Violet: `#7A4BDD`
    - Burnt Terracotta: `#B96539`
    - Cold Luxury Slate: `#F1F3F5` & `#18181B`
-6. **Always run the Pre-Flight Gatekeeper** in `references/anti_slop_checklist.md` before delivering work.
+8. **Always run the Pre-Flight Gatekeeper** in `references/anti_slop_checklist.md` before delivering work.
 
 ---
 

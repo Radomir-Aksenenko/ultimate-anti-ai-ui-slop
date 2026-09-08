@@ -27,6 +27,10 @@ Run this comprehensive checklist before delivering any UI design, Figma asset, w
 | **16. Noise Filter** | Micro-Label Purge | No decorative pseudo-tech corner tags (`SYSTEM // v1.0`, fake latency/uptime) | `[OK]` / `[FAIL]` |
 | **17. Geometry** | Anti-Egg Radii | Concentric radii (`R_in = R_out - pad`); no bubble pill cards or mismatched corners | `[OK]` / `[FAIL]` |
 | **18. Density** | Anti-Tabularity | No slicing text into pseudo-spreadsheets; content breathes in spacious blocks | `[OK]` / `[FAIL]` |
+| **19. Character** | Typographic Tension | Expressive display font paired with neutral body; no single-font Inter monotony | `[OK]` / `[FAIL]` |
+| **20. Cadence** | Visual Rhythm Shift | Section heights and densities vary; no identical 3-card stacks repeated sequentially | `[OK]` / `[FAIL]` |
+| **21. Semantics** | Concrete Domain Copy | Zero AI buzzwords ("transform", "seamless", "next-gen"); real numbers and domain facts | `[OK]` / `[FAIL]` |
+| **22. Physicality** | Depth & Layer Bleed | Intentional color temperature (warm/ink) + at least 1 element breaking box bounds | `[OK]` / `[FAIL]` |
 
 ---
 

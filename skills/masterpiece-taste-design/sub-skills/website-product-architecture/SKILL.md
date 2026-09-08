@@ -70,7 +70,9 @@ To prevent models from defaulting to the generic "centered hero + 3 cards" slop,
 ### 3.2 The Hero Section
 - **Viewport Fit:** Entire hero MUST be visible above the fold on desktop (`min-h-[100dvh]` in CSS, `1440x900` frame in Figma).
 - **Headline Budget:** Maximum 2 lines on desktop. Max 8 words total.
-- **Subtext Budget:** Maximum 20 words and maximum 3 lines.
+- **Editorial Italic Accent:** Always consider setting 1 key concept word in a contrasting italic serif (e.g., `<h1 className="text-5xl font-bold font-sans">Zero latency <span className="font-serif italic font-normal text-neutral-300">rendering</span></h1>`). This single detail instantly shatters the generic AI look.
+- **Subtext Budget:** Maximum 20 words and maximum 3 lines. Real technical numbers and capabilities, NO corporate buzzwords ("empower", "seamless").
+- **Layer Bleed:** Visual asset (device or UI preview) must partially overlap background boundaries (`-mt-8 md:-mt-14 relative z-10`) to eliminate rigid sterile box framing.
 - **CTA Rule:** Maximum 1 primary button + 1 ghost/secondary button.
 - **BANNED IN HERO:**
   - Trust logos, bullet feature lists, and pricing tables belong in subsequent sections, NEVER crammed into the hero.
@@ -106,11 +108,44 @@ To prevent models from defaulting to the generic "centered hero + 3 cards" slop,
 
 ---
 
-## 5. FIGMA FRAME TRANSLATION SPECIFICATION
+## 5. THE ANTI-AI SOUL INOCULATION (KILLING THE 50/50 "COOL BUT AI-ISH" PARADOX)
+
+Why do AI designs often feel "50% cool, 50% generic slop"? Because LLMs algorithmically generate **uniform symmetry, single-font flatness, and abstract buzzwords**. Apply these three human design injections:
+
+### 5.1 Typographic Friction & Editorial Contrast
+Never use one font for the entire layout. Pair fonts with distinct genetic traits:
+- **Rule:** Display Grotesk (e.g. `Cabinet Grotesk`, `Clash Display`, or `PP Neue Machina`) for Headlines + Clean Geometric Sans (`Geist`, `Plus Jakarta Sans`, `Inter`) for Body.
+- **The Editorial Accent:** In the main H1 or value statement, set 1-2 words in an italic serif font:
+  ```html
+  <h1 class="text-6xl font-bold font-sans tracking-tight">
+    Architecting <span class="font-serif italic font-normal text-neutral-300">uncompromising</span> digital taste.
+  </h1>
+  ```
+
+### 5.2 Dynamic Visual Pacing (The Wave)
+Never stack consecutive sections with the same height, padding, or 3-column cards. Follow the **Pacing Wave**:
+1. **Air & Scale:** Hero has heavy negative space and 1 giant focal point.
+2. **Dense Functional Matrix:** 7:5 Asymmetric Bento Grid packed with micro-UI details.
+3. **Scale Breaker:** A single full-width editorial typographic quote or massive monospace metric (`text-7xl font-mono`).
+4. **Action Focus:** High-contrast conversion card with dark tactile background.
+
+### 5.3 Concrete Domain Copywriting (The Anti-Buzzword Filter)
+Never use generic AI filler words. Translate abstract slop into concrete realities:
+| Banned AI Buzzword Phrase | Real Human Engineering Replacement |
+|---|---|
+| "Transform your workflow with intelligent AI" | "Render 120fps raytraced frames with 0.4ms latency" |
+| "Seamless collaboration for modern teams" | "Real-time CRDT sync with local-first SQLite persistence" |
+| "Empowering next-generation digital products" | "Calibrated design systems exported directly to CSS & Figma variables" |
+| "All-in-one platform built for efficiency" | "Zero-config asset pipelines from raw PSD to production SVG" |
+
+---
+
+## 6. FIGMA FRAME TRANSLATION SPECIFICATION
 
 When producing or describing Figma deliverables for a website design:
 1. **Root Desktop Frame:** `1440px` width (or `1920px` for widescreen), Auto Layout: `Vertical`, Gap: `0px`, Padding: `0px`.
 2. **Page Section Frames:** Width: `Fill container`, Height: `Hug contents`, Top/Bottom Padding: `96px` to `128px`.
 3. **Inner Content Containers:** Auto Layout: `Horizontal` or `Vertical`, Max-Width: `1200px` (or `1280px`), Margin: `Auto` (centered).
 4. **Responsive Mobile Frame:** `390px` width (iPhone 16), Auto Layout: `Vertical`, Padding: `16px` or `24px`.
+
 
