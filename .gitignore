@@ -3,3 +3,12 @@ presentation-video/node_modules/
 presentation-video/out/
 .DS_Store
 Thumbs.db
+__pycache__/
+*.pyc
+.env
+*.session
+*.session-journal
+data/media/*.jpg
+data/media/*.png
+data/test_export/
+

@@ -1,0 +1,53 @@
+{
+  "title": "Jam Mockup Design DNA Profile",
+  "total_posts_analyzed": 3,
+  "top_hashtags": {
+    "psd": 2,
+    "figma": 2,
+    "mockup": 1,
+    "iphone": 1,
+    "device": 1,
+    "studio": 1,
+    "editorial": 1,
+    "book": 1,
+    "branding": 1,
+    "stationery": 1,
+    "paper": 1,
+    "macbook": 1,
+    "apple": 1,
+    "display": 1,
+    "workspace": 1
+  },
+  "format_distribution": {
+    "PSD": 2,
+    "Figma": 2,
+    "Smart Object": 2
+  },
+  "composition_archetypes": {
+    "device_mockup": 2,
+    "editorial_print": 1
+  },
+  "lighting_and_background_modes": {
+    "high_key_light": 3
+  },
+  "average_aspect_ratio": 1.33,
+  "core_rules_extracted": {
+    "studio_lighting": {
+      "key_light": "45-degree diffused directional light source",
+      "shadow_softness": "Multi-layer Gaussian blur (8px tight contact shadow + 32px diffused ambient shadow)",
+      "reflection_behavior": "Micro-specular Fresnel reflections with subtle roughness (0.15 - 0.25)"
+    },
+    "color_temperature": {
+      "primary_tone": "Monochromatic neutral gray, concrete, or warm travertine",
+      "saturation_ceiling": "Max 30% for studio stage backgrounds; device surfaces preserve true material colors"
+    },
+    "composition_physics": {
+      "depth_layers": [
+        "Foreground subject",
+        "Contact shadow floor",
+        "Atmospheric back-drop"
+      ],
+      "isometric_tilt": "30 to 45 degree dynamic floating perspective for hardware"
+    }
+  }
+}
