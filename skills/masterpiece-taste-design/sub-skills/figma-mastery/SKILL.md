@@ -90,3 +90,25 @@ When presenting mobile or desktop screens:
 - **Mobile Frame:** 393x852 px (iPhone 16 Pro). Corner radius: `55px`. Top notch: Dynamic Island (`width: 120px, height: 35px, radius: 20px, fill: #000000`).
 - **Desktop Frame:** 1440x900 px or 1920x1080 px. Top window bar height: `44px`. Traffic light circles: 12px diameter, 8px gap.
 - **Presentation Backdrop:** 2560x1440 px frame with subtle studio gray (`#F1F3F5`) and multi-layer shadows.
+
+---
+
+## 6. CORNER SMOOTHING & SQUIRCLE MASTERY IN FIGMA
+
+Standard circular arcs look cheap and create visible, abrupt tangent seams. High-end product design uses **Continuous Curvature (G2 Continuity)**.
+
+### 6.1 The Figma Corner Smoothing Setting:
+1. Select the frame or rectangle.
+2. Under **Corner Radius**, click the **Independent Corners** icon.
+3. Click the **Three Dots (...)** to open the advanced corner options.
+4. Set the **Corner Smoothing** slider:
+   - **60% (iOS Squircle):** The Apple standard. Seamlessly blends the arc into straight lines without tangent kinks.
+   - **100% (Pure Lamé Superellipse):** For ultra-organic, futuristic product cards and hardware mockups.
+
+### 6.2 The Unified Radius Scale in Figma:
+- `4px - 6px`: Micro-elements, tooltips, checkboxes, compact tags.
+- `8px - 10px`: Interactive inputs, primary/secondary buttons.
+- `14px - 18px`: Standard content cards, bento grid cells, preview containers.
+- `24px - 32px`: Floating islands, modal dialogs, presentation cards.
+- `50px - 55px`: Hardware device frames (iPhone Pro series).
+

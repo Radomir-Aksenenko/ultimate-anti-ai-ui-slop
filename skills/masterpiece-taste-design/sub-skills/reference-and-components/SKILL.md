@@ -84,3 +84,49 @@ $$\text{Radius}_{\text{inner}} = \max(0, \text{Radius}_{\text{outer}} - \text{Pa
 - **Subtle Architectural:** `rounded-md` (6px) or `rounded-lg` (8px). Clean, precise, sharp.
 - **Modern Surface Squircle:** `rounded-xl` (12px) or `rounded-2xl` (16px). For cards and modal windows.
 - **Buttons:** Match card curvature (`rounded-lg` 8px to `rounded-xl` 12px). **Never default to full pill (`rounded-full`)**.
+
+---
+
+## 4. CHARACTER & NON-STANDARD RADII (ELEVATED TECHNIQUES)
+
+Top design references (*Integrated Biosciences, Seamless Studio, Wolverine*) use non-standard geometry to escape AI-slop uniformity:
+
+### 4.1 Diagonal Asymmetric Curvature:
+Rounding only opposite diagonal corners gives a signature organic/architectural silhouette:
+```tsx
+{/* Leaf / Diagonal Silhouette */}
+<div className="rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md p-8 bg-neutral-900 border border-white/10">
+  {/* Content */}
+</div>
+```
+
+### 4.2 Chamfered / Cut Corners (Technical & Biotech Aesthetic):
+Instead of curved radius, 45-degree cut corners convey precision engineering:
+```tsx
+<div 
+  className="p-6 bg-neutral-900 border border-white/10"
+  style={{
+    clipPath: 'polygon(16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0% calc(100% - 16px), 0% 16px)'
+  }}
+>
+  {/* Precision hardware card */}
+</div>
+```
+
+### 4.3 Morphing Radius on Hover (Tactile Spring Physics):
+Subtly expanding the corner curvature on user interaction makes static layouts feel responsive:
+```tsx
+<div className="rounded-xl hover:rounded-2xl transition-all duration-300 ease-out p-6 bg-neutral-900 border border-white/10">
+  {/* Tactile morph card */}
+</div>
+```
+
+### 4.4 Web Implementation of Apple Squircle:
+```css
+/* Modern CSS Squircle (CSS Borders and Box Decorations Level 4) */
+.squircle-card {
+  border-radius: 20px;
+  corner-shape: squircle;
+}
+```
+
