@@ -34,10 +34,54 @@ description: Sub-skill for frontend web engineering (Tailwind v4, Next.js RSC, M
 
 ---
 
-## 2. NATIVE DESKTOP POLISH (macOS / WINDOWS)
+## 2. CONCENTRIC GEOMETRY (ANTI-EGG RADIUS LAWS)
+
+Lightweight models either make everything 0px boxy or abuse `rounded-full` egg-pills. Follow this strict radius scale:
+
+```tsx
+{/* Outer Card (Radius: 16px) */}
+<div className="rounded-2xl p-6 bg-neutral-900 border border-white/10">
+  {/* Inner Element (Radius = max(0, 16px - 24px) -> 0 to 8px max) */}
+  <div className="rounded-lg bg-neutral-950 p-4 border border-white/5">
+    {/* Concentric inner content */}
+  </div>
+
+  {/* Button inside card: rounded-lg (8px), NOT rounded-full! */}
+  <button className="mt-4 px-4 py-2 rounded-lg bg-white text-black text-sm font-medium">
+    Action
+  </button>
+</div>
+```
+
+- **Outer container:** `rounded-2xl` (16px) or `rounded-xl` (12px).
+- **Inner items / buttons:** `rounded-lg` (8px) or `rounded-md` (6px).
+- **Banned:** Wrapping standard rectangular cards or buttons in `rounded-full` (egg-bubble aesthetic).
+
+---
+
+## 3. CLEAN STATUS BADGES (BANNING PULSING ONLINE DOTS)
+
+Generic AI designs always add a pulsing green dot + "All systems operational". Ban this slop.
+Use subtle typographic tags:
+
+```tsx
+{/* BAD (AI Slop): */}
+{/* <span className="flex h-3 w-3 relative"><span className="animate-ping bg-green-400 rounded-full" /></span> All systems operational */}
+
+{/* GOOD (Clean Editorial): */}
+<div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-800/80 border border-neutral-700/60 text-xs font-mono text-neutral-300">
+  <span className="text-neutral-500">[STATUS]</span>
+  <span>Operational</span>
+</div>
+```
+
+---
+
+## 4. NATIVE DESKTOP POLISH (macOS / WINDOWS)
 
 - **macOS Window Traffic Lights:** Leave `pl-20` (72px padding) on the top navbar so window controls do not overlap navigation items.
 - **Translucent Materials:**
   - Sidebar: `backdrop-blur-xl bg-neutral-900/60 border-r border-white/5`.
   - Floating Command Bar (Raycast-style): `bg-neutral-900/90 backdrop-blur-2xl shadow-2xl border border-white/10 rounded-xl`.
 - **Desktop Typography:** System font cascade: `-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif`.
+

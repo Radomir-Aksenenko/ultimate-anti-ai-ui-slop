@@ -23,6 +23,10 @@ Run this comprehensive checklist before delivering any UI design, Figma asset, w
 | **12. Components** | Button Contrast | WCAG AA >= 4.5:1 contrast between label and button fill | `[OK]` / `[FAIL]` |
 | **13. Assets** | Real Imagery | No div-based fake screenshots; real images or studio mockups used | `[OK]` / `[FAIL]` |
 | **14. Copy** | Hallucination Filter | No fake-craftsman prose, faux-philosophical filler, or fake precision | `[OK]` / `[FAIL]` |
+| **15. Slop Tells** | Online Dot Ban | No decorative pulsing green "All systems normal" or "Available" dots | `[OK]` / `[FAIL]` |
+| **16. Noise Filter** | Micro-Label Purge | No decorative pseudo-tech corner tags (`SYSTEM // v1.0`, fake latency/uptime) | `[OK]` / `[FAIL]` |
+| **17. Geometry** | Anti-Egg Radii | Concentric radii (`R_in = R_out - pad`); no bubble pill cards or mismatched corners | `[OK]` / `[FAIL]` |
+| **18. Density** | Anti-Tabularity | No slicing text into pseudo-spreadsheets; content breathes in spacious blocks | `[OK]` / `[FAIL]` |
 
 ---
 

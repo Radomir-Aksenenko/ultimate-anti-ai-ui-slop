@@ -1,44 +1,46 @@
 ---
 name: reference-and-components
-description: Sub-skill for production-ready design components, bento grids, glassmorphism cards, and editorial layouts. Engineered for lightweight/flash AI models.
+description: Sub-skill for clean, production-ready design components, bento grids, concentric radii, and clutter-free editorial layouts. Engineered for lightweight/flash AI models.
 ---
 
 # Sub-Skill: Production Components & Layout Patterns
 
 > Ready-to-implement structural templates extracted from top design resources (Ludochka Design / Ref).
-> Solves the "AI template trap" by giving deterministic component blueprints.
+> Strictly enforces the **Micro-Label Purge**, **Concentric Curvature**, and **Anti-Slop Cleanliness**.
 
 ---
 
-## 1. THE ASYMMETRIC BENTO GRID (ANTI-SLOP)
+## 1. THE ASYMMETRIC BENTO GRID (CLEAN & CLUTTER-FREE)
 
-Instead of 3 equal cards, use an asymmetric 3-cell or 4-cell bento rhythm:
+Notice: **ZERO pointless corner micro-labels** (`SYSTEM // v1.0`, `TELEMETRY`).
+Notice: **Concentric corner radii** (outer card `rounded-2xl` = 16px, inner canvas `rounded-lg` = 8px with 16px padding).
 
 ```tsx
 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-6xl mx-auto">
   {/* Primary Hero Cell: Span 7 */}
-  <div className="md:col-span-7 rounded-2xl bg-neutral-900 border border-white/10 p-8 flex flex-col justify-between overflow-hidden relative group">
+  <div className="md:col-span-7 rounded-2xl bg-neutral-900 border border-white/10 p-8 flex flex-col justify-between overflow-hidden relative">
     <div>
-      <span className="text-xs font-mono uppercase tracking-wider text-emerald-400">Core Engine</span>
-      <h3 className="text-2xl font-medium text-white mt-3">Precision Layouts without AI Slop</h3>
-      <p className="text-neutral-400 text-sm mt-2 max-w-md">Deterministic component trees with strict spatial rhythm.</p>
+      <h3 className="text-2xl font-medium text-white tracking-tight">Real-time Visual Synthesis</h3>
+      <p className="text-neutral-400 text-sm mt-2 max-w-md leading-relaxed">
+        Direct frame-by-frame rendering with hardware acceleration and zero telemetry lag.
+      </p>
     </div>
-    <div className="mt-8 rounded-xl bg-neutral-950/80 border border-white/5 p-4 aspect-video flex items-center justify-center">
-      {/* Visual Asset or Interactive Micro-UI */}
-      <div className="text-xs text-neutral-500 font-mono">[Interactive Component Canvas]</div>
+    <div className="mt-8 rounded-lg bg-neutral-950/80 border border-white/5 p-4 aspect-video flex items-center justify-center">
+      {/* Real Functional Asset / Preview */}
+      <img src="/assets/preview-stage.jpg" alt="Preview Stage" className="w-full h-full object-cover rounded-md" />
     </div>
   </div>
 
   {/* Secondary Highlight Cell: Span 5 */}
   <div className="md:col-span-5 rounded-2xl bg-neutral-900 border border-white/10 p-8 flex flex-col justify-between">
     <div>
-      <span className="text-xs font-mono uppercase tracking-wider text-neutral-400">Telemetry</span>
-      <h3 className="text-2xl font-medium text-white mt-3">Sub-millisecond Feedback</h3>
-      <p className="text-neutral-400 text-sm mt-2">Zero-latency state transforms.</p>
+      <h3 className="text-2xl font-medium text-white tracking-tight">Precision Metrics</h3>
+      <p className="text-neutral-400 text-sm mt-2 leading-relaxed">
+        Deterministic latency under maximum concurrent GPU throughput.
+      </p>
     </div>
-    <div className="mt-6 flex items-baseline gap-3">
-      <span className="text-5xl font-mono font-bold text-white tracking-tight">99.8%</span>
-      <span className="text-xs text-emerald-400 font-medium">Uptime Guarantee</span>
+    <div className="mt-6 flex items-baseline gap-2">
+      <span className="text-5xl font-mono font-bold text-white tracking-tight">0.4ms</span>
     </div>
   </div>
 </div>
@@ -46,19 +48,39 @@ Instead of 3 equal cards, use an asymmetric 3-cell or 4-cell bento rhythm:
 
 ---
 
-## 2. EDITORIAL SPEC CARD (ALTERNATIVE TO BORING TABLES)
+## 2. EDITORIAL SPEC CARD (CLEAN ALTERNATIVE TO TABULAR NOISE)
 
-Never render a 20-row plain table with hairlines. Use the 2-column Spec Tile pattern:
+Instead of dense tables with 20 hairline rows or floating mini-badges:
 
 ```tsx
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-  <div className="p-6 rounded-xl bg-neutral-900/50 border border-white/5 flex items-start justify-between">
+  <div className="p-6 rounded-xl bg-neutral-900/60 border border-white/10 flex items-center justify-between">
     <div>
-      <span className="text-xs text-neutral-500 uppercase tracking-wider">Display Surface</span>
-      <h4 className="text-lg font-medium text-white mt-1">Liquid Retina XDR</h4>
-      <p className="text-xs text-neutral-400 mt-1">1600 nits peak brightness, 1,000,000:1 contrast ratio.</p>
+      <h4 className="text-lg font-medium text-white">Liquid Retina XDR</h4>
+      <p className="text-sm text-neutral-400 mt-1">1600 nits peak brightness, 1,000,000:1 contrast ratio.</p>
     </div>
-    <span className="text-sm font-mono text-neutral-300">120Hz</span>
+    <span className="text-sm font-mono font-medium text-neutral-300 ml-4">120Hz</span>
   </div>
 </div>
 ```
+
+---
+
+## 3. CONCENTRIC RADIUS MATH (THE ANTI-EGG LAW)
+
+Weak models fail at geometry by either:
+1. Slapping extreme `rounded-full` pills on everything (Egg-look / "Яишность").
+2. Making everything completely 0px sharp without architectural reason.
+3. Nesting rounded elements with mismatched radiuses.
+
+### The Concentric Formula:
+$$\text{Radius}_{\text{inner}} = \max(0, \text{Radius}_{\text{outer}} - \text{Padding})$$
+
+- If Outer Card has `border-radius: 16px` and padding `12px`:
+  -> Inner Image/Button MUST have `border-radius: 4px` (or 6px).
+  -> Putting a `rounded-full` (9999px) pill inside a `16px` card looks broken and amateurish.
+
+### Recommended Production Radius Scale:
+- **Subtle Architectural:** `rounded-md` (6px) or `rounded-lg` (8px). Clean, precise, sharp.
+- **Modern Surface Squircle:** `rounded-xl` (12px) or `rounded-2xl` (16px). For cards and modal windows.
+- **Buttons:** Match card curvature (`rounded-lg` 8px to `rounded-xl` 12px). **Never default to full pill (`rounded-full`)**.

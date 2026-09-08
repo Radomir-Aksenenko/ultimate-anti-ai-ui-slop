@@ -60,6 +60,10 @@ Set these three values (baseline: 7 / 5 / 4):
 * **`VISUAL_DENSITY: 4`** (1 = Spacious Art Gallery, 10 = Dense Cockpit)
 
 ### LAW 3: ANTI-SLOP HARD BANS (AUTOMATIC PRE-FLIGHT FAILS)
+- [BANNED] **The Pulsing Online Dot Cliché:** Decorative green/emerald status circles (`h-2 w-2 rounded-full bg-emerald-500`, `animate-ping`, "All systems operational", "Available for work"). Instant hallmark of amateur AI generation.
+- [BANNED] **Micro-Label & Side-Metadata Clutter:** Peppering corners, card headers, and sidebars with useless tiny labels (`SYSTEM // v1.0`, `TELEMETRY: ACTIVE`, `LATENCY: 12ms`, `ID: #49281`, fake coordinates). If a label does not inform a real user decision, DELETE IT.
+- [BANNED] **Egg-like Bubble Radii ("Яишность"):** Slapping extreme `rounded-full` or huge bubble `rounded-3xl` on normal cards, or conversely making everything completely 0px rigid without architectural justification.
+- [BANNED] **Spurious Table-ness:** Slicing every section into pseudo-spreadsheets and hairline-underlined rows. Content must breathe in spacious editorial blocks.
 - [BANNED] Generic purple/cyan glowing gradient buttons (`from-purple-600 to-indigo-600`).
 - [BANNED] Three identical feature cards centered in a row.
 - [BANNED] Centered hero headline over generic dark mesh background.
@@ -71,18 +75,26 @@ Set these three values (baseline: 7 / 5 / 4):
 
 ---
 
-## 2. HOW LIGHTWEIGHT / FLASH MODELS MUST OPERATE
+## 2. HOW LIGHTWEIGHT / FLASH & WEAK MODELS MUST OPERATE (QWEN, FLASH, HAIKU)
 
-If you are a smaller, faster model (e.g. Gemini Flash, Claude Haiku, GPT-4o-mini):
+If you are a smaller, faster model (e.g. Qwen 2.5 27B/32B, Gemini Flash, Claude Haiku):
 1. **Never treat Figma as abstract geometry.** Always build a full product/website section structure.
 2. **Follow the 8-Section Narrative Arc:**
    - Header -> Hero (Asymmetric 60/40) -> Social Proof -> Value Hook -> Bento (7:5) -> Specs (2-col) -> Conversion CTA -> Footer.
-3. **Use pre-calculated color codes:**
+3. **No Decorative Clutter:**
+   - NO pulsing status dots.
+   - NO tiny corner metadata badges.
+   - NO gratuitous table lines under every text item.
+4. **Concentric Non-Standard Curvature (Anti-Egg Rule):**
+   - Use intentional, calibrated radii: `radius: 10px - 14px` for cards (modern squircle feel).
+   - Concentric math: Inner element radius = `max(0, outer_radius - padding)`. Never put a pill inside a rounded rectangle.
+   - Buttons: Match card curvature (`rounded-lg` / `rounded-xl`, 8-10px), NEVER full pills (`rounded-full`) unless the brand specifically calls for it.
+5. **Use pre-calculated color codes:**
    - Forest Emerald: `#096D23`
    - Royal Violet: `#7A4BDD`
    - Burnt Terracotta: `#B96539`
    - Cold Luxury Slate: `#F1F3F5` & `#18181B`
-4. **Always run the Pre-Flight Gatekeeper** in `references/anti_slop_checklist.md` before delivering work.
+6. **Always run the Pre-Flight Gatekeeper** in `references/anti_slop_checklist.md` before delivering work.
 
 ---
 

@@ -65,17 +65,22 @@ To prevent models from defaulting to the generic "centered hero + 3 cards" slop,
 - **Desktop Height:** Fixed 64px to 72px (never eat more than 8% of the viewport).
 - **Structure:** Logo left -> Nav links center (max 4-5 items) -> Action CTA right.
 - **Single Line Guarantee:** Navigation items must NEVER wrap to a second line.
+- **BANNED IN NAVIGATION:** Pulsing green online status dots ("All systems operational", "Available for work"). This is a notorious AI slop cliche. If system status is essential, use clean, static typography: `[Status: Normal]` in a compact monospace tag.
 
 ### 3.2 The Hero Section
 - **Viewport Fit:** Entire hero MUST be visible above the fold on desktop (`min-h-[100dvh]` in CSS, `1440x900` frame in Figma).
 - **Headline Budget:** Maximum 2 lines on desktop. Max 8 words total.
 - **Subtext Budget:** Maximum 20 words and maximum 3 lines.
 - **CTA Rule:** Maximum 1 primary button + 1 ghost/secondary button.
-- **BANNED IN HERO:** Trust logos, bullet feature lists, and pricing tables belong in subsequent sections, NEVER crammed into the hero.
+- **BANNED IN HERO:**
+  - Trust logos, bullet feature lists, and pricing tables belong in subsequent sections, NEVER crammed into the hero.
+  - Floating corner pseudo-labels (`SYSTEM // v1.0`, `TELEMETRY ACTIVE`, fake uptime counters).
+  - Giant pulsing status bubbles.
 
 ### 3.3 The Feature Bento Grid
 - **Cell Ratio:** Asymmetric `7:5` or `8:4` split. Never 3 identical symmetrical squares.
 - **Content:** Every bento cell must feature rich visual assets (micro-UI component, interactive slider, or studio device mockup), not just plain white cards with text.
+- **No Pseudo-Table Clutter:** Never turn bento cells into multi-row pseudo-spreadsheets with horizontal hairlines.
 
 ### 3.4 The Conversion CTA Card
 - **Layout:** Centered or asymmetric card with deep dark background and subtle ambient gradient.
@@ -83,10 +88,29 @@ To prevent models from defaulting to the generic "centered hero + 3 cards" slop,
 
 ---
 
-## 4. FIGMA FRAME TRANSLATION SPECIFICATION
+## 4. THE 4 HARD BANS FOR FLASH/LIGHTWEIGHT MODELS (ANTI-SLOP GUARDRAILS)
+
+1. **NO EGG CURVATURE ("Яишность закруглений"):**
+   - Weak models alternate between two extremes: either brutalist 0px everywhere or giant cartoonish `rounded-full` egg-pills on every container.
+   - Use non-standard, calibrated radii: `rounded-xl` (12px) or `rounded-2xl` (16px) for cards, and `rounded-lg` (8px) for buttons.
+   - Apply the Concentric Law: $R_{\text{inner}} = \max(0, R_{\text{outer}} - \text{padding})$.
+
+2. **NO PULSING ONLINE STATUS DOTS:**
+   - Never inject pulsating green/emerald glowing dots with "All systems operational" or "Online" into headers, avatars, or hero sections unless building an actual DevOps incident status page.
+
+3. **NO MICRO-LABEL CORNER SPAM:**
+   - Never scatter useless decorative micro-tags in corners (`// PROTOCOL v2.4`, `LATENCY 0.12ms`, `SYS.MONITOR`). Every element must have real product utility.
+
+4. **NO SPURIOUS SPREADSHEET TABULARITY:**
+   - Do not divide sections into endless stacked rows with 1px border lines and miniature column headers. Use modern asymmetric bento cards, 2-column spec tiles, or editorial typography.
+
+---
+
+## 5. FIGMA FRAME TRANSLATION SPECIFICATION
 
 When producing or describing Figma deliverables for a website design:
 1. **Root Desktop Frame:** `1440px` width (or `1920px` for widescreen), Auto Layout: `Vertical`, Gap: `0px`, Padding: `0px`.
 2. **Page Section Frames:** Width: `Fill container`, Height: `Hug contents`, Top/Bottom Padding: `96px` to `128px`.
 3. **Inner Content Containers:** Auto Layout: `Horizontal` or `Vertical`, Max-Width: `1200px` (or `1280px`), Margin: `Auto` (centered).
 4. **Responsive Mobile Frame:** `390px` width (iPhone 16), Auto Layout: `Vertical`, Padding: `16px` or `24px`.
+
