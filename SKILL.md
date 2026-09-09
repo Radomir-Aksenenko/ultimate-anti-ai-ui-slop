@@ -48,11 +48,12 @@ description: Практический фреймворк создания кач
 ## 3. Быстрая навигация по ресурсам библиотеки
 
 - **Канонический диспетчер:** [skills/masterpiece-taste-design/SKILL.md](skills/masterpiece-taste-design/SKILL.md)
+- **Кинетический дизайн и Liquid Glass:** [skills/masterpiece-taste-design/references/motion_design_and_interactions.md](skills/masterpiece-taste-design/references/motion_design_and_interactions.md)
 - **Выбор дизайн-направления и бриф:** [skills/masterpiece-taste-design/references/design-direction.md](skills/masterpiece-taste-design/references/design-direction.md)
 - **Сценарии ручной проверки (Regression Briefs):** [skills/masterpiece-taste-design/references/regression-briefs.md](skills/masterpiece-taste-design/references/regression-briefs.md)
-- **Каталог антипаттернов (Контекстный аудит):** [nti-patterns.md](anti-patterns.md)
+- **Каталог антипаттернов (Контекстный аудит):** [anti-patterns.md](anti-patterns.md)
 - **Контрольный чеклист перед сдачей:** [skills/masterpiece-taste-design/references/anti_slop_checklist.md](skills/masterpiece-taste-design/references/anti_slop_checklist.md)
 - **Архитектура страниц:** [skills/masterpiece-taste-design/sub-skills/website-product-architecture/SKILL.md](skills/masterpiece-taste-design/sub-skills/website-product-architecture/SKILL.md)
 - **Работа в Figma:** [skills/masterpiece-taste-design/sub-skills/figma-mastery/SKILL.md](skills/masterpiece-taste-design/sub-skills/figma-mastery/SKILL.md)
 - **Инженерия веб-кода:** [skills/masterpiece-taste-design/sub-skills/web-and-native-ui/SKILL.md](skills/masterpiece-taste-design/sub-skills/web-and-native-ui/SKILL.md)
-- **Семантические токены:** [	okens.css](tokens.css)
+- **Семантические токены:** [tokens.css](tokens.css)

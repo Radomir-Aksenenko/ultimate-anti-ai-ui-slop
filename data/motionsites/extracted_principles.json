@@ -1,0 +1,816 @@
+{
+  "total_prompts": 70,
+  "css_utilities": [
+    ".anim-fade",
+    ".anim-stagger",
+    ".animate-fade-rise",
+    ".animate-fade-rise-delay",
+    ".animate-fade-rise-delay-2",
+    ".animate-marquee-left",
+    ".animate-marquee-right",
+    ".bp-card",
+    ".button-glow",
+    ".font-instrument",
+    ".font-inter",
+    ".font-playfair",
+    ".hero-anim",
+    ".hero-fade",
+    ".hero-heading",
+    ".hero-reveal",
+    ".hero-title",
+    ".hero-zoom",
+    ".liquid-glass",
+    ".liquid-glass-strong",
+    ".liquid-glass-strong::before",
+    ".liquid-glass::before",
+    ".noise-overlay::after",
+    ".scrollbar-hide",
+    ".scrollbar-hide::-webkit-scrollbar",
+    ".text-glow"
+  ],
+  "motion_patterns": {
+    "Bold Studio": {
+      "category": "Hero",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[0.92]",
+        "ease-out"
+      ]
+    },
+    "Interactive Discovery": {
+      "category": "Hero",
+      "staggers": [],
+      "durations": [
+        "duration:1.1s",
+        "duration:1s"
+      ],
+      "easings": [
+        "eased",
+        "[100]",
+        "cubic-bezier(0.16,1,0.3,1)"
+      ]
+    },
+    "Prisma Creative Studio": {
+      "category": "Landing Page",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[0.85]",
+        "ease",
+        "[0.16, 1, 0.3, 1]"
+      ]
+    },
+    "3D Jack Portfolio": {
+      "category": "Portfolio",
+      "staggers": [],
+      "durations": [
+        "duration 0.9."
+      ],
+      "easings": [
+        "ease-in-out",
+        "ease-out",
+        "[0.25, 0.1, 0.25, 1]"
+      ]
+    },
+    "Velorah": {
+      "category": "Agency",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[0.95]",
+        "[1.03]",
+        "ease-out"
+      ]
+    },
+    "Aetheris Voyage": {
+      "category": "Hero Section",
+      "staggers": [],
+      "durations": [
+        "duration: 0.7",
+        "Duration 0.35"
+      ],
+      "easings": [
+        "easeOut",
+        "ease",
+        "[0.8]"
+      ]
+    },
+    "Innovation": {
+      "category": "Landing Page",
+      "staggers": [],
+      "durations": [
+        "duration 0.7.",
+        "duration 0.8.",
+        "duration 0.8"
+      ],
+      "easings": [
+        "[1.1]"
+      ]
+    },
+    "Portfolio Cosmic": {
+      "category": "Portfolio",
+      "staggers": [
+        "stagger 0.1"
+      ],
+      "durations": [
+        "duration 1s",
+        "duration 1.2s",
+        "duration 40"
+      ],
+      "easings": [
+        "ease",
+        "[0.25,0.1,0.25,1]",
+        "[9999]"
+      ]
+    },
+    "Portal": {
+      "category": "Hero",
+      "staggers": [],
+      "durations": [
+        "duration: 0.6",
+        "duration 0.4s",
+        "duration 0.6s"
+      ],
+      "easings": [
+        "[0.22, 1, 0.36, 1]",
+        "[0.55, 0, 1, 0.45]",
+        "ease"
+      ]
+    },
+    "Max Reed Portfolio": {
+      "category": "Features",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[1.6]"
+      ]
+    },
+    "Mindloop Landing": {
+      "category": "Landing Page",
+      "staggers": [],
+      "durations": [
+        "duration: 0.6"
+      ],
+      "easings": [
+        "easeOut",
+        "[1]",
+        "ease"
+      ]
+    },
+    "AI Designer Portfolio": {
+      "category": "Landing Page",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[1.1]",
+        "ease-out",
+        "cubic-bezier(0.4, 0, 0.2, 1)"
+      ]
+    },
+    "Sentinel AI": {
+      "category": "Hero Section",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[0.97]",
+        "cubic-bezier(0.16, 1, 0.3, 1)",
+        "[1]"
+      ]
+    },
+    "Nexora Automation": {
+      "category": "SaaS",
+      "staggers": [],
+      "durations": [
+        "duration 0.5s",
+        "duration 0.8s",
+        "duration 0.6s"
+      ],
+      "easings": [
+        "[0.95]"
+      ]
+    },
+    "Stellar AI": {
+      "category": "Hero Section",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[1.1]",
+        "ease-out"
+      ]
+    },
+    "F1 Racing Hub": {
+      "category": "Statistics App",
+      "staggers": [],
+      "durations": [
+        "duration 2200ms"
+      ],
+      "easings": [
+        "[0.83]",
+        "[1]",
+        "[0.82]"
+      ]
+    },
+    "Cyberpunk Reveal": {
+      "category": "Hero",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "eased",
+        "cubic-bezier(0.65,0,0.35,1)",
+        "[1.05]"
+      ]
+    },
+    "Portfolio About": {
+      "category": "About",
+      "staggers": [],
+      "durations": [
+        "duration: 0.9"
+      ],
+      "easings": [
+        "[0.25, 0.1, 0.25, 1]",
+        "[0.2, 1]"
+      ]
+    },
+    "Tech-Forward": {
+      "category": "Hero",
+      "staggers": [],
+      "durations": [
+        "Duration 1.8s",
+        "duration 1s",
+        "duration 0.8s"
+      ],
+      "easings": [
+        "ease",
+        "[0.16, 1, 0.3, 1]"
+      ]
+    },
+    "Radial Diagram": {
+      "category": "Testimonials",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[0, 1, 0.9]",
+        "[0.22, 1, 0.36, 1]",
+        "[1.58]"
+      ]
+    },
+    "Rocket CTA": {
+      "category": "CTA",
+      "staggers": [],
+      "durations": [
+        "duration: 0.6"
+      ],
+      "easings": [
+        "ease",
+        "[1.5]",
+        "[1.05]"
+      ]
+    },
+    "Stark Minimal Footer": {
+      "category": "Footer",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "ease"
+      ]
+    },
+    "PROMPT": {
+      "category": "Landing Page",
+      "staggers": [],
+      "durations": [
+        "duration 0.6s"
+      ],
+      "easings": [
+        "[0.25, 0.1, 0.25, 1]",
+        "ease"
+      ]
+    },
+    "Innovation Lab": {
+      "category": "Technology",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[1.1]",
+        "cubic-bezier(0.16, 1, 0.3, 1)"
+      ]
+    },
+    "VaultShield": {
+      "category": "Hero",
+      "staggers": [],
+      "durations": [
+        "duration: 0.6",
+        "duration 0.45s"
+      ],
+      "easings": [
+        "[0.22, 1, 0.36, 1]",
+        "ease"
+      ]
+    },
+    "Visual Hero": {
+      "category": "Hero",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[0.97]",
+        "[1.08]",
+        "[0]"
+      ]
+    },
+    "Arceage Stats": {
+      "category": "Stats",
+      "staggers": [
+        "staggerChildren: 0.06"
+      ],
+      "durations": [
+        "duration: 0.8",
+        "duration: 0.4",
+        "duration: 1.5"
+      ],
+      "easings": [
+        "[1.1]",
+        "ease",
+        "easeOut"
+      ]
+    },
+    "Cognitra Feature": {
+      "category": "Feature",
+      "staggers": [],
+      "durations": [],
+      "easings": [
+        "[0.22, 1, 0.36, 1]",
+        "ease"
+      ]
+    }
+  },
+  "typography_rules": {
+    "Interactive Discovery": [
+      "**Inter**.",
+      "Playfair Display",
+      "Inter"
+    ],
+    "Prisma Creative Studio": [
+      "Almarai"
+    ],
+    "Modern Agency": [],
+    "Aethera Studio": [
+      "Instrument Serif"
+    ],
+    "Asme": [
+      "Import Google Font"
+    ],
+    "Securify Data Security": [
+      "Readex Pro"
+    ],
+    "Portal": [
+      "`var(--font-heading)`.",
+      "`var(--font-body)`.",
+      "**"
+    ],
+    "Max Reed Portfolio": [],
+    "RIVR": [
+      "var(--font-helvetica)",
+      "Helvetica Regular"
+    ],
+    "AI Designer Portfolio": [
+      "PP Neue Montreal",
+      "PP Mondwest"
+    ],
+    "Power AI": [
+      "Geist Sans (via @fontsource/geist-sans)"
+    ],
+    "Sentinel AI": [
+      "Google Fonts"
+    ],
+    "Transform Data": [
+      "Schibsted Grotesk Medium",
+      "Fustat Medium",
+      "Fustat Bold",
+      "Inter Regular"
+    ],
+    "Lumina": [
+      "Helvetica Regular"
+    ],
+    "Stellar AI": [
+      "Inter",
+      "Import Inter (weights 400"
+    ],
+    "Datacore Booking": [
+      "Cabin"
+    ],
+    "Digitwist AI Builder": [
+      "Instrument Sans",
+      "Instrument Serif"
+    ],
+    "Dot": [
+      "Instrument Serif"
+    ],
+    "Email Marketing": [
+      "var(--font-body)"
+    ],
+    "Duolingo Styleguide": [
+      "Feather Bold",
+      "Nunito"
+    ],
+    "Kresna Footer": [
+      "DM Sans"
+    ],
+    "Place Saver": [
+      "12px",
+      "ITC Garamond Std Narrow",
+      "Helvetica Neue",
+      "Inter"
+    ],
+    "Travel Journal": [
+      "Google Fonts",
+      "Inter"
+    ],
+    "Celestial Renewal": [
+      "Instrument Serif",
+      "Inter"
+    ],
+    "AI Workflow Agents": [
+      "Inter",
+      "`Instrument Serif`.",
+      "`Inter`"
+    ],
+    "F1 Racing Hub": [
+      "Albert Sans throughout",
+      "**Albert Sans** weights 300"
+    ],
+    "AI Workflow Hero": [
+      "Neue Haas Grotesk Display Pro 55 Roman"
+    ],
+    "Cyberpunk Reveal": [
+      "JetBrains Mono"
+    ],
+    "Portfolio About": [
+      "Kanit"
+    ],
+    "Rocket CTA": [
+      "Instrument Serif"
+    ],
+    "PROMPT": [
+      "Inter Tight"
+    ],
+    "Innovation Lab": [
+      "Inter"
+    ],
+    "VaultShield": [
+      "`var(--font-body)`",
+      "`var(--font-heading)`"
+    ],
+    "Visual Hero": [
+      "Instrument Serif",
+      "`",
+      "Dirtyline"
+    ],
+    "3D Collectible Hero": [
+      "`"
+    ],
+    "Wellness Hero": [
+      "Inter"
+    ],
+    "Cognitra Feature": [
+      "Helvetica Now Var",
+      "**"
+    ]
+  },
+  "color_and_surfaces": {
+    "Interactive Discovery": [
+      "rgba(255,255,255,1)"
+    ],
+    "Prisma Creative Studio": [
+      "rgba(225, 224, 204, 0.8)"
+    ],
+    "3D Jack Portfolio": [
+      "rgba(12, 12, 12, 0.15)",
+      "rgba(181, 1, 167, 0.25)"
+    ],
+    "Velorah": [
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255,255,255,0)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "Aetheris Voyage": [
+      "rgba(255,255,255,0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255,255,255,0.1)",
+      "rgba(0,0,0,0.05)",
+      "rgba(255,255,255,0)"
+    ],
+    "VEX Ventures": [
+      "rgba(255,255,255,0.1)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(0, 0, 0, 0.4)",
+      "rgba(255,255,255,0.3)",
+      "rgba(255,255,255,0)"
+    ],
+    "Modern Agency": [
+      "rgba(255,255,255,0.01)",
+      "rgba(0,0,0,0.08)",
+      "rgba(0,0,0,0.12)"
+    ],
+    "Asme": [
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255,255,255,0)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "Innovation": [
+      "rgba(255, 255, 255, 0)",
+      "rgba(255, 255, 255, 0.45)",
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255, 255, 255, 0.15)",
+      "rgba(255,255,255,0.03)"
+    ],
+    "Orbis NFT": [
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255,255,255,0)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "Portfolio Cosmic": [
+      "rgba(137, 170, 204, 0.35)"
+    ],
+    "Portal": [
+      "rgba(115,66,226,0.28)",
+      "rgba(25,40,55,0.18)",
+      "rgba(25,40,55,0.35)",
+      "rgba(25,40,55,0.1)",
+      "rgba(25,40,55,0.12)"
+    ],
+    "Max Reed Portfolio": [
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255,255,255,0)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "Mindloop Landing": [
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255,255,255,0)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "RIVR": [
+      "rgba(30,50,90,0.9)",
+      "rgba(30,50,90,0.8)",
+      "rgba(30,50,90,0.95)",
+      "rgba(30,50,90,0.05)",
+      "rgba(30,50,90,1)"
+    ],
+    "AI Designer Portfolio": [
+      "rgba(5,26,36,0.05)",
+      "rgba(0,0,0,0.08)",
+      "rgba(5,26,36,0.09)",
+      "rgba(5,26,36,0.1)",
+      "rgba(255,255,255,0.5)"
+    ],
+    "CodeNest Coding Platform": [
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255, 255, 255, 0.01)"
+    ],
+    "Power AI": [
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255,255,255,0)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "Bloom AI": [
+      "rgba(255,255,255,0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255,255,255,0.1)",
+      "rgba(0,0,0,0.05)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "Nexora Automation": [
+      "rgba(0, 0, 0, 0.08)",
+      "rgba(0,0,0,0.08)",
+      "rgba(0, 0, 0, 0.06)",
+      "rgba(255, 255, 255, 0.5)",
+      "rgba(255, 255, 255, 0.4)"
+    ],
+    "Transform Data": [
+      "rgba(0,0,0,0.24)",
+      "rgba(0,0,0,0.6)",
+      "rgba(90,225,76,0.89)"
+    ],
+    "Lumina": [
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255,255,255,0)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "Taskly": [
+      "rgba(0,132,255,0.8)",
+      "rgba(0,0,0,0.1)",
+      "rgba(255,255,255,0.3)",
+      "rgba(255,255,255,0.35)",
+      "rgba(255,255,255,0.25)"
+    ],
+    "Datacore Booking": [
+      "rgba(85,80,110,0.4)",
+      "rgba(164,132,215,0.5)"
+    ],
+    "Neuralyn": [
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.1)",
+      "rgba(255,255,255,0)",
+      "rgba(255,255,255,0.15)"
+    ],
+    "Digitwist AI Builder": [
+      "rgba(255,255,255,0.3)"
+    ],
+    "Dot": [
+      "rgba(255,255,255,0.39)"
+    ],
+    "Email Marketing": [
+      "rgba(17,17,17,0)",
+      "rgba(17,17,17,0.45)",
+      "rgba(17,17,17,0.9)",
+      "rgba(17,17,17,1)"
+    ],
+    "Duolingo Styleguide": [
+      "rgba(0,0,0,0.08)",
+      "rgba(0,0,0,0.12)",
+      "rgba(255,255,255,0.06)",
+      "rgba(255,255,255,0.08)",
+      "rgba(0,0,0,0.15)"
+    ],
+    "Digital Epoch": [
+      "rgba(0,0,0,0.03)",
+      "rgba(0,0,0,0.08)"
+    ],
+    "Kresna Footer": [
+      "rgba(0, 0, 0, 0.04)",
+      "rgba(255,255,255,0.85)",
+      "rgba(20,72,200,0.35)",
+      "rgba(0,0,0,0.28)",
+      "rgba(0,0,0,0.2)"
+    ],
+    "Vize Footer": [
+      "rgba(255, 255, 255, 0.3)",
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(31, 38, 135, 0.05)",
+      "rgba(255, 255, 255, 0.2)",
+      "rgba(255,255,255,0.45)"
+    ],
+    "Network Hero": [
+      "rgba(217, 161, 255, 1)",
+      "rgba(217, 161, 255, 0)"
+    ],
+    "Place Saver": [
+      "rgba(255,255,255,.42)",
+      "rgba(255,255,255,0.11)",
+      "rgba(0,0,0,0.12)",
+      "rgba(20,21,29,0)",
+      "rgba(255,255,255,0.30)"
+    ],
+    "Travel Journal": [
+      "rgba(0, 0, 0, 0.5)",
+      "rgba(0, 0, 0, 0.6)",
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.06)"
+    ],
+    "Celestial Renewal": [
+      "rgba(255, 255, 255, 0.3)",
+      "rgba(255, 255, 255, 0.01)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255, 255, 255, 0.2)",
+      "rgba(255, 255, 255, 0.1)"
+    ],
+    "AI Workflow Agents": [
+      "rgba(0,0,0,0.2)",
+      "rgba(0,0,0,0.15)"
+    ],
+    "F1 Racing Hub": [
+      "rgba(20,20,30,0.8)",
+      "rgba(255,255,255,0.4)",
+      "rgba(255,255,255,0.15)",
+      "rgba(255,255,255,0.1)"
+    ],
+    "Portfolio About": [
+      "rgba(181, 1, 167, 0.25)"
+    ],
+    "Tech-Forward": [
+      "rgba(255,255,255,0.8)",
+      "rgba(0,0,0,0.35)",
+      "rgba(0,0,0,0.12)"
+    ],
+    "Rocket CTA": [
+      "rgba(8,8,10,0.6)",
+      "rgba(255, 255, 255, 0.60)",
+      "rgba(255, 255, 255, 0.16)",
+      "rgba(255, 255, 255, 0.10)",
+      "rgba(255, 255, 255, 0.80)"
+    ],
+    "Mind-Body Healing": [
+      "rgba(255,255,255,0.45)",
+      "rgba(255,255,255,0.01)",
+      "rgba(255,255,255,0.1)"
+    ],
+    "Innovation Lab": [
+      "rgba(0,0,0,0.25)"
+    ],
+    "VaultShield": [
+      "rgba(115,66,226,0.28)",
+      "rgba(25,40,55,0.18)",
+      "rgba(25,40,55,0.35)"
+    ],
+    "Visual Hero": [
+      "rgba(255,255,255,0.01)",
+      "rgba(255,255,255,0.2)",
+      "rgba(255,255,255,0.45)",
+      "rgba(255,255,255,0.07)",
+      "rgba(255,255,255,0.1)"
+    ],
+    "Church Community": [
+      "rgba(255, 255, 255, 0.6)",
+      "rgba(255, 255, 255, 0.3)",
+      "rgba(255,255,255,0.77)",
+      "rgba(255, 255, 255, 0.5)",
+      "rgba(255, 255, 255, 0.77)"
+    ],
+    "3D Collectible Hero": [
+      "rgba(255,255,255,0.12)"
+    ],
+    "Animated Cards": [
+      "rgba(255,255,255,0.15)"
+    ],
+    "Cognitra Feature": [
+      "rgba(255,255,255,0.85)"
+    ]
+  },
+  "interactive_components": {
+    "radial": [
+      "Cyberpunk Reveal",
+      "Portfolio Cosmic",
+      "Innovation",
+      "Velorah",
+      "Stark Minimal Footer",
+      "Interactive Discovery"
+    ],
+    "cursor": [
+      "3D Jack Portfolio",
+      "Sentinel AI",
+      "Cyberpunk Reveal",
+      "Dot",
+      "Modern Agency",
+      "Velorah",
+      "Network Hero",
+      "Interactive Discovery",
+      "AI Designer Portfolio",
+      "Animated Cards",
+      "RIVR",
+      "PROMPT",
+      "Duolingo Styleguide"
+    ],
+    "tab": [
+      "Stellar AI",
+      "3D Jack Portfolio",
+      "Radial Diagram",
+      "Wellness Hero",
+      "Portfolio Cosmic",
+      "USD Halo",
+      "Modern Agency",
+      "Orbis NFT",
+      "Prisma Creative Studio",
+      "CodeNest Coding Platform",
+      "Nexora Automation",
+      "HAUL!",
+      "Animated Cards",
+      "Portfolio About",
+      "PROMPT",
+      "Duolingo Styleguide"
+    ],
+    "marquee": [
+      "3D Jack Portfolio",
+      "Portfolio Cosmic",
+      "Digital Epoch",
+      "Max Reed Portfolio",
+      "USD Halo",
+      "AI Designer Portfolio",
+      "Power AI"
+    ],
+    "bento": [
+      "Portfolio Cosmic"
+    ],
+    "calculator": [
+      "Price Calculator"
+    ],
+    "slider": [
+      "Price Calculator",
+      "F1 Racing Hub"
+    ]
+  }
+}

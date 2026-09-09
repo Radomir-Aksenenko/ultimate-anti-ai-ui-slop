@@ -67,20 +67,14 @@ description: Канонический диспетчер дизайн-систе
 ## 3. Справочные руководства (References)
 
 Загружайте точечно при необходимости:
-- [
-eferences/design-direction.md](references/design-direction.md) — формулирование брифа, 2-3 гипотезы, Section Purpose Map, проверка замены логотипа, проход де-декорирования.
-- [
-eferences/regression-briefs.md](references/regression-briefs.md) — 4 сценария ручной проверки (расписание, мастерская, лонгрид, задачи SaaS).
-- [
-eferences/anti_slop_checklist.md](references/anti_slop_checklist.md) — контекстный аудит перед сдачей работы.
-- [
-eferences/figma_design_system.md](references/figma_design_system.md) — детальная структура переменных и коллекций в Figma.
-- [
-eferences/web_engineering_rules.md](references/web_engineering_rules.md) — стандарты веб-верстки и компонентной архитектуры.
-- [
-eferences/app_native_polish.md](references/app_native_polish.md) — стандарты для macOS, Windows, iOS и Android.
-- [
-eferences/studio_mockup_lighting.md](references/studio_mockup_lighting.md) — физика многослойных теней и студийного освещения.
+- [references/motion_design_and_interactions.md](references/motion_design_and_interactions.md) — кинетическая дисциплина, таблица кривых ускорения, оптика Liquid Glass, флюидная типографика и архитектура UI-промптов.
+- [references/design-direction.md](references/design-direction.md) — формулирование брифа, 2-3 гипотезы, Section Purpose Map, проверка замены логотипа, проход де-декорирования.
+- [references/regression-briefs.md](references/regression-briefs.md) — 4 сценария ручной проверки (расписание, мастерская, лонгрид, задачи SaaS).
+- [references/anti_slop_checklist.md](references/anti_slop_checklist.md) — контекстный аудит перед сдачей работы.
+- [references/figma_design_system.md](references/figma_design_system.md) — детальная структура переменных и коллекций в Figma.
+- [references/web_engineering_rules.md](references/web_engineering_rules.md) — стандарты веб-верстки и компонентной архитектуры.
+- [references/app_native_polish.md](references/app_native_polish.md) — стандарты для macOS, Windows, iOS и Android.
+- [references/studio_mockup_lighting.md](references/studio_mockup_lighting.md) — физика многослойных теней и студийного освещения.
 
 ---
 
