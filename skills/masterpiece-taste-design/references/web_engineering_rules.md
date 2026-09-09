@@ -1,49 +1,46 @@
-# Web Engineering & Modern UI Directives
+# Web Engineering & Accessibility Standards
 
-Standards for building web applications and marketing interfaces with React, Next.js, and Tailwind v4.
-
----
-
-## 1. Stack & Runtime Conventions
-
-- **Framework:** Next.js (App Router, RSC by default).
-- **Styling:** Tailwind CSS v4.
-  - Avoid legacy utility hacks. Use CSS Grid for complex grids.
-  - Responsive standard: `sm: 640px`, `md: 768px`, `lg: 1024px`, `xl: 1280px`, `2xl: 1536px`.
-- **Animation:** `motion/react` (Motion).
-  - Use `useMotionValue` and `useTransform` for continuous pointer/scroll physics.
-  - Never use React `useState` for high-frequency coordinate tracking.
+Инженерные стандарты верстки веб-интерфейсов на React / Next.js / Tailwind v4.
 
 ---
 
-## 2. Anti-Slop Layout Engineering
+## 1. Сетка и компоновка
 
-### 2.1 Viewport Stability
-- Never use `h-screen` on mobile or hero sections.
-- Always use `min-h-[100dvh]` to account for dynamic mobile browser chrome (Safari / Chrome URL bars).
-
-### 2.2 Fluid Typography
-- Use `clamp()` or Tailwind responsive font scaling:
-  `text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight`
-- Avoid breaking headlines into more than 2 lines on desktop.
-
-### 2.3 Single-Line CTA Labels
-- CTA buttons must never wrap to multiple lines on desktop.
-- Keep CTA labels concise (1 to 3 words): e.g. "Start Building", "Explore Catalog", "Download Kit".
-
-### 2.4 Tactile Button States
-```tsx
-<button className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-150 active:scale-[0.98] active:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2">
-  Action Label
-</button>
-```
+- **CSS Grid для многомерных структур:** таблицы расписаний, карточные каталоги и дашборды верстаются на CSS Grid с адаптивными брейкпоинтами:
+  `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`.
+- **Flexbox для однонаправленных потоков:** панели инструментов, строки действий, меню.
+- **Стабильность высоты Viewport:**
+  - Единица `dvh` динамически пересчитывается при сворачивании и разворачивании интерфейса мобильного браузера, что может вызывать перерисовку или микро-сдвиги контента.
+  - Для фиксированных первых экранов надежнее использовать `svh` или протестированные контейнеры. Не требовать полноэкранную высоту для всех экранов подряд; применять только там, где этого требует сценарий.
 
 ---
 
-## 3. Real Visuals Over Fake UI
+## 2. Доступность (Accessibility)
 
-- Never render fake div-based UI mockups (e.g. 5 grey rectangles mimicking a dashboard).
-- Priority order:
-  1. Generate real image assets using image generation tools.
-  2. Use real photography placeholders (`https://picsum.photos/seed/...`).
-  3. Render real functional mini-components instead of fake screenshots.
+- **Контрастность:** соответствие WCAG 2.1 AA (не менее 4.5:1 для основного текста, 3:1 для крупного текста).
+- **Клавиатурный фокус:**
+  ```css
+  :focus-visible {
+    outline: 2px solid var(--border-interactive, #2563eb);
+    outline-offset: 2px;
+  }
+  ```
+- **Снижение движения (`prefers-reduced-motion`):**
+  ```css
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  ```
+- **Семантика HTML:** использование `<header>`, `<nav>`, `<main>`, `<section>`, `<table>`, `<button>` вместо нагромождения бессмысленных `<div>`.
+- **Touch-мишени на мобильных:** 44x44px — проектный ориентир для отдельных кнопок и управляющих элементов, но не безусловное требование WCAG для встроенных inline-ссылок в тексте.
+
+---
+
+## 3. Интерактивные состояния
+
+- **Кнопки:** однострочный емкий текст (1-3 слова), визуальный отклик на нажатие (`active:scale-[0.98]`).
+- **Поля ввода:** видимая метка (`<label>`) над полем, индикация ошибки и вспомогательный текст.

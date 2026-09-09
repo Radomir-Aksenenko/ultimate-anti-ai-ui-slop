@@ -1,114 +1,81 @@
 ---
 name: figma-mastery
-description: Sub-skill for Figma design systems, website frames, Auto Layout, tokens, variables, component sets, and vector device staging. Engineered for lightweight/flash AI models with deterministic rules.
+description: Поднавык работы с Figma: Auto Layout, токены, дизайн-системы, компонентные наборы с состояниями и векторные фреймы устройств. Применим для задач любого масштаба.
 ---
 
-# Sub-Skill: Figma Mastery & Website Systems
+# Sub-Skill: Проектирование в Figma и компонентные системы
 
-> **CORE PRINCIPLE:** Figma is the professional workbench for designing **real websites and digital products**.
-> Do not treat Figma as a toy for loose rectangles. Every frame represents a production-ready web or product layout.
-
----
-
-## 1. FIGMA CANVAS STRUCTURE FOR WEBSITES
-
-When designing a website in Figma, create a clean, organized hierarchy:
-
-```
-[Page: "🖥️ Desktop - 1440px"]
-└── [Frame: "Page / Home"] (W: 1440, Auto Layout: Vertical, Gap: 0)
-    ├── [Frame: "01_Navbar"] (W: Fill, H: 72, Auto Layout: Horizontal)
-    ├── [Frame: "02_Hero"] (W: Fill, Min-H: 800, Auto Layout: Vertical, Padding: 96px)
-    │   └── [Frame: "Hero_Container_1200"] (W: 1200, Auto Layout: Split 60/40)
-    ├── [Frame: "03_SocialProof"] (W: Fill, Padding: 48px)
-    ├── [Frame: "04_BentoFeatures"] (W: Fill, Padding: 120px)
-    ├── [Frame: "05_MetricsSpec"] (W: Fill, Padding: 96px)
-    ├── [Frame: "06_CTA"] (W: Fill, Padding: 120px)
-    └── [Frame: "07_Footer"] (W: Fill, Padding: 64px)
-```
+Руководство по организации фреймов, Auto Layout, переменных и компонентов в Figma для задач любого масштаба — от отдельной кнопки до комплексного интерфейса.
 
 ---
 
-## 2. AUTO LAYOUT IS MANDATORY (NO FLOATING LAYERS)
+## 1. Организация холста под масштаб задачи
 
-Every container, card, button, and section MUST use Auto Layout.
-- **Direction:** `Horizontal` for rows (navbar, button content, tag pills); `Vertical` for stacks (cards, forms, hero copy).
-- **Width Sizing:**
-  - Full-width sections & cards: `Fill container` (W: Fill).
-  - Text inside cards: `Fill container` (W: Fill) with Auto height so it wraps naturally.
-  - Buttons, badges, icons: `Hug contents` (W: Hug, H: Hug).
-- **Padding Scale (8pt Grid):**
-  - Buttons: Horizontal 16px, Vertical 10px (`px-4 py-2.5`).
-  - Cards: Inner padding 24px (`p-6`) or 32px (`p-8`).
-  - Page Sections: Desktop vertical padding 80px to 120px (`py-20` to `py-30`).
+Масштаб структуры холста определяется исходным брифом:
 
----
-
-## 3. VARIABLE & TOKEN TAXONOMY
-
-When outputting design tokens, use this exact two-tier structure:
-
-### Tier 1: Primitives (Fixed Color Codes)
-- `neutral/0`: `#FFFFFF`
-- `neutral/100`: `#F1F5F9`
-- `neutral/200`: `#E2E8F0`
-- `neutral/800`: `#1E293B`
-- `neutral/900`: `#0F172A`
-- `neutral/950`: `#020617`
-- `accent/emerald`: `#096D23`
-- `accent/cobalt`: `#2563EB`
-- `accent/terracotta`: `#B96539`
-
-### Tier 2: Semantics (Light vs Dark Mode)
-| Token Name | Light Mode Value | Dark Mode Value |
-|---|---|---|
-| `surface/page` | `neutral/100` (`#F1F5F9`) | `neutral/950` (`#020617`) |
-| `surface/card` | `neutral/0` (`#FFFFFF`) | `neutral/900` (`#0F172A`) |
-| `surface/elevated` | `neutral/0` + shadow | `neutral/800` (`#1E293B`) |
-| `text/primary` | `neutral/950` (`#020617`) | `neutral/0` (`#FFFFFF`) |
-| `text/secondary` | `neutral/800` (65% opacity) | `neutral/200` (70% opacity) |
-| `border/subtle` | `neutral/200` (`#E2E8F0`) | `neutral/800` (`#1E293B`) |
-| `border/focus` | `accent/cobalt` | `accent/cobalt` |
+- **Для атомарных компонентов и UI-китов:**
+  Фрейм каталога (Components / Buttons, Components / Form Controls) с демонстрацией состояний (Default, Hover, Active, Focus, Disabled).
+- **Для экранов и таблиц данных:**
+  Фрейм с рабочей шириной (например, 1440px для десктопа или 393px для мобильного), внутри которого располагаются контейнеры с явными правилами ресайза.
+- **Для многостраничных сценариев:**
+  Логическая последовательность связанных фреймов с именованием по шагам (
+> Задача в Figma не сводится исключительно к созданию полноразмерного сайта. Конкретный масштаб и состав фреймов диктуются потребностью пользователя.
 
 ---
 
-## 4. COMPONENT SETS & VARIANT MATRIX
+## 2. Дисциплина Auto Layout
 
-Every interactive component in Figma must have defined states:
-- **Button:**
-  - Properties: `Variant: Primary | Secondary | Ghost`, `State: Default | Hover | Pressed | Disabled`, `Size: Sm | Md | Lg`.
-  - Pressed State rule: Shift inner content Y +1px or reduce scale to 98%.
-- **Input Field:**
-  - States: `Default | Focused (2px accent border) | Filled | Error (Red border + caption below)`.
-  - Always keep labels OUTSIDE and ABOVE the input field.
+Каждый компонент, карточка или строка должны использовать Auto Layout с предсказуемым поведением:
 
----
-
-## 5. HARDWARE MOCKUP FRAMING IN FIGMA
-
-When presenting mobile or desktop screens:
-- **Mobile Frame:** 393x852 px (iPhone 16 Pro). Corner radius: `55px`. Top notch: Dynamic Island (`width: 120px, height: 35px, radius: 20px, fill: #000000`).
-- **Desktop Frame:** 1440x900 px or 1920x1080 px. Top window bar height: `44px`. Traffic light circles: 12px diameter, 8px gap.
-- **Presentation Backdrop:** 2560x1440 px frame with subtle studio gray (`#F1F3F5`) and multi-layer shadows.
+- **Направление:** Horizontal для строк, Vertical для колонок и стеков.
+- **Правила растяжения (Resizing):**
+  - Растягивающиеся контейнеры и текстовые блоки описаний: Fill container (W: Fill).
+  - Кнопки, бейджи, компактные метки и иконки: Hug contents (W: Hug, H: Hug).
+  - Фиксированные элементы: только там, где размер строго задан физическим носителем (например, размер аватара 40x40).
+- **Сетка отступов (Шкала 4/8pt):**
+  - Микро-элементы (бейджи, теги): паддинги 4–8px.
+  - Кнопки и поля ввода: горизонтальные 12–16px, вертикальные 8–12px.
+  - Карточки: внутренние отступы 16–24px (для компактных) или 24–32px (для просторных).
+  - Секции страниц: вертикальные отступы 64–112px на десктопе.
 
 ---
 
-## 6. CORNER SMOOTHING & SQUIRCLE MASTERY IN FIGMA
+## 3. Двухуровневая система переменных (Tokens)
 
-Standard circular arcs look cheap and create visible, abrupt tangent seams. High-end product design uses **Continuous Curvature (G2 Continuity)**.
+Организация переменных в Figma строится на двух слоях:
 
-### 6.1 The Figma Corner Smoothing Setting:
-1. Select the frame or rectangle.
-2. Under **Corner Radius**, click the **Independent Corners** icon.
-3. Click the **Three Dots (...)** to open the advanced corner options.
-4. Set the **Corner Smoothing** slider:
-   - **60% (iOS Squircle):** The Apple standard. Seamlessly blends the arc into straight lines without tangent kinks.
-   - **100% (Pure Lamé Superellipse):** For ultra-organic, futuristic product cards and hardware mockups.
+### Уровень 1: Примитивы (Primitives)
+Базовые палитры и значения без привязки к контексту темы:
+- color/neutral/0 (#ffffff), color/neutral/100 (#f1f5f9), color/neutral/900 (#0f172a).
+- color/brand/500 (основной акцент бренда).
+- spacing/2 (2px), spacing/4 (4px), spacing/8 (8px), spacing/16 (16px), spacing/24 (24px).
+- radius/sm (4px), radius/md (8px), radius/lg (12px), radius/xl (16px).
 
-### 6.2 The Unified Radius Scale in Figma:
-- `4px - 6px`: Micro-elements, tooltips, checkboxes, compact tags.
-- `8px - 10px`: Interactive inputs, primary/secondary buttons.
-- `14px - 18px`: Standard content cards, bento grid cells, preview containers.
-- `24px - 32px`: Floating islands, modal dialogs, presentation cards.
-- `50px - 55px`: Hardware device frames (iPhone Pro series).
+### Уровень 2: Семантические токены (Semantics)
+Переменные, меняющие значение в зависимости от темы (Light / Dark):
+- surface/base: фон страницы (светлый в Light, темный в Dark).
+- surface/raised: фон карточек и всплывающих панелей.
+- 	ext/primary: основной контрастный текст (WCAG AA >= 4.5:1).
+- 	ext/secondary: вспомогательный текст умеренного контраста.
+- order/subtle: тонкие разделители и границы.
+- order/focus: яркий фокусный контур для доступности.
 
+---
+
+## 4. Компоненты и матрица состояний
+
+Для интерактивных элементов обязательно моделируются состояния:
+1. Default — исходный вид.
+2. Hover — деликатное изменение яркости границы или фона (без чрезмерных прыжков).
+3. Active / Pressed — визуальный отклик на нажатие (микро-сдвиг Y: +1px или деликатный scale).
+4. Focus-visible — контрастное двухпиксельное кольцо фокуса со смещением.
+5. Disabled — приглушенный вид и запрет взаимодействия.
+
+---
+
+## 5. Аппаратные размеры устройств
+
+При создании мокапов и презентационных фреймов:
+- **Мобильный фрейм:** iPhone 16 Pro — 393x852 px, радиус фрейма 55px.
+- **Десктопный фрейм:** 1440x900 px или 1920x1080 px.
+- **Скругление углов (Corner Smoothing):** для платформ Apple допустимо использование сглаживания углов 60% (squircle), если это уместно для эстетики проекта.

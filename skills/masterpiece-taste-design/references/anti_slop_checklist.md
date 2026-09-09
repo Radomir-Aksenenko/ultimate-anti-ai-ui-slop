@@ -1,37 +1,30 @@
-# Anti-AI UI Slop Pre-Flight Audit Checklist
+# Контекстный аудит качества интерфейса (Pre-Flight Audit)
 
-Run this comprehensive checklist before delivering any UI design, Figma asset, web layout, or application prototype.
+Контрольная матрица проверки перед сдачей макета, страницы или компонента.
+Аудит оценивает наблюдаемые критерии качества, эргономики и доступности, а не наличие декораций или субъективные цветовые запреты.
 
 ---
 
-## Pre-Flight Gatekeeper Rubric
+## Матрица аудита
 
-| Category | Requirement | Pass Criteria | Status |
+| № | Категория | Наблюдаемый критерий проверки | Статус |
 |---|---|---|---|
-| **0. Intent** | One-Line Design Read | Explicitly declared before generation | `[OK]` / `[FAIL]` |
-| **1. Typography** | Sans Display Default | Sans-serif display used unless editorial brief justifies serif | `[OK]` / `[FAIL]` |
-| **2. Typography** | Banned Serif Guard | Fraunces and Instrument Serif NOT used as default | `[OK]` / `[FAIL]` |
-| **3. Typography** | Descender Clearance | Italic headlines have >= 1.1 line-height and bottom padding reserve | `[OK]` / `[FAIL]` |
-| **4. Color** | Anti-Purple Guard | No random purple/blue button glows or cosmic gradient blobs | `[OK]` / `[FAIL]` |
-| **5. Color** | Anti-Beige Guard | No automatic warm beige/brass palette for premium consumer | `[OK]` / `[FAIL]` |
-| **6. Color** | Color Lock | Single accent color maintained across the entire screen | `[OK]` / `[FAIL]` |
-| **7. Layout** | Anti-Center Bias | Hero headline is not a centered generic block (if Variance > 4) | `[OK]` / `[FAIL]` |
-| **8. Layout** | Eyebrow Restraint | Maximum 1 small uppercase eyebrow per 3 sections | `[OK]` / `[FAIL]` |
-| **9. Layout** | Zigzag Cap | Maximum 2 consecutive left-image / right-text alternating rows | `[OK]` / `[FAIL]` |
-| **10. Layout** | Hero Fit | Hero headline <= 2 lines, subtext <= 20 words, CTA above fold | `[OK]` / `[FAIL]` |
-| **11. Components** | CTA Single Line | Desktop buttons fit on one line without text wrapping | `[OK]` / `[FAIL]` |
-| **12. Components** | Button Contrast | WCAG AA >= 4.5:1 contrast between label and button fill | `[OK]` / `[FAIL]` |
-| **13. Assets** | Real Imagery | No div-based fake screenshots; real images or studio mockups used | `[OK]` / `[FAIL]` |
-| **14. Copy** | Hallucination Filter | No fake-craftsman prose, faux-philosophical filler, or fake precision | `[OK]` / `[FAIL]` |
-| **15. Slop Tells** | Online Dot Ban | No decorative pulsing green "All systems normal" or "Available" dots | `[OK]` / `[FAIL]` |
-| **16. Noise Filter** | Micro-Label Purge | No decorative pseudo-tech corner tags (`SYSTEM // v1.0`, fake latency/uptime) | `[OK]` / `[FAIL]` |
-| **17. Geometry** | Anti-Egg Radii | Concentric radii (`R_in = R_out - pad`); no bubble pill cards or mismatched corners | `[OK]` / `[FAIL]` |
-| **18. Density** | Anti-Tabularity | No slicing text into pseudo-spreadsheets; content breathes in spacious blocks | `[OK]` / `[FAIL]` |
-| **19. Character** | Typographic Tension | Expressive display font paired with neutral body; no single-font Inter monotony | `[OK]` / `[FAIL]` |
-| **20. Cadence** | Visual Rhythm Shift | Section heights and densities vary; no identical 3-card stacks repeated sequentially | `[OK]` / `[FAIL]` |
-| **21. Semantics** | Concrete Domain Copy | Zero AI buzzwords ("transform", "seamless", "next-gen"); real numbers and domain facts | `[OK]` / `[FAIL]` |
-| **22. Physicality** | Depth & Layer Bleed | Intentional color temperature (warm/ink) + at least 1 element breaking box bounds | `[OK]` / `[FAIL]` |
+| 1 | **Содержание** | Текст описывает реальные функции, процессы и сущности без абстрактной маркетинговой шелухи («Revolutionize», «Seamless synergy»). | [OK] / [FAIL] |
+| 2 | **Достоверность** | Отсутствуют выдуманные отзывы несуществующих персон, поддельные логотипы клиентов и взятые с потолка метрики («10x faster», «99.9% smarter»). Демо-данные помечены как [Demo]. | [OK] / [FAIL] |
+| 3 | **Контрастность** | Контраст текста и фона соответствует стандарту WCAG 2.1 AA: не менее 4.5:1 для обычного текста и не менее 3.0:1 для крупного текста (от 24px) и границ полей ввода. | [OK] / [FAIL] |
+| 4 | **Разборчивость** | Длина строки текстовых абзацев ограничена диапазоном 60–75 символов (max-w-[65ch]), исключая потерю строки взглядом при чтении. | [OK] / [FAIL] |
+| 5 | **Иерархия** | На экране присутствует явный визуальный якорь; размер и вес заголовков подчинены логике структуры (H1 -> H2 -> H3), а не случайному выбору. | [OK] / [FAIL] |
+| 6 | **Формат данных** | Способ подачи выбран под структуру данных: таблицы применены для структурированных списков и расписаний, карточки — для витрин и обзоров. | [OK] / [FAIL] |
+| 7 | **Состояния элементов** | Для интерактивных компонентов определены базовые состояния: default, hover, active (нажатие), focus-visible, disabled, loading, empty, error. | [OK] / [FAIL] |
+| 8 | **Доступность клавиатуры** | Все управляющие элементы имеют различимый контур :focus-visible (ring-offset); фокус не теряется при навигации клавишей Tab; модальные окна закрываются по Esc. | [OK] / [FAIL] |
+| 9 | **Мобильная эргономика** | Размер зон касания для отдельных кнопок и контролов ориентирован на 44x44px (не является безусловной нормой WCAG для inline-ссылок в тексте); отсутствуют случайные горизонтальные полосы прокрутки; учтены отступы безопасных зон `safe-area-inset`. | `[OK]` / `[FAIL]` |
+| 10 | **Стабильность Viewport** | Для полноэкранных блоков высота калибруется под UX сценарий (`svh` для статичной высоты первого экрана, `dvh` при динамическом учете панелей); полноэкранный режим не навязывается экранам без необходимости. | `[OK]` / `[FAIL]` |
+| 11 | **Reduced Motion** | Анимации и переходы уважают медиазапрос prefers-reduced-motion: reduce; отсутствуют бесконечные раздражающие пульсации декоративных элементов. | [OK] / [FAIL] |
+| 12 | **Чистота декораций** | Декоративные слои (тени, размытия, границы) помогают структурированию контента, а не скрывают отсутствие проработанной информационной сетки. | [OK] / [FAIL] |
 
 ---
 
-If any item is marked `[FAIL]`, the design must be revised before presentation.
+## Регламент проверки
+
+- При выявлении статуса [FAIL] по пунктам доступности (3, 8, 9, 11) или достоверности данных (2) макет подлежит обязательной корректировке до передачи пользователю.
+- Оценка [N/A] допустима только для параметров, не применимых к изолированному типу компонента (например, viewport для единичной кнопки).

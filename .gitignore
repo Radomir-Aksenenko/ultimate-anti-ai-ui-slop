@@ -11,4 +11,4 @@ __pycache__/
 data/media/*.jpg
 data/media/*.png
 data/test_export/
-
+tmp_demo_data/

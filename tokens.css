@@ -1,12 +1,12 @@
 /**
- * ANTI-AI-SLOP DESIGN TOKENS
- * Design tokens extracted from Apple, Google DeepMind, Cloudflare, GitHub, Microsoft, and Linear.
- * Zero decorative gradients. Zero saturated purple glow. Pure physical surfaces and optical precision.
+ * SEMANTIC DESIGN TOKENS
+ * Inspired by modern design systems of Apple, Google DeepMind, Cloudflare, GitHub, Microsoft, and Linear.
+ * Neutral semantic token architecture with robust light/dark foundations, accessibility rings, and responsive motion controls.
  */
 
 :root {
   /* ==========================================================================
-     GLOBAL BASE SYSTEM
+     GLOBAL BASE SYSTEM (TYPOGRAPHY & TIMINGS)
      ========================================================================== */
   --font-display-serif: "Newsreader", "Charter", "Georgia", serif;
   --font-display-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Google Sans Flex", "Segoe UI", sans-serif;
@@ -29,25 +29,177 @@
   --duration-fast: 120ms;
   --duration-normal: 200ms;
   --duration-slow: 350ms;
+
+  /* ==========================================================================
+     NEUTRAL SEMANTIC FOUNDATION (DEFAULT: LIGHT BASE)
+     ========================================================================== */
+  --surface-base: #fbfbfb;
+  --surface-raised: #ffffff;
+  --surface-overlay: #ffffff;
+  --surface-sunken: #f1f5f9;
+  --surface-hover: rgba(0, 0, 0, 0.04);
+
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-accent: #2563eb;
+
+  --border-subtle: #e5e7eb;
+  --border-default: #d1d5db;
+  --border-strong: #9ca3af;
+  --border-hover: #9ca3af;
+  --border-interactive: #2563eb;
+
+  --status-success: #16a34a;
+  --status-warning: #d97706;
+  --status-error: #dc2626;
+  --status-info: #2563eb;
+  --status-color: var(--status-success);
+
+  --kbd-bg: #f1f5f9;
+  --kbd-border: #cbd5e1;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
 }
 
 /* ==========================================================================
-   ARCHETYPE 1: GOOGLE DEEPMIND EDITORIAL (High-Tech Science Laboratory)
+   DARK BASE SYSTEM (AUTOMATIC VIA MEDIA QUERY OR DATA ATTRIBUTE)
    ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface-base: #0b0c0e;
+    --surface-raised: #141720;
+    --surface-overlay: #1c202c;
+    --surface-sunken: #08090b;
+    --surface-hover: rgba(255, 255, 255, 0.05);
+
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --text-tertiary: #6b7280;
+    --text-muted: #4b5563;
+    --text-accent: #60a5fa;
+
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-default: rgba(255, 255, 255, 0.14);
+    --border-strong: rgba(255, 255, 255, 0.22);
+    --border-hover: rgba(255, 255, 255, 0.25);
+    --border-interactive: #3b82f6;
+
+    --status-success: #10b981;
+    --status-warning: #f59e0b;
+    --status-error: #ef4444;
+    --status-info: #3b82f6;
+
+    --kbd-bg: rgba(255, 255, 255, 0.06);
+    --kbd-border: rgba(255, 255, 255, 0.12);
+
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+}
+
+[data-theme="dark"],
+.theme-dark {
+  --surface-base: #0b0c0e;
+  --surface-raised: #141720;
+  --surface-overlay: #1c202c;
+  --surface-sunken: #08090b;
+  --surface-hover: rgba(255, 255, 255, 0.05);
+
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --text-muted: #4b5563;
+  --text-accent: #60a5fa;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-default: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --border-hover: rgba(255, 255, 255, 0.25);
+  --border-interactive: #3b82f6;
+
+  --status-success: #10b981;
+  --status-warning: #f59e0b;
+  --status-error: #ef4444;
+  --status-info: #3b82f6;
+
+  --kbd-bg: rgba(255, 255, 255, 0.06);
+  --kbd-border: rgba(255, 255, 255, 0.12);
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"],
+.theme-light {
+  --surface-base: #fbfbfb;
+  --surface-raised: #ffffff;
+  --surface-overlay: #ffffff;
+  --surface-sunken: #f1f5f9;
+  --surface-hover: rgba(0, 0, 0, 0.04);
+
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-accent: #2563eb;
+
+  --border-subtle: #e5e7eb;
+  --border-default: #d1d5db;
+  --border-strong: #9ca3af;
+  --border-hover: #9ca3af;
+  --border-interactive: #2563eb;
+
+  --status-success: #16a34a;
+  --status-warning: #d97706;
+  --status-error: #dc2626;
+  --status-info: #2563eb;
+
+  --kbd-bg: #f1f5f9;
+  --kbd-border: #cbd5e1;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   LEGACY ARCHETYPES COMPATIBILITY LAYER
+   ========================================================================== */
+
+/* ARCHETYPE 1: GOOGLE DEEPMIND EDITORIAL */
 [data-archetype="deepmind"],
 .theme-deepmind {
+  --surface-base: #090a0f;
+  --surface-raised: #0e1017;
+  --surface-overlay: #151821;
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --text-primary: #f5f6f8;
+  --text-secondary: #9ea4b0;
+  --text-muted: #5c6270;
+  --text-accent: #8ab4f8;
+  --kbd-bg: rgba(255, 255, 255, 0.06);
+  --kbd-border: rgba(255, 255, 255, 0.12);
+
   --dm-bg-canvas: #090a0f;
   --dm-surface-0: #0e1017;
   --dm-surface-1: #151821;
   --dm-surface-2: #1e222e;
   --dm-border-subtle: rgba(255, 255, 255, 0.07);
   --dm-border-strong: rgba(255, 255, 255, 0.15);
-
   --dm-text-primary: #f5f6f8;
   --dm-text-secondary: #9ea4b0;
   --dm-text-muted: #5c6270;
   --dm-text-accent: #8ab4f8;
-
   --dm-rule-color: rgba(255, 255, 255, 0.09);
   --dm-font-heading: var(--font-display-serif);
   --dm-font-body: var(--font-display-sans);
@@ -55,40 +207,60 @@
 }
 
 .theme-deepmind-light {
+  --surface-base: #fbfbfb;
+  --surface-raised: #ffffff;
+  --surface-overlay: #f3f4f6;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.18);
+  --border-hover: rgba(0, 0, 0, 0.25);
+  --text-primary: #111215;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --text-accent: #1a73e8;
+  --kbd-bg: #f1f5f9;
+  --kbd-border: #cbd5e1;
+
   --dm-bg-canvas: #fbfbfb;
   --dm-surface-0: #ffffff;
   --dm-surface-1: #f3f4f6;
   --dm-surface-2: #e5e7eb;
   --dm-border-subtle: rgba(0, 0, 0, 0.08);
   --dm-border-strong: rgba(0, 0, 0, 0.18);
-
   --dm-text-primary: #111215;
   --dm-text-secondary: #4b5563;
   --dm-text-muted: #9ca3af;
   --dm-text-accent: #1a73e8;
-
   --dm-rule-color: rgba(0, 0, 0, 0.08);
   --dm-font-heading: var(--font-display-serif);
   --dm-font-body: var(--font-display-sans);
   --dm-radius: 0px;
 }
 
-/* ==========================================================================
-   ARCHETYPE 2: APPLE MONUMENTAL (Hardware Minimalism & Cinematic Spacing)
-   ========================================================================== */
+/* ARCHETYPE 2: APPLE MONUMENTAL */
 [data-archetype="apple"],
 .theme-apple-dark {
+  --surface-base: #000000;
+  --surface-raised: #161617;
+  --surface-overlay: #1d1d1f;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --text-primary: #f5f5f7;
+  --text-secondary: #a1a1a6;
+  --text-tertiary: #6e6e73;
+  --text-accent: #2997ff;
+  --kbd-bg: rgba(255, 255, 255, 0.08);
+  --kbd-border: rgba(255, 255, 255, 0.16);
+
   --apple-bg: #000000;
   --apple-surface: #161617;
   --apple-surface-raised: #1d1d1f;
   --apple-border: rgba(255, 255, 255, 0.12);
   --apple-border-hairline: rgba(255, 255, 255, 0.08);
-
   --apple-text-primary: #f5f5f7;
   --apple-text-secondary: #a1a1a6;
   --apple-text-tertiary: #6e6e73;
   --apple-accent: #2997ff;
-
   --apple-glass-bg: rgba(22, 22, 23, 0.72);
   --apple-glass-blur: blur(20px) saturate(180%);
   --apple-radius-sm: 8px;
@@ -98,96 +270,169 @@
 }
 
 .theme-apple-light {
+  --surface-base: #ffffff;
+  --surface-raised: #f5f5f7;
+  --surface-overlay: #e8e8ed;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-default: rgba(0, 0, 0, 0.12);
+  --border-hover: rgba(0, 0, 0, 0.2);
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-tertiary: #86868b;
+  --text-accent: #0071e3;
+  --kbd-bg: #e8e8ed;
+  --kbd-border: #d2d2d7;
+
   --apple-bg: #ffffff;
   --apple-surface: #f5f5f7;
   --apple-surface-raised: #e8e8ed;
   --apple-border: rgba(0, 0, 0, 0.12);
   --apple-border-hairline: rgba(0, 0, 0, 0.06);
-
   --apple-text-primary: #1d1d1f;
   --apple-text-secondary: #6e6e73;
   --apple-text-tertiary: #86868b;
   --apple-accent: #0071e3;
-
   --apple-glass-bg: rgba(255, 255, 255, 0.8);
   --apple-glass-blur: blur(20px) saturate(180%);
 }
 
-/* ==========================================================================
-   ARCHETYPE 3: CLOUDFLARE TELEMETRY (Engineering Density & Live Metrics)
-   ========================================================================== */
+/* ARCHETYPE 3: CLOUDFLARE TELEMETRY */
 [data-archetype="cloudflare"],
 .theme-cloudflare {
+  --surface-base: #0f1117;
+  --surface-raised: #141720;
+  --surface-overlay: #1a1e2a;
+  --border-subtle: #262b3a;
+  --border-default: #32384c;
+  --border-hover: #3d455d;
+  --border-interactive: #f6821f;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-accent: #f6821f;
+  --kbd-bg: #1a1e2a;
+  --kbd-border: #32384c;
+
   --cf-bg-canvas: #0f1117;
   --cf-surface-0: #141720;
   --cf-surface-1: #1a1e2a;
   --cf-surface-hover: #222736;
   --cf-border: #262b3a;
   --cf-border-hover: #3d455d;
-
   --cf-text-primary: #f3f4f6;
   --cf-text-secondary: #9ca3af;
   --cf-text-muted: #6b7280;
-
   --cf-accent: #f6821f;
   --cf-accent-hover: #fa9738;
   --cf-metric-green: #10b981;
   --cf-metric-blue: #3b82f6;
-
   --cf-radius: 4px;
 }
 
-/* ==========================================================================
-   ARCHETYPE 4: GITHUB PRIMER (Developer Tooling & Terminal Aesthetics)
-   ========================================================================== */
+/* ARCHETYPE 4: GITHUB PRIMER */
 [data-archetype="github"],
 .theme-github-dark {
+  --surface-base: #0d1117;
+  --surface-raised: #161b22;
+  --surface-overlay: #21262d;
+  --border-subtle: #21262d;
+  --border-default: #30363d;
+  --border-hover: #8b949e;
+  --border-interactive: #2f81f7;
+  --text-primary: #e6edf3;
+  --text-secondary: #848d97;
+  --text-muted: #484f58;
+  --text-accent: #2f81f7;
+  --kbd-bg: rgba(110, 118, 129, 0.15);
+  --kbd-border: rgba(240, 246, 252, 0.15);
+
   --gh-bg-default: #0d1117;
   --gh-surface-subtle: #161b22;
   --gh-surface-inset: #010409;
   --gh-border-default: #30363d;
   --gh-border-muted: #21262d;
-
   --gh-text-primary: #e6edf3;
   --gh-text-secondary: #848d97;
   --gh-text-muted: #484f58;
-
   --gh-accent: #2f81f7;
   --gh-success: #238636;
   --gh-badge-bg: rgba(56, 139, 253, 0.1);
   --gh-badge-border: rgba(56, 139, 253, 0.4);
-
   --gh-radius: 6px;
 }
 
-/* ==========================================================================
-   ARCHETYPE 5: LINEAR ULTRA-SAAS (Micro-Borders & Keyboard Ergonomics)
-   ========================================================================== */
+.theme-github-light {
+  --surface-base: #ffffff;
+  --surface-raised: #f6f8fa;
+  --surface-overlay: #ffffff;
+  --surface-sunken: #f6f8fa;
+  --border-subtle: #d0d7de;
+  --border-default: #d0d7de;
+  --border-strong: #afb8c1;
+  --border-hover: #57606a;
+  --border-interactive: #0969da;
+  --text-primary: #1f2328;
+  --text-secondary: #656d76;
+  --text-tertiary: #8c959f;
+  --text-muted: #8c959f;
+  --text-accent: #0969da;
+  --kbd-bg: #f6f8fa;
+  --kbd-border: #d0d7de;
+
+  --gh-bg-default: #ffffff;
+  --gh-surface-subtle: #f6f8fa;
+  --gh-surface-inset: #f6f8fa;
+  --gh-border-default: #d0d7de;
+  --gh-border-muted: #d0d7de;
+  --gh-text-primary: #1f2328;
+  --gh-text-secondary: #656d76;
+  --gh-text-muted: #8c959f;
+  --gh-accent: #0969da;
+  --gh-success: #1a7f37;
+  --gh-badge-bg: rgba(9, 105, 218, 0.1);
+  --gh-badge-border: rgba(9, 105, 218, 0.4);
+  --gh-radius: 6px;
+}
+
+/* ARCHETYPE 5: LINEAR ULTRA-SAAS */
 [data-archetype="linear"],
 .theme-linear {
+  --surface-base: #08090a;
+  --surface-raised: #0f1011;
+  --surface-overlay: #151618;
+  --surface-sunken: #050506;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.16);
+  --border-interactive: #5e6ad2;
+  --text-primary: #f7f8f8;
+  --text-secondary: #8a8f98;
+  --text-tertiary: #52555a;
+  --text-accent: #5e6ad2;
+  --kbd-bg: rgba(255, 255, 255, 0.06);
+  --kbd-border: rgba(255, 255, 255, 0.12);
+
   --linear-bg: #08090a;
   --linear-surface-0: #0f1011;
   --linear-surface-1: #151618;
   --linear-surface-2: #1c1d20;
   --linear-border: rgba(255, 255, 255, 0.08);
   --linear-border-hover: rgba(255, 255, 255, 0.16);
-
   --linear-text-primary: #f7f8f8;
   --linear-text-secondary: #8a8f98;
   --linear-text-tertiary: #52555a;
-
   --linear-accent: #5e6ad2;
   --linear-kbd-bg: rgba(255, 255, 255, 0.06);
   --linear-kbd-border: rgba(255, 255, 255, 0.12);
-
   --linear-radius-sm: 6px;
   --linear-radius-md: 10px;
   --linear-radius-lg: 14px;
 }
 
 /* ==========================================================================
-   MICRO-UTILITIES (PHYSICAL BORDERS & OPTICAL HAIRLINES)
+   UTILITY CLASSES (POWERED BY SEMANTIC TOKENS)
    ========================================================================== */
+
 .hairline-b {
   border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
 }
@@ -200,17 +445,21 @@
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
 }
 
+/* Карточки: базовая физическая поверхность без навязанных теней */
 .card-physical {
-  background: var(--surface-0, #0e1017);
+  background: var(--surface-raised, var(--surface-0, #0e1017));
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: border-color var(--duration-fast) var(--ease-out-expo),
-              box-shadow var(--duration-fast) var(--ease-out-expo);
+  transition: border-color var(--duration-fast) var(--ease-out-expo);
 }
 
 .card-physical:hover {
   border-color: var(--border-hover, rgba(255, 255, 255, 0.18));
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.card-flat {
+  background: var(--surface-raised, var(--surface-0, #0e1017));
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  box-shadow: none;
 }
 
 .kbd-badge {
@@ -224,15 +473,35 @@
   line-height: 1;
   background: var(--kbd-bg, rgba(255, 255, 255, 0.06));
   border: 1px solid var(--kbd-border, rgba(255, 255, 255, 0.12));
-  border-radius: 4px;
-  color: var(--text-secondary, #9ca3af);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
 }
 
 .telemetry-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: var(--status-color, #10b981);
+  background-color: var(--status-color, var(--status-success, #10b981));
   display: inline-block;
-  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 0 2px var(--status-dot-ring, rgba(16, 185, 129, 0.2));
+}
+
+/* Доступность: контрастный контур фокуса клавиатуры */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--border-interactive, #2563eb);
+  outline-offset: 2px;
+}
+
+/* Доступность: адаптация под предпочтение снижения движения для компонентов библиотеки */
+@media (prefers-reduced-motion: reduce) {
+  .card-physical,
+  .card-flat,
+  .kbd-badge,
+  .telemetry-dot,
+  .focus-ring {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

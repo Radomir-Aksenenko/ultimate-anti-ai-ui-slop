@@ -47,11 +47,13 @@ class DesignDNAAnalyzer:
 
                 # Quantize with PIL for fast color extraction
                 quantized = img.quantize(colors=num_colors, method=Image.Quantize.MEDIANCUT)
-                palette_raw = quantized.getpalette()[: num_colors * 3]
-                palette_colors = [
-                    (palette_raw[i * 3], palette_raw[i * 3 + 1], palette_raw[i * 3 + 2])
-                    for i in range(num_colors)
-                ]
+                raw_pal = quantized.getpalette() or []
+                palette_colors = []
+                for i in range(0, min(len(raw_pal), num_colors * 3), 3):
+                    if i + 2 < len(raw_pal):
+                        palette_colors.append((raw_pal[i], raw_pal[i + 1], raw_pal[i + 2]))
+                if not palette_colors:
+                    palette_colors = [(int(np_img[0, 0, 0]), int(np_img[0, 0, 1]), int(np_img[0, 0, 2]))]
 
                 # Classify background from border pixels
                 border_pixels = np.concatenate(
@@ -140,7 +142,12 @@ class DesignDNAAnalyzer:
             if media_rel:
                 media_path = Path(media_rel)
                 if not media_path.is_absolute():
-                    media_path = self.data_dir.parent / media_path
+                    if (self.data_dir.parent / media_path).exists():
+                        media_path = self.data_dir.parent / media_path
+                    elif (self.data_dir / media_path).exists():
+                        media_path = self.data_dir / media_path
+                    else:
+                        media_path = self.data_dir.parent / media_path
 
                 if media_path.exists() and media_path.suffix.lower() in [".jpg", ".jpeg", ".png", ".webp"]:
                     img_data = self.extract_image_palette(media_path)
@@ -150,27 +157,38 @@ class DesignDNAAnalyzer:
                         aspect_ratios.append(img_data["aspect_ratio"])
 
         # Synthesize Design DNA Manifest
+        total_images = len(palettes)
+        avg_aspect = round(float(np.mean(aspect_ratios)), 2) if aspect_ratios else None
+
         dna_manifest = {
             "title": "Jam Mockup Design DNA Profile",
             "total_posts_analyzed": len(posts),
+            "total_images_analyzed": total_images,
+            "total_palettes_extracted": len(palettes),
+            "sample_palettes": palettes[:10] if palettes else [],
             "top_hashtags": dict(tag_counter.most_common(20)),
             "format_distribution": dict(format_counter),
             "composition_archetypes": dict(composition_counter),
             "lighting_and_background_modes": dict(bg_type_counter),
-            "average_aspect_ratio": round(float(np.mean(aspect_ratios)), 2) if aspect_ratios else 1.33,
-            "core_rules_extracted": {
+            "average_aspect_ratio": avg_aspect,
+            # Empty dict for backwards compatibility; real extracted rules come from data
+            "core_rules_extracted": {},
+            # Explicit curated guidelines with method and provenance
+            "manual_guidelines": {
+                "method": "curated_design_heuristics",
+                "provenance": "repository-authored suggestions; not inferred from this dataset; unverified source attribution",
                 "studio_lighting": {
-                    "key_light": "45-degree diffused directional light source",
-                    "shadow_softness": "Multi-layer Gaussian blur (8px tight contact shadow + 32px diffused ambient shadow)",
-                    "reflection_behavior": "Micro-specular Fresnel reflections with subtle roughness (0.15 - 0.25)",
+                    "key_light": "Diffused directional light source with calibrated falloff",
+                    "shadow_softness": "Multi-layer shadow (contact occlusion directly under object + soft ambient floor dispersion)",
+                    "reflection_behavior": "Specular highlights calibrated to material properties",
                 },
                 "color_temperature": {
-                    "primary_tone": "Monochromatic neutral gray, concrete, or warm travertine",
-                    "saturation_ceiling": "Max 30% for studio stage backgrounds; device surfaces preserve true material colors",
+                    "neutral_range": "Neutral gray, warm travertine, or clean studio surface",
+                    "backdrop_guideline": "Subtle backdrop contrast allowing subject details to remain focal",
                 },
                 "composition_physics": {
-                    "depth_layers": ["Foreground subject", "Contact shadow floor", "Atmospheric back-drop"],
-                    "isometric_tilt": "30 to 45 degree dynamic floating perspective for hardware",
+                    "depth_layers": ["Foreground subject", "Contact shadow floor", "Atmospheric backdrop"],
+                    "perspective": "Front-facing or calibrated perspective depending on hardware geometry",
                 },
             },
         }

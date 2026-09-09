@@ -1,87 +1,57 @@
 ---
 name: web-and-native-ui
-description: Sub-skill for frontend web engineering (Tailwind v4, Next.js RSC, Motion) and native application polish (macOS/iOS HIG, Windows Mica). Engineered for lightweight/flash AI models.
+description: Поднавык фронтенд-инженерии и нативного интерфейса. Стабильность viewport, CSS Grid, доступность клавиатуры, reduced motion и эргономика мобильных устройств.
 ---
 
-# Sub-Skill: Web & Native UI Engineering
+# Sub-Skill: Инженерия веб-интерфейсов и нативных приложений
 
-> Concrete, unbreakable code standards for web applications and native desktop/mobile interfaces.
-> Designed for lightweight/flash LLMs to generate bug-free, award-winning layouts.
-
----
-
-## 1. THE 5 UNBREAKABLE WEB RULES
-
-1. **NO `h-screen` ON HERO SECTIONS:**
-   - ALWAYS write `min-h-[100dvh]`. `h-screen` causes jarring layout shifts on mobile Safari and Chrome when URL bars expand/collapse.
-2. **NO FLEX PERCENTAGE MATH:**
-   - NEVER write `w-[calc(33%-1rem)]` or `flex-wrap`.
-   - ALWAYS use CSS Grid: `grid grid-cols-1 md:grid-cols-3 gap-6`.
-3. **HERO TEXT BUDGET (MAX 4 ELEMENTS):**
-   - 1. Optional Eyebrow (e.g. `SYSTEM OVERVIEW`)
-   - 2. Headline: Max 2 lines on desktop (`text-4xl md:text-6xl font-semibold tracking-tight`)
-   - 3. Subtext: Max 20 words and max 3 lines (`text-base text-neutral-400 max-w-xl`)
-   - 4. Action row: 1 primary CTA + max 1 secondary link
-4. **CTA BUTTON SINGLE LINE RULE:**
-   - Button labels must NEVER wrap to 2 lines on desktop. Max 3 words: "Start Free Trial", "Download Kit", "Get Access".
-5. **TACTILE INTERACTION FEEDBACK:**
-   - Buttons must feel physical:
-     ```tsx
-     <button className="px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-150 active:scale-[0.98] active:translate-y-[1px]">
-       Explore System
-     </button>
-     ```
+Технические стандарты верстки интерфейсов с акцентом на надежность, доступность и адаптивность.
 
 ---
 
-## 2. CONCENTRIC GEOMETRY (ANTI-EGG RADIUS LAWS)
+## 1. Базовые правила веб-инженерии
 
-Lightweight models either make everything 0px boxy or abuse `rounded-full` egg-pills. Follow this strict radius scale:
+### 1.1 Стабильность высоты экрана
+- Подход content-first: высота экрана определяется естественным потоком контента; не требовать принудительную полноэкранную фиксацию для всех экранов подряд.
+- При обоснованной полноэкранной верстке: единица `dvh` динамически изменяется при скрытии/появлении панелей браузера (что может вызывать сдвиг контента при скролле), тогда как `svh` рассчитывается по наименьшему размеру и обеспечивает стабильность первого экрана без скачков. Выбирать единицу под конкретный UX-сценарий.
 
-```tsx
-{/* Outer Card (Radius: 16px) */}
-<div className="rounded-2xl p-6 bg-neutral-900 border border-white/10">
-  {/* Inner Element (Radius = max(0, 16px - 24px) -> 0 to 8px max) */}
-  <div className="rounded-lg bg-neutral-950 p-4 border border-white/5">
-    {/* Concentric inner content */}
-  </div>
+### 1.2 Сетка и адаптивность
+- Для сложных структур использовать CSS Grid (`grid grid-cols-1 md:grid-cols-3 gap-6`), обеспечивающий предсказуемое выравнивание колонок.
+- Флекс-контейнеры (`flex`) применять для линейных цепочек элементов (панели действий, списки тегов, шапки).
 
-  {/* Button inside card: rounded-lg (8px), NOT rounded-full! */}
-  <button className="mt-4 px-4 py-2 rounded-lg bg-white text-black text-sm font-medium">
-    Action
-  </button>
-</div>
+### 1.3 Доступность с клавиатуры (Keyboard Accessibility)
+Все интерактивные элементы обязаны иметь четкое состояние `:focus-visible`:
+```css
+:focus-visible {
+  outline: 2px solid var(--border-interactive, #2563eb);
+  outline-offset: 2px;
+}
 ```
 
-- **Outer container:** `rounded-2xl` (16px) or `rounded-xl` (12px).
-- **Inner items / buttons:** `rounded-lg` (8px) or `rounded-md` (6px).
-- **Banned:** Wrapping standard rectangular cards or buttons in `rounded-full` (egg-bubble aesthetic).
-
----
-
-## 3. CLEAN STATUS BADGES (BANNING PULSING ONLINE DOTS)
-
-Generic AI designs always add a pulsing green dot + "All systems operational". Ban this slop.
-Use subtle typographic tags:
-
-```tsx
-{/* BAD (AI Slop): */}
-{/* <span className="flex h-3 w-3 relative"><span className="animate-ping bg-green-400 rounded-full" /></span> All systems operational */}
-
-{/* GOOD (Clean Editorial): */}
-<div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-800/80 border border-neutral-700/60 text-xs font-mono text-neutral-300">
-  <span className="text-neutral-500">[STATUS]</span>
-  <span>Operational</span>
-</div>
+### 1.4 Учет prefers-reduced-motion
+Для пользователей с чувствительностью к анимации интерфейс обязан отключать или минимизировать движение:
+```css
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 ```
 
 ---
 
-## 4. NATIVE DESKTOP POLISH (macOS / WINDOWS)
+## 2. Мобильная эргономика (Touch Ergonomics)
 
-- **macOS Window Traffic Lights:** Leave `pl-20` (72px padding) on the top navbar so window controls do not overlap navigation items.
-- **Translucent Materials:**
-  - Sidebar: `backdrop-blur-xl bg-neutral-900/60 border-r border-white/5`.
-  - Floating Command Bar (Raycast-style): `bg-neutral-900/90 backdrop-blur-2xl shadow-2xl border border-white/10 rounded-xl`.
-- **Desktop Typography:** System font cascade: `-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif`.
+1. **Размер кликабельной зоны:** 44x44px (или 48x48dp) — проектный ориентир для отдельных интерактивных контролов (кнопок, иконок действий), но не безусловная норма WCAG для inline-ссылок в связном тексте.
+2. **Безопасные зоны экрана:** учет отступов `env(safe-area-inset-bottom)` и `env(safe-area-inset-top)` для фиксированных и плавающих панелей.
+3. **Строка CTA в мобильном интерфейсе:** кнопка целевого действия должна быть комфортно доступна в зоне естественного охвата экрана.
 
+---
+
+## 3. Честный статус вместо декоративных точек
+
+- Индикаторы состояния (`[OK]`, `[В работе]`, `[Завершено]`) должны отражать реальное состояние данных.
+- Запрещено добавлять декоративные пульсирующие зеленые круги с надписью «All systems operational» на сайтах, не имеющих отношения к системному мониторингу.

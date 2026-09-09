@@ -1,25 +1,24 @@
-# Desktop & Mobile Native Application Design Guidelines
+# Desktop & Mobile Native Application Guidelines
 
-Architectural principles for desktop (macOS, Windows) and mobile (iOS, Android) interfaces.
-
----
-
-## 1. Window Chrome & Frame Ergonomics
-
-### 1.1 macOS Desktop Apps
-- **Traffic Light Integration:** Leave standard padding (`pl-20` or 72px) for native window controls.
-- **Unified Toolbar:** Keep the search bar, segmented controls, and action items aligned on the same horizontal plane as the window title.
-- **Translucent Sidebars:** Utilize `backdrop-blur-md` or native NSVisualEffectView (`material: sidebar`) with subtle 1px border dividers (`border-r border-black/5 dark:border-white/10`).
-- **Corner Radii:** Windows should utilize native 10-12px outer radius.
-
-### 1.2 Windows Desktop Apps (Mica / Acrylic)
-- Adhere to Windows 11 Fluent 2 design principles: subtle Mica background tinting, crisp 8px corner radii, and custom draggable titlebar region (`app-region: drag`).
+Контекстные инженерные ориентиры для десктопных (macOS, Windows) и мобильных (iOS, Android) интерфейсов.
 
 ---
 
-## 2. Mobile Ergonomics (iOS & Android)
+## 1. Десктопная эргономика (macOS & Windows)
 
-- **Touch Target Minimums:** 44x44 points (iOS) or 48x48 dp (Material).
-- **Safe Area Insets:** Always honor `env(safe-area-inset-top)` and `env(safe-area-inset-bottom)`.
-- **Thumb Zone Navigation:** Primary navigation and quick-actions must reside within bottom sheets or tab bars within comfortable reach of the thumb.
-- **Haptic & Visual Feedback:** Immediate visual feedback on touch down (`scale(0.97)`).
+### 1.1 Интеграция с окном macOS
+- **Системные кнопки окна (Traffic Lights):** при кастомном заголовке окна резервировать отступ слева (порядка 70–72px), чтобы навигационные элементы не перекрывали кнопки управления окном.
+- **Панель инструментов:** выравнивание поиска, фильтров и действий по базовой линии заголовка окна в зависимости от структуры приложения.
+- **Боковые панели (Sidebars):** полупрозрачные материалы или нейтральные фоновые заливки с деликатным разделителем (`border-r`).
+
+### 1.2 Окна Windows (Fluent Design)
+- Учет принципов Fluent Design: адаптивные нейтральные тона, четкие границы, поддержка зон перетаскивания окна (`app-region: drag`).
+
+---
+
+## 2. Мобильные платформы (iOS & Android)
+
+- **Touch-ориентиры:** 44x44 pt (iOS) или 48x48 dp (Material) для изолированных кнопок и управляющих элементов.
+- **Безопасные зоны:** учет системных отступов `env(safe-area-inset-top)` и `env(safe-area-inset-bottom)` для прижатых к краям панелей.
+- **Навигационные структуры:** выбор между таб-баром (Tab Bar), нижней шторкой (Bottom Sheet) или навигационной шапкой определяется глубиной дерева экранов и частотой сценариев, а не универсальным правилом.
+- **Обратная связь при касании:** визуальная индикация нажатия (изменение тона заливки, подсветка границы или деликатный сдвиг) подбирается под общий стиль интерфейса.

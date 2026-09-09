@@ -1,131 +1,97 @@
 ---
 name: masterpiece-taste-design
-description: Master anti-slop design skill with modular sub-skills for Website/Product Architecture, Figma Systems, Photoshop Mockups, Colors, and Components. Engineered for both frontier and lightweight/flash AI models.
+description: Канонический диспетчер дизайн-системы и поднавыков. Направляет проектирование от задачи пользователя, структуры данных, бренда и доступности без догматических шаблонов.
 ---
 
-# Masterpiece Taste Design: Universal Architecture (Master Skill)
+# Masterpiece Taste Design: Canonical Router
 
-> **CORE AXIOM FOR ALL AI MODELS:**
-> **A request about Figma is NOT just a request to configure a tool.**
-> It is a request to **architect a real, commercial, award-winning WEBSITE, WEB APP, or DIGITAL PRODUCT**.
-> Figma is simply the production workbench where high-conversion layout, typography hierarchy, spatial rhythm, and design systems are forged.
+Канонический диспетчер дизайн-системы. Служит точкой входа для проектирования интерфейсов, графических материалов и компонентов.
 
 ---
 
-## 0. DISPATCHER & SUB-SKILL ROUTER (FOR FLASH MODELS)
+## 1. Иерархия приоритетов решений
 
-When given ANY design or frontend task, **immediately identify the category and activate the matching sub-skill**:
+При принятии любых дизайн-решений действует строгая иерархия приоритетов:
+
+1. **Ограничения функциональности и доступности (Обязательные требования):**
+   - Контрастность текста по WCAG 2.1 AA (минимум 4.5:1 для обычного текста, 3:1 для крупного и UI-элементов).
+   - Поддержка навигации с клавиатуры (`:focus-visible`).
+   - Проектные ориентиры размеров кликабельных контролов (44x44px на мобильных устройствах).
+   - Учет системных настроек (`prefers-reduced-motion`).
+   - Обязательные требования доступности не могут отменяться субъективными стилизациями.
+2. **Явный бриф, существующий бренд и проверенные факты:**
+   - Если пользователь предоставил конкретные требования, гайдлайны бренда, цветовую гамму, сетку или реальный контент — они определяют форму и содержание в рамках доступности и имеют безусловный приоритет над общими стилевыми рекомендациями.
+   - Не навязывать чужую эстетику (например, темный tech-минимализм или псевдо-терминалы), если задача этого не требует.
+3. **Рекомендации и контекстные приемы оформления:**
+   - Стилистические приемы подбираются под задачу, а не навязываются как универсальный шаблон.
+
+> **Важно:** задача в Figma **не означает автоматически** создание полноразмерного 8-секционного сайта.
+> В Figma проектируются задачи любого масштаба: отдельная кнопка, карточка спецификаций, таблица расписания, модальное окно, UI-кит или прототип приложения. Масштаб решения определяется брифом.
+
+---
+
+## 2. Маршрутизатор специализированных поднавыков
+
+Активируйте **только релевантный поднавык** под текущую задачу. Не загружайте все файлы одновременно.
 
 ```
-                                  [USER DESIGN TASK]
-                                          |
-        +------------------+--------------+---------------+------------------+
-        |                  |                              |                  |
-[1. Website / Product] [2. Figma Systems]       [3. Studio Mockups]  [4. Colors & Gradients]
-  (8-Section Arc,        (Canvas layout,          (PSD, 3D staging,    (@wtcolor_bot, Mesh,
-   Bento, Hero Stage)     Auto Layout, Tokens)     Screen/Multiply)     Contrast, Palettes)
-        |                  |                              |                  |
-  --> sub-skills/    --> sub-skills/                --> sub-skills/    --> sub-skills/
-      website-           figma-mastery                  photoshop-         color-and-
-      product-                                          mockups            gradients
-      architecture
+                                  [ДИЗАЙН-ЗАДАЧА]
+                                         │
+       ┌──────────────────┬──────────────┴───────────────┬──────────────────┐
+       ▼                  ▼                              ▼                  ▼
+ [Веб/Продукт]      [Figma-системы]             [Компоненты и Сетки]   [Код и Стили]
+   Карта целей,       Auto Layout, токены,        Таблицы, списки,       Tailwind, CSS Grid,
+   структура данных   компоненты, фреймы          карточки, бенто        состояния, доступность
+       │                  │                              │                  │
+  sub-skills/        sub-skills/                    sub-skills/        sub-skills/
+  website-product-   figma-mastery                  reference-and-     web-and-native-ui
+  architecture                                      components
 ```
 
-### Direct Routing Index
-1. **Website, Landing Page, SaaS Product, E-Commerce:**
-   -> **PRIMARY:** Use `sub-skills/website-product-architecture/SKILL.md` (8-Section Narrative Arc, 4 Compositional Archetypes, Hero Viewport Budget, Asymmetric Bento).
-2. **Figma Canvas Structure, Auto Layout, Tokens, Component Sets:**
-   -> Use `sub-skills/figma-mastery/SKILL.md` (Canvas frame hierarchy, W:Fill/Hug rules, 2-tier variables, device frames).
-3. **Web Code Implementation (React, Tailwind v4, Motion):**
-   -> Use `sub-skills/web-and-native-ui/SKILL.md` (`min-h-[100dvh]`, CSS grid over flex math, tactile `:active` states).
-4. **Photoshop PSDs, Device Mockups, Studio Lighting:**
-   -> Use `sub-skills/photoshop-mockups/SKILL.md` (3-tier formula: Base surface -> Multiply design -> Screen reflection).
-5. **Color Palettes, Mesh Gradients, Dark/Light Themes:**
-   -> Use `sub-skills/color-and-gradients/SKILL.md` (@wtcolor_bot saturated palettes, CSS radial-gradient mesh, Cold Luxury).
-6. **Feature Cards, Bento Tiles, Spec Tiles:**
-   -> Use `sub-skills/reference-and-components/SKILL.md` (Asymmetric 7+5 bento, 2-col spec tiles, glass cards).
+### Навигационный индекс поднавыков:
+- **Архитектура страниц и экранов:**
+  [sub-skills/website-product-architecture/SKILL.md](sub-skills/website-product-architecture/SKILL.md) — компоновка по карте целей секций, работа от структуры данных без фиксации на 8 секциях.
+- **Инструментарий Figma:**
+  [sub-skills/figma-mastery/SKILL.md](sub-skills/figma-mastery/SKILL.md) — иерархия Auto Layout (Fill/Hug), переменные, двухуровневые токены, аппаратные фреймы.
+- **Компонентные структуры:**
+  [sub-skills/reference-and-components/SKILL.md](sub-skills/reference-and-components/SKILL.md) — таблицы данных, списки, 3-колоночные сетки, бенто, концентрические скругления.
+- **Инженерия веб-интерфейсов и доступность:**
+  [sub-skills/web-and-native-ui/SKILL.md](sub-skills/web-and-native-ui/SKILL.md) — верстка на CSS Grid, адаптивность, состояния :active, :focus-visible, reduced motion.
+- **Цветовые системы и контрастность:**
+  [sub-skills/color-and-gradients/SKILL.md](sub-skills/color-and-gradients/SKILL.md) — подбор функциональных палитр, семантические роли, светлая и темная основы.
+- **Студийные мокапы и растровые материалы:**
+  [sub-skills/photoshop-mockups/SKILL.md](sub-skills/photoshop-mockups/SKILL.md) — физика трех слоев (Base -> Smart Object -> Screen reflection).
 
 ---
 
-## 1. THE 3 UNIVERSAL LAWS (MANDATORY FOR ALL TASKS)
+## 3. Справочные руководства (References)
 
-### LAW 1: BRIEF INFERENCE FIRST (NO GUESSING)
-Before generating code or design, state in one single line:
-**"Reading this as: <medium> for <audience>, with a <vibe> aesthetic, powered by <stack/system>."**
-
-### LAW 2: THE THREE DIALS
-Set these three values (baseline: 7 / 5 / 4):
-* **`DESIGN_VARIANCE: 7`** (1 = Rigid Symmetry, 10 = Dynamic Asymmetry)
-* **`MOTION_INTENSITY: 5`** (1 = Static, 10 = Physics-driven)
-* **`VISUAL_DENSITY: 4`** (1 = Spacious Art Gallery, 10 = Dense Cockpit)
-
-### LAW 3: ANTI-SLOP HARD BANS (AUTOMATIC PRE-FLIGHT FAILS)
-- [BANNED] **The Pulsing Online Dot Cliché:** Decorative green/emerald status circles (`h-2 w-2 rounded-full bg-emerald-500`, `animate-ping`, "All systems operational", "Available for work"). Instant hallmark of amateur AI generation.
-- [BANNED] **Micro-Label & Side-Metadata Clutter:** Peppering corners, card headers, and sidebars with useless tiny labels (`SYSTEM // v1.0`, `TELEMETRY: ACTIVE`, `LATENCY: 12ms`, `ID: #49281`, fake coordinates). If a label does not inform a real user decision, DELETE IT.
-- [BANNED] **Egg-like Bubble Radii ("Яишность"):** Slapping extreme `rounded-full` or huge bubble `rounded-3xl` on normal cards, or conversely making everything completely 0px rigid without architectural justification.
-- [BANNED] **Spurious Table-ness:** Slicing every section into pseudo-spreadsheets and hairline-underlined rows. Content must breathe in spacious editorial blocks.
-- [BANNED] **Semantic Emptiness & Corporate AI Buzzword Water:** Headlines like "Transform your workflow with next-gen AI", "Seamless collaboration for modern teams", "Empowering intelligent insights". Copy MUST be tangible, domain-specific, and concrete (real metrics, real physical/software actions).
-- [BANNED] **Mono-Font Flatness:** Using a single generic font (`Inter` or `Roboto`) for every headline, body, and button with zero character or tension. Always pair an expressive display face with a clean workhorse body.
-- [BANNED] **Section Cadence Monotony ("Слишком одинаково"):** Stacking sections that all use identical heights, identical 3-column cards, and centered headlines. Alternating visual rhythm is mandatory (Impact Hero -> Dense Bento -> Giant Metric Break -> Asymmetric CTA).
-- [BANNED] Generic purple/cyan glowing gradient buttons (`from-purple-600 to-indigo-600`).
-- [BANNED] Three identical feature cards centered in a row.
-- [BANNED] Centered hero headline over generic dark mesh background.
-- [BANNED] CTA buttons with labels wrapping to 2 lines on desktop.
-- [BANNED] Hand-rolled div rectangles pretending to be fake UI screenshots.
-- [BANNED] More than 1 uppercase tracking eyebrow per 3 sections.
-- [BANNED] More than 2 consecutive zigzag alternating rows (left-img/right-text).
+Загружайте точечно при необходимости:
+- [
+eferences/design-direction.md](references/design-direction.md) — формулирование брифа, 2-3 гипотезы, Section Purpose Map, проверка замены логотипа, проход де-декорирования.
+- [
+eferences/regression-briefs.md](references/regression-briefs.md) — 4 сценария ручной проверки (расписание, мастерская, лонгрид, задачи SaaS).
+- [
+eferences/anti_slop_checklist.md](references/anti_slop_checklist.md) — контекстный аудит перед сдачей работы.
+- [
+eferences/figma_design_system.md](references/figma_design_system.md) — детальная структура переменных и коллекций в Figma.
+- [
+eferences/web_engineering_rules.md](references/web_engineering_rules.md) — стандарты веб-верстки и компонентной архитектуры.
+- [
+eferences/app_native_polish.md](references/app_native_polish.md) — стандарты для macOS, Windows, iOS и Android.
+- [
+eferences/studio_mockup_lighting.md](references/studio_mockup_lighting.md) — физика многослойных теней и студийного освещения.
 
 ---
 
-## 2. HOW LIGHTWEIGHT / FLASH & WEAK MODELS MUST OPERATE (QWEN, FLASH, HAIKU)
+## 4. Контекстные принципы взамен догм
 
-If you are a smaller, faster model (e.g. Qwen 2.5 27B/32B, Gemini Flash, Claude Haiku):
-1. **Never treat Figma as abstract geometry.** Always build a full product/website section structure.
-2. **Follow the 8-Section Narrative Arc:**
-   - Header -> Hero (Asymmetric 60/40) -> Social Proof -> Value Hook -> Bento (7:5) -> Specs (2-col) -> Conversion CTA -> Footer.
-3. **No Decorative Clutter & No Buzzword Fluff:**
-   - NO pulsing status dots.
-   - NO tiny corner metadata badges.
-   - NO gratuitous table lines under every text item.
-   - NO AI buzzword headlines ("Transform", "Seamless", "Next-gen"). Use real domain terminology and numbers.
-4. **Typographic Pairing Presets (Kill the Mono-Inter Boredom):**
-   - **Modern Editorial Tech:** `Cabinet Grotesk` (Display Headline) + `Geist` or `Plus Jakarta Sans` (Body) + `JetBrains Mono` (Specs).
-   - **Futuristic Hardware:** `Clash Display` or `PP Neue Machina` (Headline) + `Satoshi` (Body).
-   - **Warm Luxury / Studio:** `Instrument Serif` (Italic Accent Word in Headline) + `General Sans` (Heavy Grotesk Headline) + `Inter` (Neutral Body).
-5. **Concentric Non-Standard Curvature (Anti-Egg Rule):**
-   - Use intentional, calibrated radii: `radius: 12px - 16px` for cards (modern squircle feel).
-   - Concentric math: Inner element radius = `max(0, outer_radius - padding)`. Never put a pill inside a rounded rectangle.
-   - Buttons: Match card curvature (`rounded-lg` / `rounded-xl`, 8-10px), NEVER full pills (`rounded-full`) unless the brand specifically calls for it.
-6. **Break the Uniform Box Grid:**
-   - At least 1 visual asset MUST partially break out of its container or overlap the text layer (`-mt-12` or `translate-y-6 relative z-10`).
-   - Alternate pacing: do not repeat the same 3-column card block twice in a row.
-7. **Use pre-calculated color codes with temperature:**
-   - Warm Obsidian: `#131211` with `#1E1D1B` cards.
-   - Deep Ink Navy: `#090D16` with `#111726` cards.
-   - Forest Emerald: `#096D23`
-   - Royal Violet: `#7A4BDD`
-   - Burnt Terracotta: `#B96539`
-   - Cold Luxury Slate: `#F1F3F5` & `#18181B`
-8. **Always run the Pre-Flight Gatekeeper** in `references/anti_slop_checklist.md` before delivering work.
-
----
-
-## 3. FILE MAP IN REPOSITORY
-
-```
-skills/masterpiece-taste-design/
-├── SKILL.md                                        # Root Master Dispatcher
-├── sub-skills/
-│   ├── website-product-architecture/SKILL.md       # Website & Product Design (8-Section Arc, Archetypes)
-│   ├── figma-mastery/SKILL.md                      # Figma Canvas Layout, Auto Layout, Tokens & Components
-│   ├── photoshop-mockups/SKILL.md                  # PSD Layering, Screen/Multiply & Lighting
-│   ├── color-and-gradients/SKILL.md                # @wtcolor_bot Palettes & Mesh Gradients
-│   ├── web-and-native-ui/SKILL.md                  # Tailwind v4, Next.js RSC, Native HIG
-│   └── reference-and-components/SKILL.md           # Bento Grids, Spec Tiles & Glass Cards
-└── references/
-    ├── anti_slop_checklist.md                      # 14-point Pre-Flight Matrix
-    ├── figma_design_system.md                      # Detailed Figma guide
-    ├── web_engineering_rules.md                    # Detailed Web guide
-    ├── app_native_polish.md                        # Detailed Native App guide
-    └── studio_mockup_lighting.md                   # Detailed Studio Lighting guide
-```
+1. **Разрешенные паттерны по назначению:**
+   - Таблицы уместны и предпочтительны для расписаний, каталогов, реестров и логов.
+   - Сетка из трех колонок допустима при равнозначном контенте.
+   - Один качественный шрифт (system sans, Inter, Geist) уместен при высоких требованиях к нейтральности интерфейса.
+   - Центрированный заголовок допустим в компактных карточках, подтверждениях и минималистичных hero.
+   - Скругления (включая умеренные pills для бейджей) допустимы, если гармонируют с сеткой и размером элемента.
+2. **Полный запрет синтетических данных:**
+   - Запрещено придумывать фальшивые отзывы клиентов, вымышленные логотипы и непроверенные метрики.
+   - Демонстрационный контент помечается меткой [Demo].
