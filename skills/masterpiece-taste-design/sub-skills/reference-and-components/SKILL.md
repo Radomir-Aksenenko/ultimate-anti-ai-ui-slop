@@ -85,3 +85,100 @@ description: Поднавык компонентных паттернов: та�
 - **Независимый контрол:** карточка с радиусом 16px и padding 16px может содержать кнопку с радиусом 8px. Вычитание padding из радиуса карточки к кнопке не применяется.
 - **Форма кнопок и бейджей:** задавай явный радиус через семантический токен или класс, например `rounded-[8px]`. `rounded-full` допустим для кнопок, тегов и бейджей, когда соответствует выбранному направлению; радиусы разных ролей не обязаны совпадать.
 - **Проверка в браузере:** проверь computed `border-radius` кнопок и полей. Если выбран мягкий стиль, значение 0 из reset, отсутствующего класса или неверного токена нужно исправить.
+
+---
+
+## 5. Интерактивные калькуляторы и слайдеры параметров
+
+Вместо статичных прайс-таблиц используются функциональные калькуляторы параметров с мгновенным пересчетом:
+- Ползунок (`<input type="range">`) с поддержкой управления клавишами стрелок, `Home`, `End` и явным атрибутом `aria-valuenow`.
+- Числовой тикер: значение вычисляется в реальном времени с плавной сменой чисел.
+- Прозрачная математика: отображение формулы или составляющих цены без скрытых условий и синтетических скидок.
+
+```tsx
+<div className="p-6 rounded-2xl border border-neutral-200 dark:border-white/10 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-md">
+  <div className="flex justify-between items-center mb-4">
+    <label htmlFor="nodes-range" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      Количество вычислительных узлов
+    </label>
+    <span className="text-lg font-bold font-mono text-neutral-900 dark:text-white">
+      {nodeCount} шт.
+    </span>
+  </div>
+  <input
+    id="nodes-range"
+    type="range"
+    min="1"
+    max="64"
+    value={nodeCount}
+    onChange={(e) => setNodeCount(Number(e.target.value))}
+    className="w-full h-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
+  />
+  <div className="mt-4 pt-4 border-t border-neutral-200 dark:border-neutral-800 flex justify-between items-center">
+    <span className="text-xs text-neutral-500">Оценка стоимости в месяц:</span>
+    <span className="text-xl font-bold text-neutral-900 dark:text-white">{estimatedCost} ₽</span>
+  </div>
+</div>
+```
+
+---
+
+## 6. Бесшовный бесконечный Marquee (Чистый CSS)
+
+Бегущая строка логотипов партнеров, стеков или параметров без скриптовых таймеров и скачков:
+
+```tsx
+<div className="marquee-wrapper overflow-hidden select-none">
+  <div className="marquee-track flex gap-8 whitespace-nowrap">
+    <div className="marquee-group flex gap-8 items-center shrink-0">
+      {items.map((item) => (
+        <span key={item.id} className="text-sm font-medium text-neutral-500">
+          {item.name}
+        </span>
+      ))}
+    </div>
+    <div className="marquee-group flex gap-8 items-center shrink-0" aria-hidden="true">
+      {items.map((item) => (
+        <span key={`dup-${item.id}`} className="text-sm font-medium text-neutral-500">
+          {item.name}
+        </span>
+      ))}
+    </div>
+  </div>
+</div>
+```
+
+```css
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 2rem)); }
+}
+
+@media (hover: hover) {
+  .marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    overflow-x: auto;
+  }
+}
+```
+
+---
+
+## 7. Плавающая островная навигация (Floating Island Dock)
+
+Компактная навигация для первого экрана и одностраничных интерфейсов:
+- Размещение: по центру вверху экрана с отступом `top-4` или `top-6`.
+- Оформление: `.liquid-glass`, скругление `rounded-full`, отступы `px-4 py-2`.
+- Высота: 44–52px. Сохранение доступности сенсорной зоны (контролы внутри имеют высоту не менее 36px).
+- Активный таб: плавный переход подложки с физикой пружины (Framer Motion `layoutId="active-dock-pill"`).
+
