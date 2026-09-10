@@ -41,6 +41,10 @@ description: Практический фреймворк создания кач
 | Любая гарнитура без настройки | Запрет использовать один шрифт, навязывание вычурных пар | Допустим один качественный гротеск или выверенная шрифтовая пара |
 | Бесконечный анимационный шум без повода | Полный запрет на плавное движение и интерактивность | Выверенная кинетическая физика: стандартизированные кривые Безье, пружинный отклик, reduced-motion |
 | Полное игнорирование структуры | Насильственный сдвиг слоев («overlap -mt-12») в каждом блоке | Естественная пространственная иерархия без искусственных наложений |
+| Стерильный холодный Tailwind (Slate/Sky) | Навязанная темная тема с переключателем Sun/Moon везде подряд | Тактильная физическая палитра: теплая бумага (`#f7f7f2`), графит (`#20251f`), акцентный ультрамарин (`#2448ed`) |
+| Раздувание лендинга в сухой дашборд на 20 файлов | Разрыв страницы на изолированные вкладки через React-стейт | Сфокусированное полотно лендинга с плавным скроллом и контекстными WAI-ARIA модалками |
+| Попугайничанье формулировок скилла в комментариях (`Anti-Slop Grid`) | Формальное объявление `*:focus-visible` без реального Focus Trap | Чистый код без мета-шума, полный жизненный цикл доступности (Esc, Tab-trap, `body.overflow: hidden`) |
+
 
 ---
 
@@ -184,6 +188,7 @@ description: Практический фреймворк создания кач
 
 ## 8. Быстрая навигация по ресурсам библиотеки
 
+- **Канонический эталон реализации:** [skills/masterpiece-taste-design/references/archive_1_masterpiece_exemplar.md](skills/masterpiece-taste-design/references/archive_1_masterpiece_exemplar.md)
 - **Канонический диспетчер:** [skills/masterpiece-taste-design/SKILL.md](skills/masterpiece-taste-design/SKILL.md)
 - **Справочник по кинетике и Liquid Glass:** [skills/masterpiece-taste-design/references/motion_design_and_interactions.md](skills/masterpiece-taste-design/references/motion_design_and_interactions.md)
 - **Архитектура веб-страниц:** [skills/masterpiece-taste-design/sub-skills/website-product-architecture/SKILL.md](skills/masterpiece-taste-design/sub-skills/website-product-architecture/SKILL.md)
